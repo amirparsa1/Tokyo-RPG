@@ -256,6 +256,10 @@ local HeistSpawns = {
 
 function SpawnPlayersForHeist( thePlayer , i )
 	setTimer( function()
+		-- FIX (bugfix pass 4): the element can be gone by the time this timer
+		--   fires (player quit / object destroyed). Without this guard MTA
+		--   raises "Bad argument" and the rest of the callback never runs.
+		if not isElement(thePlayer) then return end
 		triggerClientEvent( "ShowHeistText", thePlayer, thePlayer, "San Fierro Bank Heist Started" )
 		spawnPlayer(thePlayer, HeistSpawns[i][1], HeistSpawns[i][2], HeistSpawns[i][3])
 		setElementInterior ( thePlayer, 0 )
@@ -433,12 +437,20 @@ function HitTheDoor( thePlayer )
 			end
 			setPedAnimation( thePlayer, "police", "door_kick", -1, false, false )
 			setTimer( function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then return end
 				setPedAnimation ( thePlayer )
 				moveObject(HeistSfDoors[DoorId], 100, HsFD[DoorId][8], HsFD[DoorId][9], HsFD[DoorId][10], HsFD[DoorId][11], HsFD[DoorId][12], HsFD[DoorId][13])
 			end, 700, 1)
 		else
 			setPedAnimation( thePlayer, "bomber", "bom_plant", -1, false, false )
 			setTimer( function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then return end
 				setPedAnimation ( thePlayer )
 				setTimer( function()
 					moveObject(HeistSfDoors[DoorId], 2000, HsFD[DoorId][8], HsFD[DoorId][9], HsFD[DoorId][10], HsFD[DoorId][11], HsFD[DoorId][12], HsFD[DoorId][13])

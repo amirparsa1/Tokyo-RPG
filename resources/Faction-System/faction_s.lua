@@ -941,8 +941,11 @@ function ( thePlayer, command, player, tedad )
 			end
 
 			if tedad then
-				if tonumber(tedad) > 0 then
-					local tedad = tonumber(tedad)
+				if tonumber(tedad) and tonumber(tedad) > 0 then
+					-- FIX (bugfix pass 4): floor the payout so a fractional
+					--   amount cannot desync the faction treasury against the
+					--   money actually handed out.
+					local tedad = math.floor(tonumber(tedad))
 					local KhazaneHoghogh = tonumber(getFactionData(thePlayer,tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pMember")),"fKhazane"))
 					if KhazaneHoghogh >= tedad then
 						local factionesh = tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pMember"))

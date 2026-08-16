@@ -361,6 +361,10 @@ function ( ammo, attacker, weapon, bodypart )
 			setElementData(source,"Baj",nil)
 			outputChatBox("#ff0000[Baj]: #ffffffShoma Koshte Shodid Va Mablaghe #ff0000"..MeghdarBaj.."$ #ffffffBaj Drop Kardid!", source, 255, 255, 255, true)
 			setTimer( function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then return end
 				local DropedBaj = createPickup ( x,y,z, 3, 1212 , 0)
 				setElementInterior(DropedBaj, int)
 				setElementDimension(DropedBaj, dim)

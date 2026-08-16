@@ -96,6 +96,10 @@ function(thePlayer, cmd)
 					outputChatBox("#649c9e(Mechanic): #ffffffPlayer #649c9e"..getPlayerName(thePlayer).." #ffffffDarkhast Tamir Shoma Ra Qabool Kard Va Mashin Ash Tamir Shod! #649c9e(+100$ Babat Tamir Kardan)", find, 255, 255, 255, true)
 					givePlayerMoney (find , 100)
 					setTimer(function()
+						-- FIX (bugfix pass 4): the element can be gone by the time this timer
+						--   fires (player quit / object destroyed). Without this guard MTA
+						--   raises "Bad argument" and the rest of the callback never runs.
+						if not isElement(thePlayer) then return end
 						setElementData(thePlayer ,"Mechanic", nil)
 					end , 100, 1)
 				else
@@ -204,6 +208,10 @@ function(thePlayer, cmd)
 					outputChatBox("#649c9e(Mechanic): #ffffffPlayer #649c9e"..getPlayerName(thePlayer).." #ffffffDarkhast Tamir Shoma Ra Qabool Kard Va Bak Benzin Mashin Ash Por Shod! #649c9e(+2000$ Babat Por Kardan Bak Benzin)", find, 255, 255, 255, true)
 					givePlayerMoney (find , 2000)
 					setTimer(function()
+						-- FIX (bugfix pass 4): the element can be gone by the time this timer
+						--   fires (player quit / object destroyed). Without this guard MTA
+						--   raises "Bad argument" and the rest of the callback never runs.
+						if not isElement(thePlayer) then return end
 						setElementData(thePlayer ,"Mechanic2", nil)
 					end , 100, 1)
 				else

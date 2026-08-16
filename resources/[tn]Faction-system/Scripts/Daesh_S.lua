@@ -178,6 +178,10 @@ local x,y,z = getElementPosition(thePlayer)
 						)
 
 						setTimer(function()
+							-- FIX (bugfix pass 4): the element can be gone by the time this timer
+							--   fires (player quit / object destroyed). Without this guard MTA
+							--   raises "Bad argument" and the rest of the callback never runs.
+							if not isElement(thePlayer) then return end
 							for i, daeshi in pairs(getElementsByType("player")) do  
 								if getElementData(daeshi , "loggedIn") == true then
 								if tonumber(getElementData(accSys:getPlayerAcc(daeshi), "pMember")) == 18 then

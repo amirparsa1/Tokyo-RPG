@@ -1653,6 +1653,10 @@ function ()
 	local vehid = getElementID ( source )
     if vehid == "Family" then 
         setTimer(function()
+        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+        	--   fires (player quit / object destroyed). Without this guard MTA
+        	--   raises "Bad argument" and the rest of the callback never runs.
+        	if not isElement(source) then return end
             setElementData(source,"fuel",100)
             setElementDimension(source,getElementData(source,"owner"))
             setElementInterior(source,getElementData(source,"owner"))
@@ -2188,6 +2192,10 @@ end
 
 function createKamion(x,y,z,rx,ry,rz,id)
     setTimer(function()
+    	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+    	--   fires (player quit / object destroyed). Without this guard MTA
+    	--   raises "Bad argument" and the rest of the callback never runs.
+    	if not isElement(veh) then return end
         veh = createVehicle(573,x,y,z,rx,ry,rz)
         setVehicleColor(veh,255,255,255,255,255,255)
         setElementID(veh,"KamionMat")
@@ -2835,6 +2843,10 @@ addCommandHandler("c4",function(thePlayer)
             destroyElement(StartMarker[TheDoor])
             StartMarker[TheDoor] = false
             setTimer(function()
+            	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+            	--   fires (player quit / object destroyed). Without this guard MTA
+            	--   raises "Bad argument" and the rest of the callback never runs.
+            	if not isElement(thePlayer) then return end
                 createExplosion(keshtipos[TheDoor][9] ,keshtipos[TheDoor][10] ,keshtipos[TheDoor][11], 3)
                 destroyElement(DoorBoomb[TheDoor])
                 setElementData(thePlayer,"KeshtiDoor",0)
@@ -3835,3 +3847,17 @@ function paycheckfamilys()
         end
     end
 end
+
+-- FIX (bugfix pass 4): the per-player gate tables below were never cleared when
+--   a player disconnected. Each is tested as `if not <tbl>[thePlayer]`, so a
+--   flag left set (or a timer that fires after the quit) leaves the feature
+--   dead for that player and keeps the dead element referenced.
+addEventHandler("onPlayerQuit", root, function()
+	for _, tbl in ipairs({ Spamer }) do
+		if type(tbl) == "table" and tbl[source] ~= nil then
+			if isTimer(tbl[source]) then killTimer(tbl[source]) end
+			if isElement(tbl[source]) then destroyElement(tbl[source]) end
+			tbl[source] = nil
+		end
+	end
+end)

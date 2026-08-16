@@ -24,6 +24,10 @@ function GivePizzaJob(thePlayer)
 	setElementData(accSys:getPlayerAcc(thePlayer), "pJob", 7)
 	fadeCamera( thePlayer, false,0.5)
 	setTimer(function()
+		-- FIX (bugfix pass 4): the element can be gone by the time this timer
+		--   fires (player quit / object destroyed). Without this guard MTA
+		--   raises "Bad argument" and the rest of the callback never runs.
+		if not isElement(thePlayer) then return end
 		local c = math.random(1,3)
 		local pname = getPlayerName(thePlayer)
 		mashin[thePlayer] = createVehicle( 448, randompos[c][1], randompos[c][2], randompos[c][3], randompos[c][4], randompos[c][5], randompos[c][6] )
@@ -315,6 +319,10 @@ function (thePlayer,seat)
 		if seat == 0 then
 			if isElementFrozen(source) then
 				setTimer(function()
+					-- FIX (bugfix pass 4): the element can be gone by the time this timer
+					--   fires (player quit / object destroyed). Without this guard MTA
+					--   raises "Bad argument" and the rest of the callback never runs.
+					if not isElement(thePlayer) then return end
 					toggleControl ( thePlayer, "jump", false )
 					toggleControl ( thePlayer, "sprint", false )
 					toggleControl ( thePlayer, "crouch", false )
@@ -364,3 +372,17 @@ end)
 
 
 -- The End --
+
+-- FIX (bugfix pass 4): the per-player gate tables below were never cleared when
+--   a player disconnected. Each is tested as `if not <tbl>[thePlayer]`, so a
+--   flag left set (or a timer that fires after the quit) leaves the feature
+--   dead for that player and keeps the dead element referenced.
+addEventHandler("onPlayerQuit", root, function()
+	for _, tbl in ipairs({ SfPNowPizzaMarker1, SfPVehicle }) do
+		if type(tbl) == "table" and tbl[source] ~= nil then
+			if isTimer(tbl[source]) then killTimer(tbl[source]) end
+			if isElement(tbl[source]) then destroyElement(tbl[source]) end
+			tbl[source] = nil
+		end
+	end
+end)

@@ -41,6 +41,10 @@ function(thePlayer, cmd, ...)
 											end
 										end
 										setTimer(function()
+											-- FIX (bugfix pass 4): the element can be gone by the time this timer
+											--   fires (player quit / object destroyed). Without this guard MTA
+											--   raises "Bad argument" and the rest of the callback never runs.
+											if not isElement(thePlayer) then return end
 										if getElementData(thePlayer, "haveAd") == true and getElementData(thePlayer, "rad") == false then
 											setElementData(thePlayer, "haveAd", nil)
 											outputChatBox("#00ff00Tabligh Az " .. getPlayerName(thePlayer) .. " ["..miscSys:FormatPN(getElementData(accSys:getPlayerAcc(thePlayer), "pPnumber")).."]: #ffffff" .. message, v, 255, 255, 255, true)

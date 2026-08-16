@@ -73,6 +73,14 @@ addEventHandler("onVehicleStartEnter", getRootElement(),
 addEvent("cartheft:getcar", true)
 addEventHandler("cartheft:getcar", getRootElement(),
 	function()
+		-- FIX (bugfix pass 4): getCarList is drained by the table.remove below, so
+		--   after enough carjacks it is empty and math.random(#getCarList) becomes
+		--   math.random(0) -> "bad argument #2 to 'random' (interval is empty)",
+		--   which killed the whole carjack event until a resource restart.
+		if #getCarList == 0 or #carList == 0 then
+			outputDebugString("Carjack: no spawn locations left, skipping", 2)
+			return
+		end
 		local random = math.random(#getCarList)
 		local cords = getCarList[random]
 		table.remove(getCarList, random)

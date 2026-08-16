@@ -1836,6 +1836,9 @@ function getRandomKey()
 	return randomKeys[math.random(1,#randomKeys)]
 end
 function table.random ( theTable )
+    -- FIX (bugfix pass 4): math.random(0) on an empty table raises
+    --   "interval is empty". Return nil instead of throwing.
+    if type(theTable) ~= "table" or #theTable == 0 then return nil end
     return theTable[math.random ( #theTable )]
 end
 
@@ -6678,5 +6681,31 @@ addEventHandler("RequestKooreItem",getRootElement(),function(thePlayer,ItemSlot1
 		end
 	else
 		ReLoadInventoryForPlayer(thePlayer)
+	end
+end)
+
+-- =============================================================================
+--  FIX (bugfix pass 4) -- STUCK PLAYER STATE AFTER A DISCONNECT
+--
+--  Several per-player tables in this resource act as GATES: the code does
+--      if not InvTimer[thePlayer] then ... end
+--  If the player disconnects while such a flag is set, the entry is never
+--  cleared. Player elements are unique per session, so a reconnecting player
+--  normally gets a fresh element -- but a timer that fires after the quit can
+--  re-populate the table, and any element-keyed entry keeps the dead element
+--  referenced (a slow leak on a long-running server).
+--
+--  The concrete symptom for InvTimer is the F2 inventory refusing to open,
+--  which is exactly the "F2 sometimes doesn't open" report.
+-- =============================================================================
+addEventHandler("onPlayerQuit", root, function()
+	local p = source
+	for _, tbl in ipairs({ InvTimer, JetPack, fishing, fishingSpam, invis, smokespam,
+	                       useObject, useTimer, InventoryData }) do
+		if type(tbl) == "table" and tbl[p] ~= nil then
+			if isTimer(tbl[p]) then killTimer(tbl[p]) end
+			if isElement(tbl[p]) then destroyElement(tbl[p]) end
+			tbl[p] = nil
+		end
 	end
 end)

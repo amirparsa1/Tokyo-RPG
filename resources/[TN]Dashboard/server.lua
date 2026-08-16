@@ -628,3 +628,15 @@ function CanselColorName(root)
 end
 addEvent("CanselColorName",true)
 addEventHandler("CanselColorName", root, CanselColorName)
+
+
+-- FIX (bugfix pass 4): spawnlimit is keyed by player and gates the spawn
+--   selector ("if not spawnlimit[thePlayer]"). It was never cleared, so the
+--   table grew for the life of the server and kept dead player elements
+--   referenced. [TN]Dashboard had no onPlayerQuit handler at all.
+addEventHandler("onPlayerQuit", root, function()
+	if spawnlimit and spawnlimit[source] ~= nil then
+		if isTimer(spawnlimit[source]) then killTimer(spawnlimit[source]) end
+		spawnlimit[source] = nil
+	end
+end)

@@ -173,6 +173,10 @@ function ExitFromBiz(thePlayer)
 			triggerClientEvent("hideHousePage",thePlayer,thePlayer,1)
 			fadeCamera(thePlayer,false,0.5)
 			TeleportTimer[thePlayer] = setTimer(function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then TeleportTimer[thePlayer] = nil return end -- FIX: also clear the slot, else the player is locked out after reconnect
 				setElementPosition(thePlayer,Business[ID]["bX"],Business[ID]["bY"],Business[ID]["bZ"])
 				setElementDimension(thePlayer,0)
 				setElementInterior(thePlayer,0)
@@ -291,6 +295,10 @@ addEventHandler("requestTeleportToBiz",getRootElement(),function(thePlayer,ID)
 			triggerClientEvent("hideHousePage",thePlayer,thePlayer,1)
 			fadeCamera(thePlayer,false,0.5)
 			TeleportTimer[thePlayer] = setTimer(function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then TeleportTimer[thePlayer] = nil return end -- FIX: also clear the slot, else the player is locked out after reconnect
 				setElementDimension(thePlayer,Business[ID]["bDimension"])
 				setElementInterior(thePlayer,Business[ID]["bInterior"])
 				setElementPosition(thePlayer,Business[ID]["bIntX"],Business[ID]["bIntY"]+1.5,Business[ID]["bIntZ"])
@@ -1452,3 +1460,21 @@ createBlip ( 1369.0009765625 ,-1279.705078125 ,13.546875 , 18 ) -- Gun Shop Blip
 
 local skinshopblip = createBlip ( 461.7177734375 ,-1500.8740234375 ,31.044410705566 , 45 )
 setElementData( skinshopblip, 'blipName',"SkinShop")
+
+-- =============================================================================
+--  FIX (bugfix pass 4): [TN]Biz kept per-player state in TeleportTimer and
+--  lastVisit but never cleaned it up when a player left. Two consequences:
+--    * the tables grew for the lifetime of the server (keys are player
+--      elements, so the entries also kept dead elements referenced), and
+--    * a player who disconnected mid-teleport came back with
+--      TeleportTimer[them] still set, and every entry point checks
+--      `if not TeleportTimer[thePlayer]` -- so business teleports were dead
+--      for that player until the resource restarted.
+-- =============================================================================
+addEventHandler("onPlayerQuit", root, function()
+	if TeleportTimer and TeleportTimer[source] then
+		if isTimer(TeleportTimer[source]) then killTimer(TeleportTimer[source]) end
+		TeleportTimer[source] = nil
+	end
+	if lastVisit then lastVisit[source] = nil end
+end)

@@ -17,6 +17,10 @@ function (thePlayer,mahmole)
 	setElementData(accSys:getPlayerAcc(thePlayer), "pJob", 9)
 	fadeCamera( thePlayer, false,0.5)
 	setTimer(function()
+		-- FIX (bugfix pass 4): the element can be gone by the time this timer
+		--   fires (player quit / object destroyed). Without this guard MTA
+		--   raises "Bad argument" and the rest of the callback never runs.
+		if not isElement(thePlayer) then return end
 		local c = math.random(1,3)
 		local pname = getPlayerName(thePlayer)
 		mashin[thePlayer] = createVehicle( 551, randompos[c][1], randompos[c][2], randompos[c][3], randompos[c][4], randompos[c][5], randompos[c][6] )

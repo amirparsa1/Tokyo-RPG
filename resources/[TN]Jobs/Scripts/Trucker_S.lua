@@ -70,6 +70,10 @@ addEventHandler("GiveTruckerJob", root,
 function (thePlayer)
 	fadeCamera( thePlayer, false,0.5)
 	setTimer(function()
+		-- FIX (bugfix pass 4): the element can be gone by the time this timer
+		--   fires (player quit / object destroyed). Without this guard MTA
+		--   raises "Bad argument" and the rest of the callback never runs.
+		if not isElement(thePlayer) then return end
 		local c = math.random(1,3)
 		local pname = getPlayerName(thePlayer)
 		mashin[thePlayer] = createVehicle( 515, randompos[c][1], randompos[c][2], randompos[c][3], randompos[c][4], randompos[c][5], randompos[c][6] )
@@ -123,6 +127,10 @@ end)
 addEventHandler("onTrailerAttach", getRootElement(),
 function (theTruck)
 	local thePlayer = getVehicleController ( theTruck )
+	-- FIX (bugfix pass 4): onTrailerAttach also fires for driverless trucks (and
+	--   during streaming), so getVehicleController returns nil and the
+	--   getPlayerAcc(nil) call below raised "Bad argument", aborting the handler.
+	if not thePlayer or not isElement(thePlayer) then return end
 	if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pJob")) == 4 then
 		local vehid = getElementID ( theTruck )
 		if getElementData(theTruck,"owner") == "Trucker" then

@@ -23,6 +23,10 @@ function mashrobrobekhar( thePlayer )
 	exports.bone_attach:attachElementToBone(bottle,thePlayer,11,-0.14,0.01,0.1,0,90,0)
 	setPedAnimation( thePlayer, "vending", "vend_drink_p", -1, true, false )
 	setTimer( function()
+		-- FIX (bugfix pass 4): the element can be gone by the time this timer
+		--   fires (player quit / object destroyed). Without this guard MTA
+		--   raises "Bad argument" and the rest of the callback never runs.
+		if not isElement(thePlayer) then return end
 	setPedAnimation ( thePlayer )
 	destroyElement (bottle)
 	triggerClientEvent ( thePlayer, "shake", thePlayer )

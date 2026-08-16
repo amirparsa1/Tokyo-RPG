@@ -41,6 +41,10 @@ function(thePlayer, cmd, ...)
 						setPedAnimation(thePlayer, "int_shop", "shop_cashier", 30000, true, false, false, false)
 						exports["notf"]:addNotification(thePlayer, "Dar Hal Crack Kardan Computer...!!" , 'warning')
 						setTimer(function()
+							-- FIX (bugfix pass 4): the element can be gone by the time this timer
+							--   fires (player quit / object destroyed). Without this guard MTA
+							--   raises "Bad argument" and the rest of the callback never runs.
+							if not isElement(thePlayer) then return end
 							--DepartmentMessages("Rob Javaheri Zade Shode Zod Be Javaheri Berid!!")
 							--setTimer(function()
 							--DepartmentMessages("Rob Javaheri Zade Shode Zod Be Javaheri Berid!!")
@@ -118,6 +122,10 @@ function(thePlayer, cmd, ...)
 						setPedAnimation(thePlayer, "bomber", "BOM_Plant_Loop", -1, true, false, false)
 						setTimer(function()
 								setTimer(function()
+									-- FIX (bugfix pass 4): the element can be gone by the time this timer
+									--   fires (player quit / object destroyed). Without this guard MTA
+									--   raises "Bad argument" and the rest of the callback never runs.
+									if not isElement(thePlayer) then return end
 									setElementFrozen( thePlayer, false )
 									toggleAllControls(thePlayer, true)
 									setPedAnimation(thePlayer)

@@ -287,7 +287,12 @@ function ( thePlayer, _, player, amount )
 	end
 	local find = miscSys:findPlayer ( player )
 	if find then
-		if amount then
+		-- FIX (bugfix pass 4): a negative amount here handed out a money DRAIN
+		--   ("/givemoney x -50000" removed cash), and a fractional amount
+		--   desynced the client money counter. Floor it and require > 0.
+		local amount = tonumber(amount)
+		if amount then amount = math.floor(amount) end
+		if amount and amount > 0 and amount < 100000000 then
 			local targetName = getPlayerName ( find )
 			givePlayerMoney( find, tonumber( amount ) )
 			local totalMoney = getPlayerMoney ( find )
@@ -1481,6 +1486,10 @@ function ( thePlayer, command, player, score )
 		toggleAllControls ( taraf, false, true, false)
 		toggleAllControls ( thePlayer, false, true, false)
 		setTimer( function()
+			-- FIX (bugfix pass 4): the element can be gone by the time this timer
+			--   fires (player quit / object destroyed). Without this guard MTA
+			--   raises "Bad argument" and the rest of the callback never runs.
+			if not isElement(thePlayer) then return end
 			setPedAnimation ( thePlayer )
 			setPedAnimation ( taraf )
 			toggleAllControls ( thePlayer, true )
@@ -1605,6 +1614,10 @@ function (thePlayer,command,pname)
 			toggleAllControls ( taraf, false, true, false)
 			toggleAllControls ( thePlayer, false, true, false)
 			setTimer( function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then return end
 				destroyElement(chair)
 				chair = nil
 				setPedAnimation ( thePlayer )
@@ -1641,6 +1654,10 @@ function (thePlayer,command,pname)
 			toggleAllControls ( taraf, false, true, false)
 			toggleAllControls ( thePlayer, false, true, false)
 			setTimer( function()
+				-- FIX (bugfix pass 4): the element can be gone by the time this timer
+				--   fires (player quit / object destroyed). Without this guard MTA
+				--   raises "Bad argument" and the rest of the callback never runs.
+				if not isElement(thePlayer) then return end
 				setPedAnimation ( thePlayer )
 				setPedAnimation ( taraf )
 				toggleAllControls ( thePlayer, true )

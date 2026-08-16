@@ -1267,3 +1267,17 @@ addEventHandler("hqActions",getRootElement(),function(thePlayer,Wish,whatToDo,Se
 		end
 	end
 end)
+
+-- FIX (bugfix pass 4): the per-player gate tables below were never cleared when
+--   a player disconnected. Each is tested as `if not <tbl>[thePlayer]`, so a
+--   flag left set (or a timer that fires after the quit) leaves the feature
+--   dead for that player and keeps the dead element referenced.
+addEventHandler("onPlayerQuit", root, function()
+	for _, tbl in ipairs({ havePanel, killtedad, margtedad, morde, warsSpam }) do
+		if type(tbl) == "table" and tbl[source] ~= nil then
+			if isTimer(tbl[source]) then killTimer(tbl[source]) end
+			if isElement(tbl[source]) then destroyElement(tbl[source]) end
+			tbl[source] = nil
+		end
+	end
+end)

@@ -153,6 +153,10 @@ function (thePlayer,command,pname)
 					toggleAllControls ( taraf, false, true, false)
 					toggleAllControls ( thePlayer, false, true, false)
 					setTimer( function()
+						-- FIX (bugfix pass 4): the element can be gone by the time this timer
+						--   fires (player quit / object destroyed). Without this guard MTA
+						--   raises "Bad argument" and the rest of the callback never runs.
+						if not isElement(thePlayer) then return end
 						setPedAnimation ( thePlayer )
 						setPedAnimation ( taraf )
 						toggleAllControls ( thePlayer, true )
@@ -3048,6 +3052,10 @@ function ( thePlayer, command, player )
 			setElementInterior ( box, tonumber(interior) )
 			setElementDimension ( box, tonumber(Dimension) )
 				setTimer ( function()
+					-- FIX (bugfix pass 4): the element can be gone by the time this timer
+					--   fires (player quit / object destroyed). Without this guard MTA
+					--   raises "Bad argument" and the rest of the callback never runs.
+					if not isElement(box) then return end
 					destroyElement ( box )
 					setElementData(accSys:getPlayerAcc(find), "pLevel", tonumber(newLevel))
 					setElementData(find, "levelPlayer", tonumber(newLevel))
@@ -4058,7 +4066,12 @@ addCommandHandler("givemoney",
 		if player then
 			local find = miscSys:findPlayer ( player )
 		if find then
-		if amount then
+		-- FIX (bugfix pass 4): `amount` was only checked for existence. A
+		--   negative value silently DRAINED the target ("/givemoney x -50000")
+		--   and a fractional one desynced the money counter. Validate it.
+		local amount = tonumber(amount)
+		if amount then amount = math.floor(amount) end
+		if amount and amount > 0 and amount < 100000000 then
 				local targetName = getPlayerName ( find )
 				givePlayerMoney( find, tonumber( amount ) )
 				outputChatBox("#00ff00[Done]: #ffffffShoma Be Player #ff1010"..targetName.." #ffffffMeghdar #ff1010$"..convertNumber(amount).." #ffffffPool Dadid!", thePlayer, 0, 255, 0, true)

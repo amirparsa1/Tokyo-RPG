@@ -1180,6 +1180,10 @@ function UnjailSho(thePlayer)
 	
 	if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pJailTime")) > 5 then
 		unJailTImer[thePlayer] = setTimer(function()
+			-- FIX (bugfix pass 4): the element can be gone by the time this timer
+			--   fires (player quit / object destroyed). Without this guard MTA
+			--   raises "Bad argument" and the rest of the callback never runs.
+			if not isElement(thePlayer) then return end
 			if getElementInterior( thePlayer ) == 0 then
 				setElementData(thePlayer,"pJailTime",0)
 				triggerClientEvent("TakeMile", thePlayer, thePlayer)

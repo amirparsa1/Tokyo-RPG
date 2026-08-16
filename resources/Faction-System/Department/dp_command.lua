@@ -104,6 +104,10 @@ function(thePlayer, cmd)
 					outputChatBox("#00ff00[Tavajoh]: #ffffffPlayer #00ff00"..getPlayerName(thePlayer).." #ffffffTicket Jarime Shoma Ra Be Mablaghe #00ff00$"..MizanJarime.." #ffffffAccept Kard.", find, 255, 255, 255, true)
 					givePlayerMoney (find , MizanJarime)
 					setTimer(function()
+						-- FIX (bugfix pass 4): the element can be gone by the time this timer
+						--   fires (player quit / object destroyed). Without this guard MTA
+						--   raises "Bad argument" and the rest of the callback never runs.
+						if not isElement(thePlayer) then return end
 						setElementData(thePlayer ,"JarimeRq", nil)
 					end , 100, 1)
 				else

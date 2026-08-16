@@ -22,11 +22,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -54,11 +62,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -87,11 +103,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -120,11 +144,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -153,11 +185,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -186,11 +226,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)
@@ -219,11 +267,19 @@ function bekhab( thePlayer, command )
                                         setElementData(thePlayer,"sleeptime",true)
                                         doSleep(thePlayer)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                     else
                                         setElementData(thePlayer,"sleeptime",true)
                                         setTimer(function()
+                                        	-- FIX (bugfix pass 4): the element can be gone by the time this timer
+                                        	--   fires (player quit / object destroyed). Without this guard MTA
+                                        	--   raises "Bad argument" and the rest of the callback never runs.
+                                        	if not isElement(thePlayer) then return end
                                             setElementData(thePlayer,"sleeptime",false)
                                         end , 10000, 1)
                                         doUnSleep(thePlayer)

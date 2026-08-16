@@ -334,6 +334,10 @@ function initVehicleShopWindow()
 		fadeCamera( false, 1 )
 		removeEventHandler("onClientRender",root,drawVehicleShop)
 		setTimer(function()
+			-- FIX (bugfix pass 4): the element can be gone by the time this timer
+			--   fires (player quit / object destroyed). Without this guard MTA
+			--   raises "Bad argument" and the rest of the callback never runs.
+			if not isElement(veh) then return end
 				setElementAlpha(currentMarker,255)
 				setCameraTarget(localPlayer)
 				setElementFrozen(localPlayer,true)
@@ -358,6 +362,10 @@ function initVehicleShopWindow()
 		setElementFrozen(localPlayer,true)
 
 		setTimer(function() 
+			-- FIX (bugfix pass 4): the element can be gone by the time this timer
+			--   fires (player quit / object destroyed). Without this guard MTA
+			--   raises "Bad argument" and the rest of the callback never runs.
+			if not isElement(veh) then return end
 			fadeCamera(true,1)
 			removeEventHandler("onClientRender",root,drawVehicleShop) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,drawVehicleShop)

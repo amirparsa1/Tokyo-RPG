@@ -1,6 +1,47 @@
+-- =============================================================================
+--  SECURITY FIX (bugfix pass 4) -- GUN SHOP
+--
+--  Every handler in this file used `source` as the buyer. In a server-side
+--  handler for an allowRemoteTrigger event, `source` is whatever element the
+--  client passed to triggerServerEvent, so it is attacker-controlled: a cheater
+--  could charge ANOTHER player for a gun and receive nothing themselves, or
+--  more usefully charge a victim repeatedly.
+--
+--  There was also no location check at all. The shop GUI only opens on the
+--  marker at (296.03, -38.51, 1001.51) in interior 1, but the events could be
+--  fired from anywhere on the map at any time -- so the marker was decoration,
+--  not a gate.
+--
+--  verifyGunShopBuyer() below pins the buyer to the real caller (`client`,
+--  which cannot be forged) and requires them to actually be at the counter.
+-- =============================================================================
+
+local SHOP_X, SHOP_Y, SHOP_Z = 296.03515625, -38.5146484375, 1001.515625
+local SHOP_INTERIOR = 1
+local SHOP_RADIUS = 8
+
+local function verifyGunShopBuyer()
+	if not client or not isElement(client) or getElementType(client) ~= "player" then
+		return false
+	end
+	if source ~= client then
+		outputDebugString(("GunShop: rejected spoofed source from %s"):format(getPlayerName(client)), 2)
+		return false
+	end
+	if getElementInterior(client) ~= SHOP_INTERIOR then return false end
+	local x, y, z = getElementPosition(client)
+	if getDistanceBetweenPoints3D(x, y, z, SHOP_X, SHOP_Y, SHOP_Z) > SHOP_RADIUS then
+		outputDebugString(("GunShop: %s tried to buy from outside the shop"):format(getPlayerName(client)), 2)
+		return false
+	end
+	return true
+end
+
 addEvent("Pistol", true)
 addEventHandler("Pistol",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 8000) then
     takePlayerMoney(source,8000)
@@ -13,6 +54,8 @@ end)
 addEvent("Deagle", true)
 addEventHandler("Deagle",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 10000) then
     takePlayerMoney(source,10000)
@@ -25,6 +68,8 @@ end)
 addEvent("Sawn-Off", true)
 addEventHandler("Sawn-Off",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 13000) then
     takePlayerMoney(source,13000)
@@ -37,6 +82,8 @@ end)
 addEvent("Shotgun", true)
 addEventHandler("Shotgun",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 15000) then
     takePlayerMoney(source,15000)
@@ -49,6 +96,8 @@ end)
 addEvent("Spaz", true)
 addEventHandler("Spaz",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 15000) then
     takePlayerMoney(source,15000)
@@ -61,6 +110,8 @@ end)
 addEvent("Mp5", true)
 addEventHandler("Mp5",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 13000) then
     takePlayerMoney(source,13000)
@@ -73,6 +124,8 @@ end)
 addEvent("Tec", true)
 addEventHandler("Tec",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 12000) then
     takePlayerMoney(source,12000)
@@ -85,6 +138,8 @@ end)
 addEvent("Uzi", true)
 addEventHandler("Uzi",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 12000) then
     takePlayerMoney(source,12000)
@@ -97,6 +152,8 @@ end)
 addEvent("M4", true)
 addEventHandler("M4",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 25000) then
     takePlayerMoney(source,25000)
@@ -109,6 +166,8 @@ end)
 addEvent("AK", true)
 addEventHandler("AK",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 25000) then
     takePlayerMoney(source,25000)
@@ -122,6 +181,8 @@ end)
 addEvent("Rifle", true)
 addEventHandler("Rifle",root,
 function()
+	if not verifyGunShopBuyer() then return end -- FIX: pin buyer to real caller + require presence at the shop
+	local source = client
 local PlayerMoney = getPlayerMoney(source)
  if ( PlayerMoney >= 15000) then
     takePlayerMoney(source,15000)
