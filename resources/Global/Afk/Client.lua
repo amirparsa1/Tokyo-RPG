@@ -21,6 +21,7 @@ if getElementData(getLocalPlayer(), "inSleep") ~= true then
 
 	end
 end
+removeEventHandler("onClientRender",root,You) -- FIX: avoid stacking duplicate render handlers
 addEventHandler ( "onClientRender",root,You)
 Count()
 end )
@@ -39,6 +40,7 @@ function Count()
 			dxDrawText(" Move To Cancel", x-700,y-243,sw,sh,tocolor ( 255, 0, 0, 255 ), 1, "pricedown","center", "center", false, false, false)
 		end
 		
+		removeEventHandler("onClientRender",root,txt) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender" , root ,txt)
 		
 	timer =	setTimer ( 

@@ -518,6 +518,7 @@ addEventHandler ("onClientClick", root, Granadas)
 function abrir( key, keyState )
 --if not isPedInVehicle ( localPlayer ) and isPedInVehicle ( localPlayer ) then
     if ( keyState == 'down' ) then
+        removeEventHandler("onClientRender",root,dx) -- FIX: avoid stacking duplicate render handlers
         addEventHandler ("onClientRender", root, dx)
 		showCursor (true)
 		som = playSound("sfx/effect.mp3")

@@ -80,6 +80,7 @@ addEventHandler( "onClientResourceStart", getResourceRootElement( getThisResourc
 			if not colorCode then colorCode = {0,176,255} end
 		end
 		
+		removeEventHandler("onClientRender",getRootElement(),drawScoreboard) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler( "onClientRender", getRootElement(), drawScoreboard )
 		triggerServerEvent( "onClientDXScoreboardResourceStart", getRootElement() )
 		readScoreboardSettings()
@@ -1292,4 +1293,5 @@ function getFPSForPlayer()
 		fps = 1
 	end
 end
+removeEventHandler("onClientRender",getRootElement(),getFPSForPlayer) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender",getRootElement(),getFPSForPlayer)

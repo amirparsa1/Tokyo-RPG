@@ -228,7 +228,9 @@ function TuneCar( CarID, NowTune) -- #VeCtoR
 				setElementData(Mashin, "NowTestTimer", 0)
 				setElementData(Mashin, "NowTestTimerDrag", 0)
 				setElementData(Mashin, "NowTestTimerU", 0)
-				killTimer (TimereTestMC)
+				if isTimer(TimereTestMC) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer (TimereTestMC)
+				end
 			end
 
 				-->> -->> Nitro <<-- <<--
@@ -1680,7 +1682,9 @@ function TestKonTimer (thePlayer, Moshtari, CarID, TimerTest )
 			setElementData(thePlayer, "CarID", CarID)
 			setElementData(thePlayer, "TestCarID", CarID)
 			TestTimer(	getElementData(thePlayer,"CarID"),	getElementData(thePlayer,"NewTuneTestTime"))
-			killTimer (TimereTestMC)
+			if isTimer(TimereTestMC) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+				killTimer (TimereTestMC)
+			end
 			TimereTestMC = setTimer( function () -- End She Time Test
 				for index, Mashin in ipairs( getElementsByType("vehicle") ) do
 					if getElementData(Mashin,"vehicleID") and getElementData(Mashin,"vehicleID") == CarID then
@@ -1793,7 +1797,9 @@ function KillTimerTune (thePlayer, Moshtari, CarID, TimerTest)
 						else
 							setVehicleHandling(Mashin, "suspensionForceLevel", tonumber(susforceshn) )
 						end
-						killTimer (TimereTestMC)
+						if isTimer(TimereTestMC) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+							killTimer (TimereTestMC)
+						end
 						exports["notf"]:addNotification(thePlayer, "Teste Tune In Khodro Laghv Shod!" , 'info')
 						exports["notf"]:addNotification(find, "Teste Tune In Khodro Tavasote Mechanic "..getPlayerName(thePlayer).." Laghv Shod!" , 'info')
 						triggerClientEvent ( thePlayer, "Playinfo", thePlayer)

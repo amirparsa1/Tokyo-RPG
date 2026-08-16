@@ -352,7 +352,9 @@ end
 function aRemoveUnmuteTimer( player )
 	local serial = getPlayerSerial( player )
 	if aUnmuteTimerList[serial] then
-		killTimer( aUnmuteTimerList[serial] )
+		if isTimer(aUnmuteTimerList[serial]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer( aUnmuteTimerList[serial] )
+		end
 		aUnmuteTimerList[serial] = nil
 	end
 end

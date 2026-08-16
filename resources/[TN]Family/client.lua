@@ -950,6 +950,7 @@ function reloadinfopanel()
 end
 function baktohomepage()
     
+    removeEventHandler("onClientRender",root,drawDXPanelFamilyManage) -- FIX: avoid stacking duplicate render handlers
     addEventHandler("onClientRender",root,drawDXPanelFamilyManage)
     guiSetVisible(PanelChapeSetting,false)
     guiSetVisible(PanelChapeSetting2,false)
@@ -989,6 +990,7 @@ function ()
         end
     elseif source == DokmeBackeAzVehcle then
         guiSetVisible(PanelKharideVeh,false)
+        removeEventHandler("onClientRender",root,drawDXPanelFamilyManage) -- FIX: avoid stacking duplicate render handlers
         addEventHandler("onClientRender",root,drawDXPanelFamilyManage)
         guiSetVisible(Players,true)
         homepage = true
@@ -1015,6 +1017,7 @@ function ()
         guiSetVisible(DokmeChengeParkingLoc,false)
         guiSetVisible(DokmeChengeInformationFamily,false)
         guiSetVisible(DokmeBackeAzSetting,false)
+        removeEventHandler("onClientRender",root,drawDXPanelFamilyManage) -- FIX: avoid stacking duplicate render handlers
         addEventHandler("onClientRender",root,drawDXPanelFamilyManage)
         guiSetVisible(Players,true)
         homepage = true
@@ -1478,6 +1481,7 @@ function OpenPanelManageFamily(player)
             fmvisable=true
             playSound( "Sounds/s1.wav", false)
             guiSetVisible(BackGrundManageFamilyPanel,true)
+            removeEventHandler("onClientRender",root,drawDXPanelFamilyManage) -- FIX: avoid stacking duplicate render handlers
             addEventHandler("onClientRender",root,drawDXPanelFamilyManage)
             triggerServerEvent("PanelInfomationLoader", getLocalPlayer(), getLocalPlayer() )
         else
@@ -1952,6 +1956,7 @@ function dxfamilylist()
 end
 function openpanelfamilylist()
     panelfamilylist = true
+    removeEventHandler("onClientRender",root,dxfamilylist) -- FIX: avoid stacking duplicate render handlers
     addEventHandler("onClientRender",root,dxfamilylist)
 end
 

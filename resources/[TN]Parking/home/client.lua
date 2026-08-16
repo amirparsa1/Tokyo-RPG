@@ -85,6 +85,7 @@ function startHomeBuying()
 	markerkharid = home.temp.marker
 	--guiSetVisible(window_buyHome,true)
 	--outputChatBox("IS.."..idhouses)
+	removeEventHandler("onClientRender",root,drawHouSys) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,drawHouSys)
 
 end
@@ -164,6 +165,7 @@ function openHomeControl(data)
 	ownergarage = data.owner
 	garageprice = data.price
 	housmodevisable = true
+	removeEventHandler("onClientRender",root,drawHoumodSys) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,drawHoumodSys)
 end
 addEvent('home:openHomeControl',true)

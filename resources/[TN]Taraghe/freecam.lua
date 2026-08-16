@@ -245,6 +245,7 @@ function setFreecamEnabled (x, y, z)
 	if (x and y and z) then
 	    setCameraMatrix ( camPosX, camPosY, camPosZ )
 	end
+	removeEventHandler("onClientRender",rootElement,freecamFrame) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender", rootElement, freecamFrame)
 	addEventHandler("onClientCursorMove",rootElement, freecamMouse)
 	enabled = true

@@ -2,6 +2,7 @@
 
 local screenW, screenH = guiGetScreenSize()
 function createJailTime()
+	removeEventHandler("onClientRender",getRootElement(),renderLoginPanel) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",getRootElement(),renderLoginPanel)
 end
 addEvent( "onSyncTime", true )

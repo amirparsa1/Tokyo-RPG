@@ -179,6 +179,7 @@ local function onRender ( )
 		end
 	end
 end
+removeEventHandler("onClientRender",root,onRender) -- FIX: avoid stacking duplicate render handlers
 addEventHandler ( "onClientRender", root, onRender )
 
 function onFire ( key, keyState )

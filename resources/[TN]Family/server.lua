@@ -2197,18 +2197,19 @@ function createKamion(x,y,z,rx,ry,rz,id)
 end
 TimerKamion = {}
 function StartEventKamionMat()
+    -- FIX (bugfix pass 3): the material-truck event was unreliable.
+    --   1. killTimer() was called on TimerKamion[1]/[2] without isTimer(). Once a
+    --      timer had already elapsed the stored value was a dead handle, and
+    --      killTimer raised "Bad argument", aborting the whole function -- so the
+    --      event silently never started.
+    --   2. See the note at the end of this function about TimerKamion being
+    --      nil'd immediately after being set.
     local id = 0
-    if TimerKamion[1] then
-        killTimer(TimerKamion[1])
-    end
-    if TimerKamion[2] then
-        killTimer(TimerKamion[2])
-    end
-    if TimerKamion[2] then
-        if isTimer( TimerKamion[2] ) then
-            killTimer(TimerKamion[2])
-
+    for i = 1, 2 do
+        if TimerKamion[i] and isTimer(TimerKamion[i]) then
+            killTimer(TimerKamion[i])
         end
+        TimerKamion[i] = nil
     end
     endeventkamion()
 
@@ -2241,10 +2242,21 @@ function StartEventKamionMat()
                 notfSys:addWarning(allpl,"(( Kamion Haml Matrial Spawn Shod ))","warning")
             end
         end
+        TimerKamion[1] = nil
     end,300000,1)
-    TimerKamion[2] = setTimer(function() endeventkamion() nowevent = false end,2400000,1)
-    TimerKamion[2] = nil
-    TimerKamion[1] = nil
+    -- FIX (bugfix pass 3): the two lines below used to read
+    --       TimerKamion[2] = nil
+    --       TimerKamion[1] = nil
+    --   immediately after the timers were created. That threw away the handles,
+    --   so the next StartEventKamionMat() could not cancel the running event and
+    --   two overlapping truck events could exist at once (duplicate blips,
+    --   nowevent stuck true, items unusable via CanUseItem). The handles are now
+    --   kept; they are cleared when the timers actually fire.
+    TimerKamion[2] = setTimer(function()
+        endeventkamion()
+        nowevent = false
+        TimerKamion[2] = nil
+    end,2400000,1)
 end
 
 function putkamion (thePlayer)
@@ -3518,7 +3530,9 @@ function FFAEVENTSTART()
                 for i = 1,#Reversed  do
                     Reversed[i] = nil
                 end
-                killTimer(ffatimer)
+                if isTimer(ffatimer) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+                	killTimer(ffatimer)
+                end
             end
         end,1000,0)
         for index,allpl in ipairs(getElementsByType("player")) do

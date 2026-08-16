@@ -68,6 +68,7 @@ function startSnow()
 		end
 		
 	--	outputChatBox(string.format("Width/Depth: %.1f",box_width))
+		removeEventHandler("onClientRender",root,drawSnow) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender",root,drawSnow)
 		snowing = true
 	--	outputChatBox("Snow started")

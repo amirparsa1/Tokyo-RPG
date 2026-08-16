@@ -198,6 +198,7 @@ function type3_2(px,py,pz,r2)
 	local pzs = pz+math.random(50,55)
 	moveObject(ball,r2,pxs,pys,pzs,0,0,0,"OutBack")
 	flare = createEffect("smoke_flare",pxs,pys,pzs,90,0,90,2000)
+	removeEventHandler("onClientRender",root,type3_3) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,type3_3)
 	setTimer(
 		function()

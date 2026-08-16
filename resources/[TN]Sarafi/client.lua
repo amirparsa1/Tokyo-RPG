@@ -163,6 +163,7 @@ function openpanelsarafi(thePlayer,goldeshtaraf)
         sarafivisable = true
 		guiSetText( goldeshtaraflabael , "Your Gold: "..tostring(goldeshtaraf).." g"  )
 
+        removeEventHandler("onClientRender",root,drawSarafiSys) -- FIX: avoid stacking duplicate render handlers
         addEventHandler("onClientRender",root,drawSarafiSys)
         guiSetVisible( bgsarafi, true )   
 		guiSetVisible( bgbuttn, true ) 

@@ -309,10 +309,13 @@ addEventHandler("showHousePage",getLocalPlayer(),function(thePlayer,State,ID,Own
 		if bizvisable ~= true then
 			showCursor(true)
 			bizvisable = true
+			removeEventHandler("onClientRender",root,drawBizSys) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,drawBizSys)
 			
 			if closeTimer[getLocalPlayer()] then
-				killTimer(closeTimer[getLocalPlayer()])
+				if isTimer(closeTimer[getLocalPlayer()]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer(closeTimer[getLocalPlayer()])
+				end
 				closeTimer[getLocalPlayer()] = nil
 			end
 			nowVorodi=Vorodi

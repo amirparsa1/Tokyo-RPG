@@ -820,6 +820,13 @@ function openMain( )
             aksshop = "Shop"
             levelaks = "Level_Reward"
             firindaks = "Referral_Reward"
+            -- FIX (bugfix pass 3): F1 could get stuck (cursor locked, chat hidden,
+            --   panel drawn twice). If dashvisable and the render handler ever fell
+            --   out of sync -- which happens when another script hides the panel,
+            --   on respawn, or when an animation/state change interrupts the close
+            --   path -- this line stacked a SECOND onClientRender handler. Removing
+            --   it first makes the open idempotent.
+            removeEventHandler("onClientRender",root,drawDashBoard)
             addEventHandler("onClientRender",root,drawDashBoard)
             showCursor( true )
             dashvisable = true
@@ -832,6 +839,11 @@ function openMain( )
             removeEventHandler("onClientRender",root,drawDashBoard)
             showCursor( false )
             dashvisable = nil
+            -- FIX (bugfix pass 3): also drop any animation/sub-panel state so the
+            --   next F1 press starts clean instead of reopening mid-animation.
+            kamkonazx = 0
+            ErtefaLevelRew = 0
+            ClosePanelLevelRew(getLocalPlayer())
 
 
         end

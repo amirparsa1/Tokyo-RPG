@@ -6,6 +6,7 @@ function renderRent()
 end
 
 function renderingRent ( )
+    removeEventHandler("onClientRender",root,renderRent) -- FIX: avoid stacking duplicate render handlers
     addEventHandler ( "onClientRender", root, renderRent ) 
 	setTimer(function()
 	removeEventHandler("onClientRender", getRootElement(), renderRent)
@@ -23,6 +24,7 @@ function renderUnrent()
 end
 
 function renderingUnrent ( )
+    removeEventHandler("onClientRender",root,renderUnrent) -- FIX: avoid stacking duplicate render handlers
     addEventHandler ( "onClientRender", root, renderUnrent ) 
 	setTimer(function()
 	removeEventHandler("onClientRender", getRootElement(), renderUnrent)

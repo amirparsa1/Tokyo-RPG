@@ -75,7 +75,9 @@ function CreateCr1( player )
                 setMarkerColor(col4, math.random(0, 255), math.random(0, 255), math.random(0, 255), 160)
                 setMarkerColor(col5, math.random(0, 255), math.random(0, 255), math.random(0, 255), 160)
             else
-                killTimer(flashTimer)
+                if isTimer(flashTimer) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+                	killTimer(flashTimer)
+                end
             end
         end
         flashTimer = setTimer(flashMark, 100, 7)    

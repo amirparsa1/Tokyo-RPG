@@ -473,6 +473,7 @@ function openpanelICACoNTrAcT(player)
 			end
 
 		end
+		removeEventHandler("onClientRender",root,DrawDXICAPANELCANTRACT) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender",root,DrawDXICAPANELCANTRACT)
 		ALPHACICAHITMANH = 255
 		ALPHACICAHITMANM1 = 100

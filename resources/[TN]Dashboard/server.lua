@@ -496,10 +496,14 @@ function buyNewLevel( thePlayer, command )
 			givePlayerMoney(thePlayer, tonumber(ArryLevel[i][2]))
 			setElementData(accSys:getPlayerAcc(thePlayer), "pGold", tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pGold"))+tonumber(ArryLevel[i][3]))
 			outputChatBox("(Dashboard-System):Shoma Be Sath #FF0000"..NexLev.." #FFFFFFErtegha Yaftid. Gift: #00FF00"..ArryLevel[i][2].."$ #FFFFFFVa Meghdar #FFFF00"..ArryLevel[i][3].."g #FFFFFFRa Daryaft Kardid.",thePlayer,255,255,255,true)
+			-- FIX (bugfix pass 3): refresh cached F1 panel values after the purchase.
+			statsetkon(thePlayer)
 			return false
 		end
 	end
 	outputChatBox("(Dashboard-System):Tabrik. Shoma Be Sath #FF0000"..NexLev.." #FFFFFFErtegha Yaftid.",thePlayer,255,255,255,true)
+	-- FIX (bugfix pass 3): refresh cached F1 panel values after the purchase.
+	statsetkon(thePlayer)
 
 end
 addEvent("bekharleveloo",true)
@@ -522,6 +526,11 @@ function bekharSlot(root)
 		setElementData(accSys:getPlayerAcc(root), "pSlot", tonumber(pSlot) + 1)
 		setElementData(accSys:getPlayerAcc(root), "pGold", tonumber(pGold) - 1250)
 		exports["notf"]:addNotification(root, "Shoma Ba Movafaghiat (1) 'Slot Car' Kharidid!" , 'success')
+		-- FIX (bugfix pass 3): the F1 panel caches gold/slot in locals that are
+		--   only refreshed by the "upstats" event. Without this call the numbers
+		--   on screen stayed at their pre-purchase values until the panel was
+		--   closed and reopened.
+		statsetkon(root)
 	else
 		exports["notf"]:addNotification(root, "Shoma Be 1250 Gold Baraye Kharid (1) 'Slot Car' Niaz Darid! Baraye Afzayesh Gold /shop" , 'error')
 	end
@@ -536,6 +545,11 @@ function bekharlifeSlot(root)
 		setElementData(accSys:getPlayerAcc(root), "pSspeakerLife",  1)
 		setElementData(accSys:getPlayerAcc(root), "pGold", tonumber(pGold) - 200000)
 		exports["notf"]:addNotification(root, "Shoma Ba Movafaghiat Item 'Speaker Life Time' Ra Kharidari Kardid" , 'success')
+		-- FIX (bugfix pass 3): the F1 panel caches gold/slot in locals that are
+		--   only refreshed by the "upstats" event. Without this call the numbers
+		--   on screen stayed at their pre-purchase values until the panel was
+		--   closed and reopened.
+		statsetkon(root)
 
 	else
 		exports["notf"]:addNotification(root, "Shoma Be 200,000 Gold Baraye Kharid Niaz Darid ." , 'error')
@@ -598,6 +612,8 @@ function setNahayColorName(root,hex)
 			setElementData(accSys:getPlayerAcc(root), "pGold", tonumber(pGold) - 500)
 			exports["notf"]:addNotification(root, "Shoma Ba Movafaghiat Range Esm Khod Ra Avaz Kardid." , 'success')
 			outputChatBox("#00ff00[Tavajoh]: #ffffffRange Esme Shoma Be ["..coloresh..""..getPlayerName(root).."#ffffff] Taghir Yaft.", root, 255, 255, 255, true)
+			-- FIX (bugfix pass 3): refresh cached F1 panel values after the purchase.
+			statsetkon(root)
 		end
 	end
 

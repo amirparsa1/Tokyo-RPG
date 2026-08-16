@@ -92,6 +92,7 @@ function drawSpeedometer()
 		
 	end
 end
+removeEventHandler("onClientRender",root,drawSpeedometer) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender",root,drawSpeedometer)
 
 bindKey ("1", "down",

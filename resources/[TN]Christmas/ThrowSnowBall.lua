@@ -44,6 +44,7 @@ function throwBall(button, state)
 			BallRadius = 0.1
 			newGroundDiff = 1
 			Ballnewx,Ballnewy,Ballnewz = getElementPosition(theBall)
+			removeEventHandler("onClientRender",getRootElement(),throwedBall) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",getRootElement(),throwedBall)
 		end,300/getGameSpeed(),1)
 		setTimer(function()

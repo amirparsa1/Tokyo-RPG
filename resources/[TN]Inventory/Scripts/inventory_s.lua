@@ -184,9 +184,17 @@ addEventHandler("RequestShowInventory",getRootElement(),function(thePlayer)
 			InvTimer[thePlayer] = setTimer(function(thePlayer)
 				InvTimer[thePlayer] = nil
 			end,500,1,thePlayer)
+		else
+			-- FIX (bugfix pass 3): not logged in yet -> also answer, otherwise the
+			--   client stays in the pending state forever.
+			triggerClientEvent(thePlayer,"InventoryOpenRefused",thePlayer)
 		end
 	else
 		notfSys:addNotification(thePlayer,"Lotfan Spam Nakonid!","warning")
+		-- FIX (bugfix pass 3): tell the client the open was refused, so it can
+		--   clear its pending state. Previously the server just went silent and
+		--   the client was left with a half-open panel that F2 could not close.
+		triggerClientEvent(thePlayer,"InventoryOpenRefused",thePlayer)
 	end
 end)
 
@@ -2291,7 +2299,9 @@ addEventHandler("onPlayerWasted",getRootElement(),function()
 	local thePlayer = source
 	
 	if smokesyncer[thePlayer] then
-		killTimer(smokesyncer[thePlayer])
+		if isTimer(smokesyncer[thePlayer]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer(smokesyncer[thePlayer])
+		end
 		smokesyncer[thePlayer] = nil
 	end
 	
@@ -2314,7 +2324,9 @@ addEventHandler("onPlayerQuit",getRootElement(),function()
 	local thePlayer = source
 	
 	if smokesyncer[thePlayer] then
-		killTimer(smokesyncer[thePlayer])
+		if isTimer(smokesyncer[thePlayer]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer(smokesyncer[thePlayer])
+		end
 		smokesyncer[thePlayer] = nil
 	end
 	
@@ -2331,7 +2343,9 @@ function takeoffcigar(thePlayer)
 		sendPlayerMessage("#FF0000Shoma Cigar ro Endakhtid!",thePlayer)
 		
 		if smokesyncer[thePlayer] then
-			killTimer(smokesyncer[thePlayer])
+			if isTimer(smokesyncer[thePlayer]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+				killTimer(smokesyncer[thePlayer])
+			end
 			smokesyncer[thePlayer] = nil
 		end
 		
@@ -2362,7 +2376,9 @@ function smokecigar(thePlayer)
 			sendPlayerMessage("#FF0000Cigaret Tamoom Shod",thePlayer)
 			
 			if smokesyncer[thePlayer] then
-				killTimer(smokesyncer[thePlayer])
+				if isTimer(smokesyncer[thePlayer]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer(smokesyncer[thePlayer])
+				end
 				smokesyncer[thePlayer] = nil
 			end
 			
@@ -6566,11 +6582,19 @@ addEventHandler("RequestForgItem",getRootElement(),function(thePlayer,ItemSlot)
 					if not useObject[thePlayer] and not useTimer[thePlayer] then
 						if tonumber(ItemID) >= 1 then
 							if getDistanceBetweenPoints3D(Vector3(getElementPosition(thePlayer)),394.85430908203 ,2508.3073730469 ,-4.8885006904602) <= 25  and getElementInterior(thePlayer) == 85 and getElementDimension(thePlayer) == 69 then
+								-- FIX (bugfix pass 3): forging consumed the WHOLE stack in one click.
+								--   TakePlayerItem(...,ItemAmount) + GivePlayerItem(...,ItemAmount) meant a
+								--   player holding 20 diamonds instantly turned all 20 into rubies.
+								--   Forge exactly ONE diamond per action instead.
+								if not yaghots[ItemID] then
+									sendPlayerMessage("#fc3600[Error]:#FFFFFF In Item Ghabele Forg Nist!",thePlayer)
+									return
+								end
 								local FreeSlot = GetPlayerFreeSlot(thePlayer,yaghots[ItemID][2])
 								if FreeSlot >= 1 then
-									TakePlayerItem(thePlayer,ItemSlot,ItemAmount)
-									GivePlayerItem(thePlayer,yaghots[ItemID][2],ItemAmount,FreeSlot)
-									sendPlayerMessage("[Farm-System]:#FFFFFF Shoma Ba Movafaghiat Almas Khod Ra Be Yaghot Tabdil Kardid!!",thePlayer)
+									TakePlayerItem(thePlayer,ItemSlot,1)
+									GivePlayerItem(thePlayer,yaghots[ItemID][2],1,FreeSlot)
+									sendPlayerMessage("[Farm-System]:#FFFFFF Shoma Ba Movafaghiat #FFD700 1x "..yaghots[ItemID][1].."#FFFFFF Sakhtid!! ("..math.max(tonumber(ItemAmount)-1,0).." Almas Baghi Mande)",thePlayer)
 								else
 									sendPlayerMessage("#CCE5FF[Farm-System]:#FFFFFF Shoma Slot Khali Nadarid!",thePlayer)
 								end

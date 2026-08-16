@@ -212,6 +212,7 @@ function Animation:play()
 		table.insert(Animation.collection, self)
 	end
 	if not Animation.playingAnimationsExist() then
+		removeEventHandler("onClientRender",getRootElement(),updateAnim) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler('onClientRender', getRootElement(), updateAnim)
 	end
 	self.playing = true

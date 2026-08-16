@@ -29,7 +29,9 @@ function aCommunityValidate ( player, username, serial )
 	local function result ( player, res )
 		local cr = aCommunity.players[player].cr
 		coroutine.resume ( cr, result ~= 0 )
-		killTimer ( aCommunity.players[player].t )
+		if isTimer(aCommunity.players[player].t) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer ( aCommunity.players[player].t )
+		end
 		aCommunity.players[player] = nil
 	end
 
@@ -55,7 +57,9 @@ function communityCall ( file, ... )
 
 	function temp ( ... )
 		coroutine.resume ( c, ... )
-		killTimer ( t )
+		if isTimer(t) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer ( t )
+		end
 	end
 
 	callRemote ( file, temp, ... )

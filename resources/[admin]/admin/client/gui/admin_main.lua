@@ -359,6 +359,7 @@ y=y+B  aTab1.VehicleHealth	= guiCreateLabel ( 0.26, y, 0.25, 0.04, "Vehicle Heal
 		addEventHandler ( "onClientGUIAccepted", aAdminForm, aClientGUIAccepted )
 		addEventHandler ( "onClientGUIChanged", aAdminForm, aClientGUIChanged )
 		addEventHandler ( "onClientCursorMove", _root, aClientCursorMove )
+		removeEventHandler("onClientRender",_root,aClientRender) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender", _root, aClientRender )
 		addEventHandler ( "onClientPlayerChangeNick", _root, aClientPlayerChangeNick )
 		addEventHandler ( "onClientResourceStop", _root, aMainSaveSettings )

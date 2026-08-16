@@ -627,6 +627,7 @@ setTimer(function()
 	Music = playSound("Data/Sounds/Music.mp3",true)
 	setSoundVolume(Music,0.5)
 	toggleAllControls(false)
+	removeEventHandler("onClientRender",root,DrawDXAccountSystem) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,DrawDXAccountSystem)
 	--guiSetProperty(LoginPageBg,"Visible","True")
 	guiSetProperty( loadscreen, "Visible", "False" )
@@ -650,6 +651,7 @@ function CameraMatrixRender()
 		guiBringToFront ( RegisterPageBg )
 	end
 end
+removeEventHandler("onClientRender",root,CameraMatrixRender) -- FIX: avoid stacking duplicate render handlers
 addEventHandler ( "onClientRender", root, CameraMatrixRender )
 
 
@@ -664,6 +666,7 @@ function LoginToRegisterStep1()
 		guiSetProperty( LoginPageBg, "Visible", "False" )
 		guiSetProperty( RegisterPageBg, "Visible", "True" )
 		guiSetAlpha( RegisterPageBg, 0 )
+		removeEventHandler("onClientRender",root,LoginToRegisterStep2) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender", root, LoginToRegisterStep2 )
 		removeEventHandler( "onClientRender", root, LoginToRegisterStep1 )
 	end
@@ -688,6 +691,7 @@ function RegisterToLoginStep1()
 		guiSetProperty( RegisterPageBg, "Visible", "False" )
 		guiSetProperty( LoginPageBg, "Visible", "True" )
 		guiSetAlpha( LoginPageBg, 0 )
+		removeEventHandler("onClientRender",root,RegisterToLoginStep2) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender", root, RegisterToLoginStep2 )
 		removeEventHandler( "onClientRender", root, RegisterToLoginStep1 )
 	end
@@ -753,8 +757,10 @@ function ()
 		triggerServerEvent ( "attemptLogin", getLocalPlayer(), getLocalPlayer(), guiGetText(UsernameLabel), PassWord )
 		--outputChatBox("PassWord Was: "..PassWord.."")
 	elseif source == RegisterPageButton then
+		removeEventHandler("onClientRender",root,LoginToRegisterStep1) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender", root, LoginToRegisterStep1 )
 	elseif source == LoginPageButton then 
+		removeEventHandler("onClientRender",root,RegisterToLoginStep1) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler ( "onClientRender", root, RegisterToLoginStep1 )
 	elseif source == RemButton then
 		if RememberState == true then

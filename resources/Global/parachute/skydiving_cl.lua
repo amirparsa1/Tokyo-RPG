@@ -101,6 +101,7 @@ local function onRender()
 					setPedRotation ( localPlayer, -rotZ )
 					setElementRotation ( localPlayer, rotX, 0, rotZ )
 					if not warning and processLineOfSight ( x,y,z, x,y,z-WARNING_HEIGHT, true, false,false,true,false,false,false,false,localPlayer ) then
+						removeEventHandler("onClientRender",root,warningText) -- FIX: avoid stacking duplicate render handlers
 						addEventHandler ( "onClientRender", root, warningText )
 						warningText() -- Prevent the event handler being called next frame
 					end			
@@ -140,6 +141,7 @@ local function onRender()
 		end
 	end
 end
+removeEventHandler("onClientRender",root,onRender) -- FIX: avoid stacking duplicate render handlers
 addEventHandler ( "onClientRender", root, onRender )
 
 

@@ -220,6 +220,7 @@ function Leasers()
     dxDrawLine3D ( cx, cy, ColSheperPOSITIONZ+1.5+1.5+1.5+1.5, lx, ly, ColSheperPOSITIONZ+1.5+1.5+1.5+1.5, tocolor ( 255, 0, 0, 230 ), 6)
     dxDrawLine3D ( cx, cy, ColSheperPOSITIONZ+1.5+1.5+1.5+1.5+1.5, lx, ly, ColSheperPOSITIONZ+1.5+1.5+1.5+1.5+1.5, tocolor ( 255, 0, 0, 230 ), 6)
 end
+removeEventHandler("onClientRender",root,Leasers) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender",root,Leasers)
 --Kharabkar 
 local ButtonsOfTask = {3 , 1 , 10 , 8 , 6 , 5 , 2 , 9 , 7 , 4}
@@ -454,6 +455,7 @@ function addLabelOnClick ( button, state, absoluteX, absoluteY, worldX, worldY, 
 end
 function CreateJoshkarPanel(Stat)
     if Stat == "Show" then 
+        removeEventHandler("onClientRender",root,Joshkar) -- FIX: avoid stacking duplicate render handlers
         addEventHandler("onClientRender",root,Joshkar)
         addEventHandler ( "onClientClick",root, addLabelOnClick )
         isPlayerJoshkar = true

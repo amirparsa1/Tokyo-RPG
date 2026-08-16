@@ -24,6 +24,7 @@ addEventHandler("cartheft:getcar", getRootElement(),
 			setElementData(blip, "exclusiveBlip", true)
 		carMarker = createMarker(stopMarker[1], stopMarker[2], stopMarker[3], "cylinder", 4.5,   181 , 246 , 181 ,60)
 		addEventHandler("onClientMarkerHit", carMarker, stopJob)
+		removeEventHandler("onClientRender",getRootElement(),render) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender", getRootElement(), render)
 		theftTimer = setTimer(function()
 			destroyElement(zone)
@@ -109,7 +110,9 @@ function stopJob(hitPlayer, matchingDimension)
 		local vehicle = getPedOccupiedVehicle(localPlayer)
 		if vehicle and getVehicleController(vehicle) == localPlayer then
 			if getElementData(vehicle, "cartheft:player") == localPlayer then
-				killTimer(theftTimer)
+				if isTimer(theftTimer) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer(theftTimer)
+				end
 				destroyElement(zone)
 				destroyElement(blip)
 				destroyElement(carMarker)

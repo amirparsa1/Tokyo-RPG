@@ -113,10 +113,13 @@ function toggleScreen()
 	if isScreenVisible then
 		closeScreen()
 	else
+		removeEventHandler("onClientRender",root,mainScreen) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender",root,mainScreen)
 		if defaultSex == "male" then
+			removeEventHandler("onClientRender",root,maleActivated) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,maleActivated)
 		elseif defaultSex == "female" then
+			removeEventHandler("onClientRender",root,femaleActivated) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,femaleActivated)
 		end
 
@@ -245,6 +248,7 @@ function changeSex(sex)
 		setMenuPedSkin()
 		if isScreenVisible then
 			removeEventHandler("onClientRender",root,maleActivated)
+			removeEventHandler("onClientRender",root,femaleActivated) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,femaleActivated)
 		end
 	end

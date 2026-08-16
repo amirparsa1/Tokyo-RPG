@@ -654,6 +654,7 @@ function hudrajzol ()
 	if mySavedConfig[20]["showing"] or valaszto then
 	end
 end
+removeEventHandler("onClientRender",getRootElement(),hudrajzol) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender", getRootElement(), hudrajzol)
 
 

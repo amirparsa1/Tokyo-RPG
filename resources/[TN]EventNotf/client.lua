@@ -56,4 +56,5 @@ function dx_drawGtaV()
         end
     end
 end
+removeEventHandler("onClientRender",root,dx_drawGtaV) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender", root, dx_drawGtaV)

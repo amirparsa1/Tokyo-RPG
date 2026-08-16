@@ -240,6 +240,7 @@ end
 function Superman.onEnter()
 
 	if (isPlayerFlying(localPlayer) or getElementData(localPlayer,"superman:takingOff")) and not isTimer(warningTimer) then
+		removeEventHandler("onClientRender",root,showWarning) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender",root,showWarning)
 		warningTimer = setTimer(hideWarning,5000,1)
 	end

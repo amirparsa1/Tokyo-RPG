@@ -372,9 +372,13 @@ end)
 addEvent("ShowInventoryForPlayer",true)
 addEventHandler("ShowInventoryForPlayer",getLocalPlayer(),function(thePlayer,InventoryData,ShowMode)
 	if ( thePlayer == getLocalPlayer() ) then
+		-- FIX (bugfix pass 3): the server confirmed, so it is now safe to reveal
+		--   the outer frame. See the note in panelinventory().
+		inventoryPending = nil
 		if ShowMode == 1 then
 			LoadPlayerInventory(thePlayer,InventoryData)
 		else
+			guiSetVisible( InventoryBGFull, true )
 			guiSetProperty(InventoryBG,"Visible","True")
 			showChat(false)
 			hideALL = true
@@ -534,6 +538,7 @@ addEventHandler("onClientGUIClick",getRootElement(),function(button)
 	elseif source == ForgItemx then
 		triggerServerEvent("RequestForgItem",getLocalPlayer(),getLocalPlayer(),ActionSlot)
 	elseif source == PutInCraftItemx then
+		removeEventHandler("onClientRender",root,DrawCraftSystem) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler("onClientRender",root,DrawCraftSystem)
 		if itemcraft1 == 0 then
 			itemcraft1 = ClientTable[TPlayer][tonumber(ActionSlot)]["Item"]
@@ -608,7 +613,14 @@ function panelinventory()
 			itemcraft1 = 0 
 			itemcraft2 = 0
 			itemcraft3 = 0
-			guiSetVisible( InventoryBGFull, true )
+			-- FIX (bugfix pass 3): F2 sometimes refused to open.
+			--   The client used to reveal InventoryBGFull here, but the server
+			--   silently drops RequestShowInventory while its own 500ms anti-flood
+			--   timer (InvTimer) is running. When that happened InventoryBG never
+			--   became "True", so the panel stayed half-open and F2 appeared dead
+			--   until something else reset it. The frame is now shown only once
+			--   the server answers (see ShowInventoryForPlayer).
+			inventoryPending = true
 			itemcraftis[1] = false
 			itemcraftis[2] = false
 			itemcraftis[3] = false
@@ -637,6 +649,40 @@ function panelinventory()
 	end
 end
 bindKey("F2","down",panelinventory)
+
+-- FIX (bugfix pass 3): recovery path for F2.
+--   The server refuses RequestShowInventory while its anti-flood timer runs or
+--   before the player is logged in. Without an answer the client used to sit in
+--   a pending state with the panel half-open and F2 doing nothing.
+addEvent("InventoryOpenRefused", true)
+addEventHandler("InventoryOpenRefused", localPlayer, function()
+	inventoryPending = nil
+	if isElement(InventoryBGFull) then guiSetVisible(InventoryBGFull, false) end
+	if isElement(InventoryBG) then guiSetProperty(InventoryBG, "Visible", "False") end
+	showCursor(false)
+	showChat(true)
+	hideALL = false
+	-- clear the client-side spam guard too, so the next F2 press works
+	if spamtimer[getLocalPlayer()] then
+		if isTimer(spamtimer[getLocalPlayer()]) then killTimer(spamtimer[getLocalPlayer()]) end
+		spamtimer[getLocalPlayer()] = nil
+	end
+end)
+
+-- FIX (bugfix pass 3): safety net -- if a request is left pending for more than
+--   3 seconds (dropped packet, server error, resource restart), unstick F2.
+setTimer(function()
+	if inventoryPending then
+		inventoryPending = nil
+		if isElement(InventoryBGFull) and guiGetVisible(InventoryBGFull)
+		   and isElement(InventoryBG) and guiGetProperty(InventoryBG,"Visible") == "False" then
+			guiSetVisible(InventoryBGFull, false)
+			showCursor(false)
+			showChat(true)
+			hideALL = false
+		end
+	end
+end, 3000, 0)
 function bekanAzJa()
 	if occupiedGUI and attachedGUI then
 		occupiedGUI = nil
@@ -784,6 +830,7 @@ end)
 
 
 function startFishing()
+	removeEventHandler("onClientRender",root,iconBecomingRight) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,iconBecomingRight)
 end
  -- 0.386 - 0.495
@@ -1034,6 +1081,7 @@ function SelfmadeHUD()
 	
 	
 end
+removeEventHandler("onClientRender",root,SelfmadeHUD) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender",root,SelfmadeHUD)
 
 
@@ -2515,6 +2563,7 @@ end
 FishName = 0
 addEvent("Fish:StartRender",true)
 addEventHandler("Fish:StartRender",getLocalPlayer(),function(thePlayer,key,deff)
+	removeEventHandler("onClientRender",root,renderFish) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender",root,renderFish)
 	bindKey(key,"down",getFish)
 	KeyName = key
@@ -2556,7 +2605,9 @@ addEventHandler("Fish:StopRender",getLocalPlayer(),function(thePlayer)
 	difficulty = 0
 	arrowPos = 0 
 	whereGo = 0
-	killTimer(Mmd)
+	if isTimer(Mmd) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+		killTimer(Mmd)
+	end
 end)
 
 addEvent("Fish:startFish",true)

@@ -271,6 +271,7 @@ function nameToggle()
     theVehName = changeTable[theVehID]
     if not theVehName then theVehName = getVehicleName(theVeh) end
     theAlpha = 255
+    removeEventHandler("onClientRender",g_Root,textShow) -- FIX: avoid stacking duplicate render handlers
     addEventHandler( "onClientRender", g_Root, textShow )
     setTimer( startTextFade, 1000, 1)
 end
@@ -282,6 +283,7 @@ function textStart(thePlayer)
         theVehName = changeTable[theVehID]
         if not theVehName then theVehName = getVehicleName(source) end
         theAlpha = 255
+        removeEventHandler("onClientRender",g_Root,textShow) -- FIX: avoid stacking duplicate render handlers
         addEventHandler ( "onClientRender", g_Root, textShow )
         setTimer( startTextFade, 1000, 1)
     end

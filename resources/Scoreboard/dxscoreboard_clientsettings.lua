@@ -650,6 +650,7 @@ function createScoreboardSettingsWindow( posX, posY )
 	tempColors.content_color.a = settings.content_color.a or defaultSettings.content_color.a
 
 	addEventHandler( "onClientGUIClick", windowSettings, settingsWindowClickHandler )
+	removeEventHandler("onClientRender",getRootElement(),drawSettingsWindowColors) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler( "onClientRender", getRootElement(), drawSettingsWindowColors )
 end
 

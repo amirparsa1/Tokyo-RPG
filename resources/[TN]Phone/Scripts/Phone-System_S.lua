@@ -940,7 +940,9 @@ function removePhone(player)
 		phone[player] = nil
 	end
 	if (animTimer[player]) then
-		killTimer(animTimer[player])
+		if isTimer(animTimer[player]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer(animTimer[player])
+		end
 		animTimer[player] = nil
 	end
 	setPedAnimation(player)

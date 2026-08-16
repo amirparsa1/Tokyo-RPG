@@ -68,6 +68,7 @@ addEventHandler( "onClientResourceStart", getResourceRootElement( getThisResourc
 		bindKey( triggerKey, "up", "Toggle scoreboard", "0" )
 		bindKey( settingsKey, "down", "Open scoreboard settings", "1" )
 
+		removeEventHandler("onClientRender",getRootElement(),drawScoreboard) -- FIX: avoid stacking duplicate render handlers
 		addEventHandler( "onClientRender", getRootElement(), drawScoreboard )
 		triggerServerEvent( "onClientDXScoreboardResourceStart", getRootElement() )
 		readScoreboardSettings()

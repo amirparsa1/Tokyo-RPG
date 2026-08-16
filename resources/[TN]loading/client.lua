@@ -26,6 +26,7 @@ local function drawCurrentImage()
 end
 
 local function render()
+	removeEventHandler("onClientRender",root,drawCurrentImage) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender", root, drawCurrentImage)
 end
 addEventHandler("onClientResourceStart", resourceRoot, render)

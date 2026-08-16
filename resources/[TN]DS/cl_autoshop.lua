@@ -359,6 +359,7 @@ function initVehicleShopWindow()
 
 		setTimer(function() 
 			fadeCamera(true,1)
+			removeEventHandler("onClientRender",root,drawVehicleShop) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler("onClientRender",root,drawVehicleShop)
 			showCursor(true)
 			if currentShop ~= "VAZ8" then

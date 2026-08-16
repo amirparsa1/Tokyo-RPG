@@ -5,4 +5,5 @@ function syncTime()
     setTime( hour , minute ) 
 end 
   
+removeEventHandler("onClientRender",rootElement,syncTime) -- FIX: avoid stacking duplicate render handlers
 addEventHandler( "onClientRender" , rootElement , syncTime ) 

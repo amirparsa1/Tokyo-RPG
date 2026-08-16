@@ -375,7 +375,9 @@ function moveTarget ( target, x2, y2 )
 	_G[tostring ( target ).."Timer"] = setTimer ( 
 		function ( element )
 			if not isElement ( element ) then
-				killTimer ( _G[tostring ( element ).."Timer"] )
+				if isTimer(_G[tostring ( element ).."Timer"]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer ( _G[tostring ( element ).."Timer"] )
+				end
 			elseif not getElementData ( element, "flipping" ) then
 				local x1, y1, z1 = getElementData ( element, "x1" ), getElementData ( element, "y1" ), getElementData ( element, "z1" )
 				local x2, y2 = getElementData ( element, "x2" ), getElementData ( element, "y2" )
@@ -412,6 +414,7 @@ function startShootingRanchTest_func ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -421,6 +424,7 @@ function startShootingRanchTest_func ()
 							end
 						end
 						setTimer ( endShootingAk47, 1000, 0 )
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestAk47", true )
@@ -469,6 +473,7 @@ function startShootingRanchTest_func2 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -479,6 +484,7 @@ function startShootingRanchTest_func2 ()
 						end
 							setTimer ( endShootingDeagle, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestDeagle", true )
@@ -526,6 +532,7 @@ function startShootingRanchTest_func3 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -536,6 +543,7 @@ function startShootingRanchTest_func3 ()
 						end
 							setTimer ( endShootingM4, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestM4", true )
@@ -583,6 +591,7 @@ function startShootingRanchTest_func4 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -593,6 +602,7 @@ function startShootingRanchTest_func4 ()
 						end
 							setTimer ( endShootingShutgun, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestShutgun", true )
@@ -640,6 +650,7 @@ function startShootingRanchTest_func5 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -650,6 +661,7 @@ function startShootingRanchTest_func5 ()
 						end
 							setTimer ( endShootingSpaz12, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestSpaz12", true )
@@ -697,6 +709,7 @@ function startShootingRanchTest_func6 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -707,6 +720,7 @@ function startShootingRanchTest_func6 ()
 						end
 							setTimer ( endShootingMP5, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestMP5", true )
@@ -754,6 +768,7 @@ function startShootingRanchTest_func7 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -764,6 +779,7 @@ function startShootingRanchTest_func7 ()
 						end
 							setTimer ( endShootingPistol, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestPistol", true )
@@ -811,6 +827,7 @@ function startShootingRanchTest_func8 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -821,6 +838,7 @@ function startShootingRanchTest_func8 ()
 						end
 							setTimer ( endShootingSilenced, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestSilenced", true )
@@ -868,6 +886,7 @@ function startShootingRanchTest_func9 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -878,6 +897,7 @@ function startShootingRanchTest_func9 ()
 						end
 							setTimer ( endShootingRifle, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestRifle", true )
@@ -925,6 +945,7 @@ function startShootingRanchTest_func10 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -935,6 +956,7 @@ function startShootingRanchTest_func10 ()
 						end
 							setTimer ( endShootingSawed, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestSawed", true )
@@ -982,6 +1004,7 @@ function startShootingRanchTest_func11 ()
 	shootingRanchCountdountG = 0
 	shootingRanchCountdountB = 0
 			shootingRanchTimeLeftVal = 600
+			removeEventHandler("onClientRender",getRootElement(),shootingRanchDraw_render) -- FIX: avoid stacking duplicate render handlers
 			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
 						for key, index in pairs ( shootingRangeTargets ) do
 							if isElement ( key ) then
@@ -992,6 +1015,7 @@ function startShootingRanchTest_func11 ()
 						end
 							setTimer ( endShootingUzi, 1000, 0 )
 
+	removeEventHandler("onClientRender",getRootElement(),shootingRanchCountdown_render) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
 end
 addEvent ( "startShootingRanchTestUzi", true )

@@ -55,4 +55,5 @@ function animateParachuteOpen()
 		end
 	end
 end
+removeEventHandler("onClientRender",getRootElement(),animateParachuteOpen) -- FIX: avoid stacking duplicate render handlers
 addEventHandler ( "onClientRender", getRootElement(), animateParachuteOpen )

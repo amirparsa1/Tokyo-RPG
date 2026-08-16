@@ -202,22 +202,30 @@ local function doPedAttackOtherPlayer(ped)
 								setPedAimTarget(ped, x2, y2, z2)
 							end
 						else
-							killTimer(pedTimer[ped])
+							if isTimer(pedTimer[ped]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+								killTimer(pedTimer[ped])
+							end
 							pedShooting[ped] = false
 							setPedControlState(ped, "fire", false)
 						end
 					else
-						killTimer(pedTimer[ped])
+						if isTimer(pedTimer[ped]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+							killTimer(pedTimer[ped])
+						end
 						pedShooting[ped] = false
 						setPedControlState(ped, "fire", false)
 					end
 				end
 			else
-				killTimer(pedTimer[ped])
+				if isTimer(pedTimer[ped]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+					killTimer(pedTimer[ped])
+				end
 			end
 		end, 500, 20)
 	else
-		killTimer(pedTimer[ped])
+		if isTimer(pedTimer[ped]) then -- FIX: killTimer on an expired handle raises "Bad argument" and aborts the enclosing function
+			killTimer(pedTimer[ped])
+		end
 	end
 end
 

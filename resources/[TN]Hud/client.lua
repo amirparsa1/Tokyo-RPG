@@ -257,6 +257,7 @@ function getHealthColor(health)
 end
 
 function renderDxHud()
+	removeEventHandler("onClientRender",getRootElement(),dxHud1) -- FIX: avoid stacking duplicate render handlers
 	addEventHandler("onClientRender", getRootElement(), dxHud1)
 	setPlayerHudComponentVisible("armour", false)
 	setPlayerHudComponentVisible("wanted", false)

@@ -249,6 +249,7 @@ function togglehud()
     end
 end
 
+removeEventHandler("onClientRender",getRootElement(),togglehud) -- FIX: avoid stacking duplicate render handlers
 addEventHandler("onClientRender", getRootElement(), togglehud)
 
 function miniMapStatus(CMD, bool)
