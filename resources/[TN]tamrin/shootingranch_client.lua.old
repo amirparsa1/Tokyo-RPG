@@ -1,0 +1,1327 @@
+local gWindow = {}
+local gGrid = {}
+local gColumn = {}
+local gButton = {}
+
+local lp = getLocalPlayer ()
+
+local screenwidth, screenheight = guiGetScreenSize ()
+
+function createTargetToShoot ( x, y, z, rx, ry, r, int, dim, points )
+
+    
+	local frame = createObject ( 1587, -321.51257324219, 826.03668212891, 17.146434783936 )
+	setObjectScale ( frame, 0.8)
+	setElementData ( frame, "x", x )
+	setElementData ( frame, "y", y )
+	setElementData ( frame, "z", z )
+	setElementRotation ( frame, rx, ry, r )
+	
+	
+
+	
+	local part1 = createObject ( 1588, -321.49752807617, 826.03668212891, 16.6 )
+	
+	local part2 = createObject ( 1588, -321.52035522461, 826.03167724609, 16.6 )
+	local part3 = createObject ( 1588, -321.52151489258, 826.03161621094, 16.6 )
+	local part4 = createObject ( 1588, -321.49887084961, 826.03137207031, 16.6 )
+	local part5 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part6 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part7 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part8 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part9 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part10 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part11 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part12 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part13 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part14 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part15 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part16 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part17 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part18 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part19 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part20 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part21 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part22 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part23 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part24 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part25 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part26 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part27 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part28 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part29 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part30 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part31 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part32 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part33 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part34 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part35 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part36 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part37 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part38 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part39 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part40 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part41 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part42 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part43 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part44 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part45 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part46 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part47 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part48 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part49 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	local part50 = createObject ( 1588, -321.51440429688, 826.03332519531, 16.6 )
+	
+	setElementRotation ( part1, 90, 90, 180 )
+	setElementRotation ( part2, 90, 90, 180 )
+	setElementRotation ( part3, 90, 90, 180 )
+	setElementRotation ( part4, 90, 90, 180 )
+	setElementRotation ( part5, 90, 90, 180 )
+	setElementRotation ( part6, 90, 90, 180 )
+	setElementRotation ( part7, 90, 90, 180 )
+	setElementRotation ( part8, 90, 90, 180 )
+	setElementRotation ( part9, 90, 90, 180 )
+	setElementRotation ( part10, 90, 90, 180 )
+	setElementRotation ( part11, 90, 90, 180 )
+	setElementRotation ( part12, 90, 90, 180 )
+	setElementRotation ( part13, 90, 90, 180 )
+	setElementRotation ( part14, 90, 90, 180 )
+	setElementRotation ( part15, 90, 90, 180 )
+	setElementRotation ( part16, 90, 90, 180 )
+	setElementRotation ( part17, 90, 90, 180 )
+	setElementRotation ( part18, 90, 90, 180 )
+	setElementRotation ( part19, 90, 90, 180 )
+	setElementRotation ( part20, 90, 90, 180 )
+	setElementRotation ( part21, 90, 90, 180 )
+	setElementRotation ( part22, 90, 90, 180 )
+	setElementRotation ( part23, 90, 90, 180 )
+	setElementRotation ( part24, 90, 90, 180 )
+	setElementRotation ( part25, 90, 90, 180 )
+	setElementRotation ( part26, 90, 90, 180 )
+	setElementRotation ( part27, 90, 90, 180 )
+	setElementRotation ( part28, 90, 90, 180 )
+	setElementRotation ( part29, 90, 90, 180 )
+	setElementRotation ( part30, 90, 90, 180 )
+	setElementRotation ( part31, 90, 90, 180 )
+	setElementRotation ( part32, 90, 90, 180 )
+	setElementRotation ( part33, 90, 90, 180 )
+	setElementRotation ( part34, 90, 90, 180 )
+	setElementRotation ( part35, 90, 90, 180 )
+	setElementRotation ( part36, 90, 90, 180 )
+	setElementRotation ( part37, 90, 90, 180 )
+	setElementRotation ( part38, 90, 90, 180 )
+	setElementRotation ( part39, 90, 90, 180 )
+	setElementRotation ( part40, 90, 90, 180 )
+	setElementRotation ( part41, 90, 90, 180 )
+	setElementRotation ( part42, 90, 90, 180 )
+	setElementRotation ( part43, 90, 90, 180 )
+	setElementRotation ( part44, 90, 90, 180 )
+	setElementRotation ( part45, 90, 90, 180 )
+	setElementRotation ( part46, 90, 90, 180 )
+	setElementRotation ( part47, 90, 90, 180 )
+	setElementRotation ( part48, 90, 90, 180 )
+	setElementRotation ( part49, 90, 90, 180 )
+	setElementRotation ( part50, 90, 90, 180 )
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	setElementInterior ( frame, int )
+	setElementInterior ( part1, int )
+	setElementInterior ( part2, int )
+	setElementInterior ( part3, int )
+	setElementInterior ( part4, int )
+	setElementInterior ( part5, int )
+	setElementInterior ( part6, int )
+	setElementInterior ( part7, int )
+	setElementInterior ( part8, int )
+	setElementInterior ( part9, int )
+	setElementInterior ( part10, int )
+	setElementInterior ( part11, int )
+	setElementInterior ( part12, int )
+	setElementInterior ( part13, int )
+	setElementInterior ( part14, int )
+	setElementInterior ( part15, int )
+	setElementInterior ( part16, int )
+	setElementInterior ( part17, int )
+	setElementInterior ( part18, int )
+	setElementInterior ( part19, int )
+	setElementInterior ( part20, int )
+	setElementInterior ( part21, int )
+	setElementInterior ( part22, int )
+	setElementInterior ( part23, int )
+	setElementInterior ( part24, int )
+	setElementInterior ( part25, int )
+	setElementInterior ( part26, int )
+	setElementInterior ( part27, int )
+	setElementInterior ( part28, int )
+	setElementInterior ( part29, int )
+	setElementInterior ( part30, int )
+	setElementInterior ( part31, int )
+	setElementInterior ( part32, int )
+	setElementInterior ( part33, int )
+	setElementInterior ( part34, int )
+	setElementInterior ( part35, int )
+	setElementInterior ( part36, int )
+	setElementInterior ( part37, int )
+	setElementInterior ( part38, int )
+	setElementInterior ( part39, int )
+	setElementInterior ( part40, int )
+	setElementInterior ( part42, int )
+	setElementInterior ( part43, int )
+	setElementInterior ( part44, int )
+	setElementInterior ( part45, int )
+	setElementInterior ( part46, int )
+	setElementInterior ( part47, int )
+	setElementInterior ( part48, int )
+	setElementInterior ( part49, int )
+	setElementInterior ( part50, int )
+	
+	
+	setElementDimension ( frame, dim )
+	setElementDimension ( part1, dim )
+	setElementDimension ( part2, dim )
+	setElementDimension ( part3, dim )
+	setElementDimension ( part4, dim )
+	setElementDimension ( part5, dim )
+	setElementDimension ( part6, dim )
+	setElementDimension ( part7, dim )
+	setElementDimension ( part8, dim )
+	setElementDimension ( part9, dim )
+	setElementDimension ( part10, dim )
+	setElementDimension ( part11, dim )
+	setElementDimension ( part12, dim )
+	setElementDimension ( part13, dim )
+	setElementDimension ( part14, dim )
+	setElementDimension ( part15, dim )
+	setElementDimension ( part16, dim )
+	setElementDimension ( part17, dim )
+	setElementDimension ( part18, dim )
+	setElementDimension ( part19, dim )
+	setElementDimension ( part20, dim )
+	setElementDimension ( part21, dim )
+	setElementDimension ( part22, dim )
+	setElementDimension ( part23, dim )
+	setElementDimension ( part24, dim )
+	setElementDimension ( part25, dim )
+	setElementDimension ( part26, dim )
+	setElementDimension ( part27, dim )
+	setElementDimension ( part28, dim )
+	setElementDimension ( part29, dim )
+	setElementDimension ( part30, dim )
+	setElementDimension ( part31, dim )
+	setElementDimension ( part32, dim )
+	setElementDimension ( part33, dim )
+	setElementDimension ( part34, dim )
+	setElementDimension ( part35, dim )
+	setElementDimension ( part36, dim )
+	setElementDimension ( part37, dim )
+	setElementDimension ( part38, dim )
+	setElementDimension ( part39, dim )
+	setElementDimension ( part40, dim )
+	setElementDimension ( part41, dim )
+	setElementDimension ( part42, dim )
+	setElementDimension ( part43, dim )
+	setElementDimension ( part44, dim )
+	setElementDimension ( part45, dim )
+	setElementDimension ( part46, dim )
+	setElementDimension ( part47, dim )
+	setElementDimension ( part48, dim )
+	setElementDimension ( part49, dim )
+	setElementDimension ( part50, dim )
+	
+	setElementPosition ( frame, x, y, z )
+	
+	
+	setElementData ( part1, "shootingRanchItem", frame )
+	setElementData ( part2, "shootingRanchItem", frame )
+	setElementData ( part3, "shootingRanchItem", frame )
+	setElementData ( part4, "shootingRanchItem", frame )
+	setElementData ( part5, "shootingRanchItem", frame )
+	setElementData ( part6, "shootingRanchItem", frame )
+	setElementData ( part7, "shootingRanchItem", frame )
+	setElementData ( part8, "shootingRanchItem", frame )
+	setElementData ( part9, "shootingRanchItem", frame )
+	setElementData ( part10, "shootingRanchItem", frame )
+	setElementData ( part11, "shootingRanchItem", frame )
+	setElementData ( part12, "shootingRanchItem", frame )
+	setElementData ( part13, "shootingRanchItem", frame )
+	setElementData ( part14, "shootingRanchItem", frame )
+	setElementData ( part15, "shootingRanchItem", frame )
+	setElementData ( part16, "shootingRanchItem", frame )
+	setElementData ( part17, "shootingRanchItem", frame )
+	setElementData ( part18, "shootingRanchItem", frame )
+	setElementData ( part19, "shootingRanchItem", frame )
+	setElementData ( part20, "shootingRanchItem", frame )
+	setElementData ( part21, "shootingRanchItem", frame )
+	setElementData ( part22, "shootingRanchItem", frame )
+	setElementData ( part23, "shootingRanchItem", frame )
+	setElementData ( part24, "shootingRanchItem", frame )
+	setElementData ( part25, "shootingRanchItem", frame )
+	setElementData ( part26, "shootingRanchItem", frame )
+	setElementData ( part27, "shootingRanchItem", frame )
+	setElementData ( part28, "shootingRanchItem", frame )
+	setElementData ( part29, "shootingRanchItem", frame )
+	setElementData ( part30, "shootingRanchItem", frame )
+	setElementData ( part31, "shootingRanchItem", frame )
+	setElementData ( part32, "shootingRanchItem", frame )
+	setElementData ( part33, "shootingRanchItem", frame )
+	setElementData ( part34, "shootingRanchItem", frame )
+	setElementData ( part35, "shootingRanchItem", frame )
+	setElementData ( part36, "shootingRanchItem", frame )
+	setElementData ( part37, "shootingRanchItem", frame )
+	setElementData ( part38, "shootingRanchItem", frame )
+	setElementData ( part39, "shootingRanchItem", frame )
+	setElementData ( part40, "shootingRanchItem", frame )
+	setElementData ( part41, "shootingRanchItem", frame )
+	setElementData ( part42, "shootingRanchItem", frame )
+	setElementData ( part43, "shootingRanchItem", frame )
+	setElementData ( part44, "shootingRanchItem", frame )
+	setElementData ( part45, "shootingRanchItem", frame )
+	setElementData ( part46, "shootingRanchItem", frame )
+	setElementData ( part47, "shootingRanchItem", frame )
+	setElementData ( part48, "shootingRanchItem", frame )
+	setElementData ( part49, "shootingRanchItem", frame )
+	setElementData ( part50, "shootingRanchItem", frame )
+	
+	
+	
+	setElementParent ( part1, frame )
+	setElementParent ( part2, frame )
+	setElementParent ( part3, frame )
+	setElementParent ( part4, frame )
+	setElementParent ( part5, frame )
+	setElementParent ( part6, frame )
+	setElementParent ( part7, frame )
+	setElementParent ( part8, frame )
+	setElementParent ( part9, frame )
+	setElementParent ( part10, frame )
+	setElementParent ( part11, frame )
+	setElementParent ( part12, frame )
+	setElementParent ( part13, frame )
+	setElementParent ( part14, frame )
+	setElementParent ( part15, frame )
+	setElementParent ( part16, frame )
+	setElementParent ( part17, frame )
+	setElementParent ( part18, frame )
+	setElementParent ( part19, frame )
+	setElementParent ( part20, frame )
+	setElementParent ( part21, frame )
+	setElementParent ( part22, frame )
+	setElementParent ( part23, frame )
+	setElementParent ( part24, frame )
+	setElementParent ( part25, frame )
+	setElementParent ( part26, frame )
+	setElementParent ( part27, frame )
+	setElementParent ( part28, frame )
+	setElementParent ( part29, frame )
+	setElementParent ( part30, frame )
+	setElementParent ( part31, frame )
+	setElementParent ( part32, frame )
+	setElementParent ( part33, frame )
+	setElementParent ( part34, frame )
+	setElementParent ( part35, frame )
+	setElementParent ( part36, frame )
+	setElementParent ( part37, frame )
+	setElementParent ( part38, frame )
+	setElementParent ( part39, frame )
+	setElementParent ( part40, frame )
+	setElementParent ( part41, frame )
+	setElementParent ( part42, frame )
+	setElementParent ( part43, frame )
+	setElementParent ( part44, frame )
+	setElementParent ( part45, frame )
+	setElementParent ( part46, frame )
+	setElementParent ( part47, frame )
+	setElementParent ( part48, frame )
+	setElementParent ( part49, frame )
+	setElementParent ( part50, frame )
+	
+	setElementData ( frame, "elements", 50 )
+	
+	shootingRangeTargets[frame] = true
+	
+	return frame
+end
+
+function moveTarget ( target, x2, y2 )
+
+	local x1, y1, z1 = getElementPosition ( target )
+	local z2 = z1
+	
+	setElementData ( target, "x1", x1 )
+	setElementData ( target, "y1", y1 )
+	setElementData ( target, "z1", z1 )
+	setElementData ( target, "x2", x2 )
+	setElementData ( target, "y2", y2 )
+	
+	moveObject ( target, 4000, x2, y2, z2 ) -- time
+	setTimer (
+		function ( element, x1, y1, z1 )
+			if isElement ( element ) then
+				moveObject ( element, 4000, x1, y1, z1 ) -- Sorate Bargasht
+			end
+		end,
+	4000, 1, target, x1, y1, z1 )
+	
+	_G[tostring ( target ).."Timer"] = setTimer ( 
+		function ( element )
+			if not isElement ( element ) then
+				killTimer ( _G[tostring ( element ).."Timer"] )
+			elseif not getElementData ( element, "flipping" ) then
+				local x1, y1, z1 = getElementData ( element, "x1" ), getElementData ( element, "y1" ), getElementData ( element, "z1" )
+				local x2, y2 = getElementData ( element, "x2" ), getElementData ( element, "y2" )
+				local z2 = z1
+				moveObject ( element, 4000, x2, y2, z2 )
+				setTimer (
+					function ( element, x1, y1, z1 )
+						if isElement ( element ) then
+							moveObject ( element, 4000, x1, y1, z1 )
+						end
+					end,
+				4000, 1, element, x1, y1, z1 )
+			end
+		end,
+	8000, -1, target )
+end
+--> Start Tamrin Ak47 <--
+function startShootingRanchTest_func ()
+	percent = 1
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target1, "ty", -129.5 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 200, 1, target3, 274, -126.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+						setTimer ( endShootingAk47, 1000, 0 )
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestAk47", true )
+addEventHandler ( "startShootingRanchTestAk47", getRootElement(), startShootingRanchTest_func )
+
+--> Stop Tamrin Ak47 <--
+function endShootingAk47 ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 1 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestAk47", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Deagle <--
+function startShootingRanchTest_func2 ()
+	percent = 2
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingDeagle, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestDeagle", true )
+addEventHandler ( "startShootingRanchTestDeagle", getRootElement(), startShootingRanchTest_func2 )
+
+--> Stop Tamrin Deagle <--
+function endShootingDeagle ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 2 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestDeagle", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin M4 <--
+function startShootingRanchTest_func3 ()
+	percent = 3
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingM4, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestM4", true )
+addEventHandler ( "startShootingRanchTestM4", getRootElement(), startShootingRanchTest_func3 )
+
+--> Stop Tamrin M4 <--
+function endShootingM4 ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 3 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestM4", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Shutgun <--
+function startShootingRanchTest_func4 ()
+	percent = 4
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingShutgun, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestShutgun", true )
+addEventHandler ( "startShootingRanchTestShutgun", getRootElement(), startShootingRanchTest_func4 )
+
+--> Stop Tamrin Shutgun <--
+function endShootingShutgun ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 4 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestShutgun", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Spaz12 <--
+function startShootingRanchTest_func5 ()
+	percent = 5
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingSpaz12, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestSpaz12", true )
+addEventHandler ( "startShootingRanchTestSpaz12", getRootElement(), startShootingRanchTest_func5 )
+
+--> Stop Tamrin Spaz12 <--
+function endShootingSpaz12 ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 5 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestSpaz12", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin MP5 <--
+function startShootingRanchTest_func6 ()
+	percent = 6
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingMP5, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestMP5", true )
+addEventHandler ( "startShootingRanchTestMP5", getRootElement(), startShootingRanchTest_func6 )
+
+--> Stop Tamrin MP5 <--
+function endShootingMP5 ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 6 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestMP5", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Pistol <--
+function startShootingRanchTest_func7 ()
+	percent = 7
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingPistol, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestPistol", true )
+addEventHandler ( "startShootingRanchTestPistol", getRootElement(), startShootingRanchTest_func7 )
+
+--> Stop Tamrin Pistol <--
+function endShootingPistol ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 7 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestPistol", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Silenced <--
+function startShootingRanchTest_func8 ()
+	percent = 8
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingSilenced, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestSilenced", true )
+addEventHandler ( "startShootingRanchTestSilenced", getRootElement(), startShootingRanchTest_func8 )
+
+--> Stop Tamrin Silenced <--
+function endShootingSilenced ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 8 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestSilenced", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Rifle <--
+function startShootingRanchTest_func9 ()
+	percent = 9
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingRifle, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestRifle", true )
+addEventHandler ( "startShootingRanchTestRifle", getRootElement(), startShootingRanchTest_func9 )
+
+--> Stop Tamrin Rifle <--
+function endShootingRifle ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 9 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestRifle", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Sawed <--
+function startShootingRanchTest_func10 ()
+	percent = 10
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingSawed, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestSawed", true )
+addEventHandler ( "startShootingRanchTestSawed", getRootElement(), startShootingRanchTest_func10 )
+
+--> Stop Tamrin Sawed <--
+function endShootingSawed ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 10 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestSawed", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+--> Start Tamrin Uzi <--
+function startShootingRanchTest_func11 ()
+	percent = 11
+	shootingRangeTargets = {}
+	setWalkable ( false )
+	local dim = getElementDimension ( lp )
+	local target3 = createTargetToShoot ( 274, -140.5 + 1.74, 1004.8396606445 + 2.04, 90, 0, 270, 7, dim, 0 )
+	setElementData ( target3, "ty", -129.5 )
+	totalShootingRangeHitTargets = 0
+	totalShootingRangeShots = 0
+	targetMoveTime = 1000
+	flapTarget ( target3, false, targetMoveTime )
+	targetMoveTime = 1000
+	setTimer ( moveTarget, targetMoveTime + 100, 1, target3, 274, -129.5 )
+	addEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+	shootingRanchCountdountR = 200
+	shootingRanchCountdountG = 0
+	shootingRanchCountdountB = 0
+			shootingRanchTimeLeftVal = 600
+			addEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+						for key, index in pairs ( shootingRangeTargets ) do
+							if isElement ( key ) then
+								if not getElementData ( key, "flipping" ) then
+									flapTarget ( key, true, 2000 )
+								end
+							end
+						end
+							setTimer ( endShootingUzi, 1000, 0 )
+
+	addEventHandler ( "onClientRender", getRootElement(), shootingRanchCountdown_render )
+end
+addEvent ( "startShootingRanchTestUzi", true )
+addEventHandler ( "startShootingRanchTestUzi", getRootElement(), startShootingRanchTest_func11 )
+
+--> Stop Tamrin Uzi <--
+function endShootingUzi ()
+	if totalShootingRangeShots >= 50 then
+		if percent == 11 then
+			setControlState ( "aim_weapon", false )
+			toggleControl ( "aim_weapon", true )
+			removeEventHandler ( "onClientRender", getRootElement(), shootingRanchDraw_render )
+			for key, index in pairs ( shootingRangeTargets ) do
+				if isElement ( key ) then
+					destroyElement ( key )
+				end
+				shootingRangeTargets[key] = nil
+			end
+			setWalkable ( true )
+			toggleControl ( "fire", true )
+			removeEventHandler ( "onClientPlayerWeaponFire", lp, shootingRanchTargetHit )
+			triggerServerEvent ( "endShootingRanchTestUzi", lp, percent, totalShootingRangeHitTargets )
+			triggerServerEvent("SetSheSkillHaBadeTamrin", getLocalPlayer(), getLocalPlayer() )
+			totalShootingRangeShots = 0
+		end
+	end
+end
+
+
+function shootingRanchTargetHit ( weapon, _, _, _, _, _, element )
+
+	if element then
+		local frame = getElementData ( element, "shootingRanchItem" )
+		if frame then
+			setElementData ( frame, "elements", getElementData ( frame, "elements" ) - 1 )
+			setElementData ( element, "shootingRanchItem", false )
+			totalShootingRangeHitTargets = totalShootingRangeHitTargets + 1
+			
+			if getElementData ( frame, "elements" ) == 0 then
+				local x, y, z = getElementData ( frame, "x" ), getElementData ( frame, "y" ), getElementData ( frame, "z" )
+				
+				local ty = getElementData ( frame, "ty" )
+				local dim = getElementDimension ( lp )
+				local newTarget = createTargetToShoot ( x, y, z, 90, 0, 270, 7, dim, 0 )
+				local targetMoveTime = 2000
+				flapTarget ( newTarget, false, targetMoveTime )
+				setTimer ( moveTarget, targetMoveTime, 1, newTarget, x, ty )
+				setElementData ( newTarget, "ty", ty )
+				
+				flapTarget ( frame, true, 1000 )
+				setTimer ( destroyElement, 1000, 1, frame )
+				playSoundFrontEnd ( 101 )
+			end
+		end
+	end
+	totalShootingRangeShots = totalShootingRangeShots + 1
+end
+
+function flapTarget ( target, up, time )
+
+	if not time then
+		time = 1000
+	end
+	setElementData ( target, "flipping", true )
+	local x, y, z = getElementPosition ( target )
+	if up then
+		moveObject ( target, time, x , y, z + 2.04, 90, 0, 0 )
+	else
+		moveObject ( target, time, x , y, z - 2.04, -90, 0, 0 )
+	end
+	setTimer ( setElementData, time, 1, target, "flipping", false )
+end
+
+function setWalkable ( boolean )
+	toggleControl ( "jump", boolean )
+	toggleControl ( "left", boolean )
+	toggleControl ( "right", boolean )
+	toggleControl ( "forwards", boolean )
+	toggleControl ( "backwards", boolean )
+end
+
+function attachElementsInCorrectWay ( element1, element2 )
+
+	local x1, y1, z1 = getElementPosition ( element1 )
+	local x2, y2, z2 = getElementPosition ( element2 )
+	attachElements ( element1, element2, x1-x2, y1-y2, z1-z2 )
+end
+
+
+
+--- panel kharid skill ---------------
+local fonts = guiCreateFont("Verdanab.ttf", 12)
+windowSkill = guiCreateStaticImage(300, 140, 800, 500, "sbg.png", false)
+
+guiSetVisible(windowSkill, false)
+closees = guiCreateButton(730, 450, 50, 30, "Cancel", false, windowSkill)
+guiSetProperty(closees, "NormalTextColour", "FFFE0000")
+
+
+ak47s = guiCreateStaticImage(25, 35, 130, 120, "Gunicon/ak47s.png", false, windowSkill)
+Deagles = guiCreateStaticImage(175, 35, 130, 125, "Gunicon/Deagles.png", false, windowSkill)
+m4s = guiCreateStaticImage(330, 35, 130, 125, "Gunicon/m4s.png", false, windowSkill)
+mp5s = guiCreateStaticImage(485, 35, 130, 125, "Gunicon/mp5s.png", false, windowSkill)
+uzis = guiCreateStaticImage(640, 35, 130, 125, "Gunicon/uzis.png", false, windowSkill)
+
+
+spaz12s = guiCreateStaticImage(25, 245, 130, 125, "Gunicon/spaz12s.png", false, windowSkill)
+Saweds = guiCreateStaticImage(175, 245, 130, 125, "Gunicon/Saweds.png", false, windowSkill)
+Shutguns = guiCreateStaticImage(330, 245, 130, 125, "Gunicon/Shutguns.png", false, windowSkill)
+pistols = guiCreateStaticImage(485, 245, 130, 125, "Gunicon/pistols.png", false, windowSkill)
+snips = guiCreateStaticImage(640, 245, 130, 125, "Gunicon/snips.png", false, windowSkill)
+
+
+ak47sb = guiCreateButton(40, 170, 105, 50, "Ak47 \n1000 Gold", false, windowSkill)
+guiSetFont(ak47sb,fonts)
+guiSetProperty(ak47sb, "NormalTextColour", "f2bdb366")
+
+Deaglesb = guiCreateButton(186, 170, 105, 50, "Deagle \n1000 Gold", false, windowSkill)
+guiSetFont(Deaglesb,fonts)
+guiSetProperty(Deaglesb, "NormalTextColour", "f2bdb366")
+
+M4sb = guiCreateButton(341, 170, 105, 50, "M4 \n1000 Gold", false, windowSkill)
+guiSetFont(M4sb,fonts)
+guiSetProperty(M4sb, "NormalTextColour", "f2bdb366")
+
+
+Mp5sb = guiCreateButton(496, 170, 105, 50, "Mp5 \n900 Gold", false, windowSkill)
+guiSetFont(Mp5sb,fonts)
+guiSetProperty(Mp5sb, "NormalTextColour", "f2bdb366")
+
+Uzisb = guiCreateButton(651, 170, 105, 50, "Uzi & Tec-9 \n1000 Gold", false, windowSkill)
+guiSetFont(Uzisb,fonts)
+guiSetProperty(Uzisb, "NormalTextColour", "f2bdb366")
+
+
+
+
+
+spaz12sb = guiCreateButton(40, 380, 105, 50, "Spaz12 \n1000 Gold", false, windowSkill)
+guiSetFont(spaz12sb,fonts)
+guiSetProperty(spaz12sb, "NormalTextColour", "f2bdb366")
+
+
+Sawedsb = guiCreateButton(186, 380, 105, 50, "Sawed Off \n1000 Gold", false, windowSkill)
+guiSetFont(Sawedsb,fonts)
+guiSetProperty(Sawedsb, "NormalTextColour", "f2bdb366")
+
+
+
+Shutgunsb = guiCreateButton(341, 380, 105, 50, "Shutgun \n1000 Gold", false, windowSkill)
+guiSetFont(Shutgunsb,fonts)
+guiSetProperty(Shutgunsb, "NormalTextColour", "f2bdb366")
+
+
+pistolsb = guiCreateButton(496, 380, 105, 50, "Pistol \n800 Gold", false, windowSkill)
+guiSetFont(pistolsb,fonts)
+guiSetProperty(pistolsb, "NormalTextColour", "f2bdb366")
+
+
+snipsb = guiCreateButton(651, 380, 105, 50, "Sniper \n1100 Gold", false, windowSkill)
+guiSetFont(snipsb,fonts)
+guiSetProperty(snipsb, "NormalTextColour", "f2bdb366")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--> Panel Entekhab Gun For Tamrin <--
+
+windowTamrin = guiCreateWindow(480, 300, 400, 200, "Tamrin Tirandazi", false)
+guiSetProperty(windowTamrin, "Visible", "False")
+guiSetProperty(windowTamrin, "AlwaysOnTop", "True")
+guiWindowSetSizable(windowTamrin, false)
+local font = guiCreateFont("Verdanab.ttf", 9)
+
+
+
+Ak47 = guiCreateButton(20, 40, 80, 35, "Ak-47", false, windowTamrin)
+Deagle = guiCreateButton(111, 40, 80, 35, "Deagle", false, windowTamrin)
+Shutgun = guiCreateButton(206, 40, 80, 35, "Shutgun", false, windowTamrin)
+Spaz12 = guiCreateButton(300, 40, 80, 35, "Spaz 12", false, windowTamrin)
+
+M4 = guiCreateButton(20, 90, 80, 35, "M4", false, windowTamrin)
+MP5 = guiCreateButton(111, 90, 80, 35, "MP5", false, windowTamrin)
+Pistol = guiCreateButton(206, 90, 80, 35, "Pistol", false, windowTamrin)
+
+
+Rifle = guiCreateButton(300, 90, 80, 35, "Rifle", false, windowTamrin)
+Sawenoff = guiCreateButton(20, 140, 80, 35, "Sawed-Off", false, windowTamrin)
+Uzi = guiCreateButton(111, 140, 85, 35, "Uzi & Tec-9", false, windowTamrin)
+
+KharidSkillGun = guiCreateButton(250, 137, 90, 40, "Kharid Skill", false, windowTamrin)
+closee = guiCreateButton(365, 168, 25, 25, "X", false, windowTamrin)
+guiSetProperty(closee, "NormalTextColour", "FFFE0000")
+guiSetProperty(KharidSkillGun, "NormalTextColour", "f2bdb366")
+--- Font ---
+guiSetFont(Ak47,font)
+guiSetFont(Deagle,font)
+guiSetFont(Rifle,font)
+guiSetFont(KharidSkillGun,font)
+guiSetFont(Spaz12,font)
+guiSetFont(M4,font)
+guiSetFont(MP5,font)
+guiSetFont(Pistol,font)
+
+guiSetFont(Shutgun,font)
+guiSetFont(Sawenoff,font)
+guiSetFont(Uzi,font)
+guiSetFont(closee,font)
+
+--- Color ---
+guiSetProperty(Ak47, "HoverTextColour", "f2bdb366")
+guiSetProperty(Deagle, "HoverTextColour", "f2bdb366")
+guiSetProperty(Rifle, "HoverTextColour", "f2bdb366")
+guiSetProperty(Spaz12, "HoverTextColour", "f2bdb366")
+guiSetProperty(M4, "HoverTextColour", "f2bdb366")
+guiSetProperty(MP5, "HoverTextColour", "f2bdb366")
+guiSetProperty(Pistol, "HoverTextColour", "f2bdb366")
+
+guiSetProperty(Shutgun, "HoverTextColour", "f2bdb366")
+guiSetProperty(Shutgun, "HoverTextColour", "f2bdb366")
+guiSetProperty(Sawenoff, "HoverTextColour", "f2bdb366")
+guiSetProperty(Uzi, "HoverTextColour", "f2bdb366")
+
+function guiTamrinNeshonBede(thePlayer)
+	if ( thePlayer == getLocalPlayer() ) then
+		guiSetProperty(windowTamrin, "Visible", "True")
+		showCursor(true)
+	end
+end
+addEvent("TamrinShowPanel",true)
+addEventHandler("TamrinShowPanel", getRootElement(), guiTamrinNeshonBede)
+
+
+addEventHandler("onClientGUIClick", getRootElement(),
+function ()
+	if source == closee then
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+		
+	elseif source == closees then
+		guiSetVisible(windowTamrin, false)
+		guiSetVisible(windowSkill, false)
+		showCursor(false)
+		
+		
+	elseif source == ak47sb then
+		triggerServerEvent( "Skillak47",localPlayer )
+	elseif source == Deaglesb then
+		triggerServerEvent( "SkillDeagle",localPlayer )
+	elseif source == M4sb then
+		triggerServerEvent( "SkillM4",localPlayer )
+	elseif source == Mp5sb then
+		triggerServerEvent( "SkillMp5",localPlayer )
+	elseif source == Uzisb then
+		triggerServerEvent( "SkillUzi",localPlayer )
+	elseif source == spaz12sb then
+		triggerServerEvent( "Skillspaz12",localPlayer )
+	elseif source == Sawedsb then
+		triggerServerEvent( "SkillSawed",localPlayer )	
+	elseif source == Shutgunsb then
+		triggerServerEvent( "SkillShutgun",localPlayer )	
+	elseif source == snipsb then
+		triggerServerEvent( "Skillsniper",localPlayer )	
+	elseif source == pistolsb then
+		triggerServerEvent( "Skillpistol",localPlayer )	
+		
+		
+	elseif source == KharidSkillGun then
+		
+		guiSetProperty(windowSkill, "Visible", "True")
+		guiSetVisible(windowTamrin, false)
+		
+		
+	elseif source == Ak47 then
+		triggerServerEvent ( "startShootingAk47", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Deagle then
+		triggerServerEvent ( "startShootingDeagle", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == M4 then
+		triggerServerEvent ( "startShootingM4", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Shutgun then
+		triggerServerEvent ( "startShootingShutgun", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Spaz12 then
+		triggerServerEvent ( "startShootingSpaz12", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == MP5 then
+		triggerServerEvent ( "startShootingMP5", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Pistol then
+		triggerServerEvent ( "startShootingPistol", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	--[[elseif source == Silenced then
+		triggerServerEvent ( "startShootingSilenced", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)--]]
+	elseif source == Rifle then
+		triggerServerEvent ( "startShootingRifle", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Sawenoff then
+		triggerServerEvent ( "startShootingSawed", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	elseif source == Uzi then
+		triggerServerEvent ( "startShootingUzi", lp, gun )
+		guiSetProperty(windowTamrin, "Visible", "False")
+		showCursor(false)
+	end
+end)

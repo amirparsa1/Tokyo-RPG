@@ -1,0 +1,5 @@
+<map edf:definitions="editor_main">
+    <object id="object (cuntwland29b) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="17101" scale="1" doublesided="false" collisions="true" frozen="false" posX="-350.25562" posY="-663.20288" posZ="-14.588" rotX="0" rotY="0" rotZ="3.475"></object>
+    <object id="object (vgElkup) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="8947" scale="1" doublesided="false" collisions="true" frozen="false" posX="2529.4792" posY="-1279.8816" posZ="35.5363" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (land_43_sfw) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="9611" scale="1" doublesided="true" collisions="true" posX="-90.5444" posY="-727.15411" posZ="-19.8561" rotX="0" rotY="0" rotZ="86.069"></object>
+</map>

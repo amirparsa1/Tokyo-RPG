@@ -1,0 +1,9 @@
+<map edf:definitions="editor_main">
+    <removeWorldObject id="removeWorldObject (officeblok1_Lan) (2)" radius="30.512997" interior="0" model="4193" lodModel="4194" posX="1360.3828" posY="-1840.6172" posZ="26.80469" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (officeblok1_Lan) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="4193" scale="1" doublesided="false" collisions="true" frozen="false" posX="1354.5" posY="-1823.8" posZ="22.39999" rotX="0" rotY="0" rotZ="270"></object>
+    <removeWorldObject id="removeWorldObject (newdbbuild_lan04) (1)" radius="40.714962" interior="0" model="4023" lodModel="4226" posX="1359.2813" posY="-1796.4687" posZ="24.34375" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (sm_bevhiltreepv) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="717" scale="1" doublesided="false" collisions="true" frozen="false" posX="1344" posY="-1846.9" posZ="12.6" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (sm_bevhiltreepv) (2)" breakable="true" interior="0" alpha="255" dimension="0" model="717" scale="1" doublesided="false" collisions="true" frozen="false" posX="1357.9" posY="-1854.1" posZ="12.6" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (sm_bevhiltreepv) (3)" breakable="true" interior="0" alpha="255" dimension="0" model="717" scale="1" doublesided="false" collisions="true" frozen="false" posX="1368.7998" posY="-1859.0996" posZ="12.6" rotX="0" rotY="0" rotZ="0"></object>
+    
+</map>

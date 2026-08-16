@@ -1,0 +1,32 @@
+<meta>
+    <script src="Rob_L.lua" type="server" cache="false"/>
+    <script src="Rob_S.lua" type="server" cache="false"/>
+    <script src="Rob_G.lua" type="client" cache="false" />
+    <script src="Rob_C.lua" type="client" cache="false" />
+
+    <file src="Data/Img/BG.png"/>
+    <file src="Data/Img/Task1.png"/>
+    <file src="Data/Img/Dastgah.png"/>
+    <file src="Data/Img/jOff.png"/>
+    <file src="Data/Img/jOn.png"/>
+    <file src="Data/Img/Party.png"/>
+    <file src="Data/Img/CParty.png"/>
+    <file src="Data/Img/TimeBox.png"/>
+ 
+    <file src="Data/Font/Font.ttf"/>
+    <file src="Data/Font/Font2.otf"/>
+
+    <file src="Data/Model/rbank.dff"/>
+    <file src="Data/Model/rbank.col"/>
+    <file src="Data/Model/rbank.txd"/>
+    <file src="Data/Model/rdoor.dff"/>
+    <file src="Data/Model/rdoor.col"/>
+
+    <file src="Data/Sound/Hack.mp3"/>
+    <file src="Data/Sound/Wanted.mp3"/>
+    <file src="Data/Sound/Done.mp3"/>
+    <file src="Data/Sound/Finish.mp3"/>
+    <file src="Data/Sound/PartTwo.m4a"/>
+    <file src="Data/Sound/Shutdown.mp3"/>
+    <file src="Data/Sound/Wiz.m4a"/>
+</meta>

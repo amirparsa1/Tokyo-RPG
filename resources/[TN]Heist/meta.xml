@@ -1,0 +1,21 @@
+<meta>
+    <info type="script" version="v1.0.0" author="(( Atis Gaming Development Team ))"></info>
+    
+    <!-- Data -->
+    <file src="Data/HeistSound.mp3"/>
+    <file src="Data/Alarm.mp3"/>
+    <file src="Data/Close.png"/>
+    <file src="Data/Click.png"/>
+    <file src="Data/HeistGui1.png"/>
+    <file src="Data/HeistGui2.png"/>
+    <file src="Data/HeistDriver.png"/>
+    <file src="Data/HeistGunner.png"/>
+    <file src="Data/HeistAudienceGuard.png"/>
+
+    <!-- Maps -->
+	<map src="Maps/HeistRoomInt.map" dimension="0"></map>
+    
+    <!-- Scripts -->
+    	<script src="SfHeist_S.lua" type="server" />
+	<script src="SfHeist_C.lua" type="client" cache="false" />
+</meta>

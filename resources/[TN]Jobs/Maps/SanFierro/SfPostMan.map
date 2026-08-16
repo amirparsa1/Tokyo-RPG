@@ -1,0 +1,13 @@
+<map edf:definitions="editor_main">
+    <vehicle id="PM1" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN1" dimension="0" posX="-57.1" posY="-1394.3" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM2" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN2" dimension="0" posX="-57.1" posY="-1396.4" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM3" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN3" dimension="0" posX="-57.2" posY="-1398.6" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM4" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN4" dimension="0" posX="-57.2" posY="-1400.8" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM5" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN5" dimension="0" posX="-57.2" posY="-1402.9" posZ="10.1" rotX="0" rotY="0" rotZ="270.25" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM6" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN6" dimension="0" posX="-61.4" posY="-1394.3" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM7" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN7" dimension="0" posX="-61.4" posY="-1396.4" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM8" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN8" dimension="0" posX="-61.4" posY="-1398.6" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM9" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN9" dimension="0" posX="-61.4" posY="-1400.8" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <vehicle id="PM10" sirens="false" paintjob="3" interior="0" alpha="255" model="461" plate="POSTMAN0" dimension="0" posX="-61.4" posY="-1402.9" posZ="10.1" rotX="0" rotY="0" rotZ="270" color="228,246,26,228,246,26,0,0,0,0,0,0"></vehicle>
+    <object id="object (airsecbooth_SFSe) (1)" breakable="true" interior="0" alpha="255" model="3881" doublesided="false" scale="1" dimension="0" posX="-1020.2" posY="-1254.3" posZ="12.1" rotX="0" rotY="0" rotZ="337"></object>
+</map>

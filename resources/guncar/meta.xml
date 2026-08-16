@@ -1,0 +1,5 @@
+<meta>
+	<info author="ParowkaPL12" name="Store weapons in the trunk" description="M to open boot, n to leave weapons, b to pick up" type="script" version="1.1.0" />
+	<script src="c.lua" type="client" />
+	<script src="s.lua" type="server" />
+</meta>

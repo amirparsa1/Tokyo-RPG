@@ -1,0 +1,11 @@
+<map edf:definitions="editor_main">
+    <removeWorldObject id="removeWorldObject (ci_bstage) (1)" radius="28.681524" interior="-1" model="3776" lodModel="3777" posX="902.33594" posY="-1191.1406" posZ="25.03906" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (ci_bstage) (2)" radius="28.681524" interior="-1" model="3776" lodModel="3777" posX="868.13281" posY="-1191.1406" posZ="25.03906" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (ci_bstage) (3)" radius="28.681524" interior="-1" model="3776" lodModel="3777" posX="831.96094" posY="-1191.1406" posZ="25.03906" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (ci_watertank01) (1)" radius="22.796053" interior="-1" model="5838" lodModel="6005" posX="895.25781" posY="-1256.9297" posZ="31.23438" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (ci_watertank) (1)" radius="16.339458" interior="-1" model="5836" lodModel="5926" posX="816.33594" posY="-1217.1484" posZ="26.44531" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (bar_barrier10) (1)" breakable="true" interior="1" alpha="255" dimension="0" model="993" scale="1" doublesided="false" collisions="true" posX="2522.2" posY="-1273.1" posZ="35.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (bar_barrier10) (2)" breakable="true" interior="1" alpha="255" dimension="0" model="993" scale="1" doublesided="false" collisions="true" posX="2576.7" posY="-1318.6" posZ="-3.1" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (bar_barrier10) (3)" breakable="true" interior="1" alpha="255" dimension="0" model="993" scale="1" doublesided="false" collisions="true" posX="2522.2" posY="-1273.1" posZ="36.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (airportgate) (1)" breakable="true" interior="1" alpha="255" dimension="0" model="980" scale="1" doublesided="false" collisions="true" posX="2522" posY="-1273" posZ="36.7" rotX="0" rotY="0" rotZ="90"></object>
+</map>

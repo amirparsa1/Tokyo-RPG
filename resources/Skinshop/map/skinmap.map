@@ -1,0 +1,5 @@
+<map edf:definitions="editor_main">
+    <object id="object (CJ_OTB_TILL_Q) (1)" breakable="true" interior="14" alpha="255" model="2771" doublesided="false" scale="0.69999999" dimension="0" posX="203.8" posY="-158.39999" posZ="1000.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (Shop_set_2_Unit1) (1)" breakable="true" interior="14" alpha="255" model="2375" doublesided="false" scale="1" dimension="0" posX="198.10001" posY="-165.10001" posZ="999.29999" rotX="0" rotY="0" rotZ="269.5"></object>
+    <object id="object (Shop_set_2_Unit1) (2)" breakable="true" interior="14" alpha="255" model="2375" doublesided="false" scale="1" dimension="0" posX="211.7" posY="-165.10001" posZ="999.29999" rotX="0" rotY="0" rotZ="268.995"></object>
+</map>

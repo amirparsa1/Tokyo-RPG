@@ -1,0 +1,17 @@
+<map edf:definitions="editor_main">
+    <object id="object (sprunk_fact) (1)" breakable="true" interior="0" alpha="255" model="12847" doublesided="false" scale="1" dimension="0" posX="-1849.5" posY="128.89999" posZ="18.4" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (sprunk_fact) (2)" breakable="true" interior="0" alpha="255" model="12847" doublesided="false" scale="1" dimension="0" posX="-1848.4" posY="127.2" posZ="12" rotX="0" rotY="0" rotZ="180"></object>
+    <object id="object (bigsprunkpole) (1)" breakable="true" interior="0" alpha="255" model="13562" doublesided="false" scale="1" dimension="0" posX="-1838.3" posY="140" posZ="21.1" rotX="0" rotY="0" rotZ="0"></object>
+    <vehicle id="Soda1" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="C15U CBX" dimension="0" posX="-1831.9" posY="113" posZ="15.4" rotX="0" rotY="0" rotZ="270" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Soda2" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="X8JE Z8J" dimension="0" posX="-1831.9004" posY="119.5" posZ="15.2" rotX="0" rotY="0" rotZ="270" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Soda3" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="9CYN 5GJ" dimension="0" posX="-1831.9004" posY="126.2002" posZ="15.2" rotX="0" rotY="0" rotZ="270.247" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Soda4" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="ARNJ GTC" dimension="0" posX="-1831.9004" posY="132.7002" posZ="15.2" rotX="0" rotY="0" rotZ="270" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Soda5" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="88H6 CVC" dimension="0" posX="-1831.9004" posY="139.2002" posZ="15.2" rotX="0" rotY="0" rotZ="270" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Soda6" sirens="false" paintjob="3" interior="0" alpha="255" model="456" plate="HKBO HG1" dimension="0" posX="-1831.9004" posY="145.7998" posZ="15.2" rotX="0" rotY="0" rotZ="270" color="254,254,254,254,254,254,0,0,0,0,0,0"></vehicle>
+    <object id="object (imy_bbox) (1)" breakable="true" interior="0" alpha="255" model="2991" doublesided="false" scale="1" dimension="0" posX="-1845.7" posY="148.8" posZ="14.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (imy_bbox) (2)" breakable="true" interior="0" alpha="255" model="2991" doublesided="false" scale="1" dimension="0" posX="-1845.7" posY="148.8" posZ="15.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (imy_bbox) (3)" breakable="true" interior="0" alpha="255" model="2991" doublesided="false" scale="1" dimension="0" posX="-1841.6" posY="148.8" posZ="14.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (gunbox) (1)" breakable="true" interior="0" alpha="255" model="1271" doublesided="false" scale="1" dimension="0" posX="-1856.1" posY="159.8" posZ="14.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (crdboxes2_LAs) (1)" breakable="true" interior="0" alpha="255" model="3630" doublesided="false" scale="1" dimension="0" posX="-1855.3" posY="165.8" posZ="15.6" rotX="0" rotY="0" rotZ="258"></object>
+    <object id="object (DockCrates2_LA) (1)" breakable="true" interior="0" alpha="255" model="3576" doublesided="false" scale="1" dimension="0" posX="-1858.7" posY="149.89999" posZ="15.5" rotX="0" rotY="0" rotZ="270"></object>
+</map>

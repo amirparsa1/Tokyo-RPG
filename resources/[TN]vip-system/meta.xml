@@ -1,0 +1,15 @@
+<meta>
+    <script src="cflyc.lua" type="client"></script>
+    <script src="panel-c.lua" type="client"></script>
+
+    <script src="cflys.lua" type="server"></script>
+    <script src="panel-s.lua" type="server"></script>
+    <file src="bg1.png"/>
+    <file src="icons/hide.png"/>
+    <file src="icons/car.png"/>
+    <file src="icons/jetpack.png"/>
+    <file src="icons/gun.png" />
+    <file src="icons/suit.png" />
+    <file src="icons/close.png" />
+    <file src="font/myfont.ttf"/>
+</meta>

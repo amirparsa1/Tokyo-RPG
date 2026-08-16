@@ -1,0 +1,13 @@
+txd_2 = engineLoadTXD ( "img/2.txd" )
+engineImportTXD ( txd_2, 1873 )
+col_2 = engineLoadCOL ( "img/2.col" )
+engineReplaceCOL ( col_2, 1873 )
+dff_2 = engineLoadDFF ( "img/2.dff", 0 )
+engineReplaceModel ( dff_2,1873 )
+engineSetModelLODDistance(1873, 200)
+
+removeWorldModel(647, 100, 1541, -1675, 13.5)
+removeWorldModel(2614, 100, 1541, -1675, 13.5)
+removeWorldModel(11245, 100, 1541, -1675, 13.5)
+removeWorldModel(all, 20, 1541, -1675, 13.5)
+removeWorldModel(4192, 100, 1541, -1675, 13.5)

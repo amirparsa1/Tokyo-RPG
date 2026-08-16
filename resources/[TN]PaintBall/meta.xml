@@ -1,0 +1,91 @@
+<meta>
+	<script src="pb_client.lua" type="client" />
+	<script src="pb_server.lua" type="server" />
+	<file src="Data/GOTHIC.ttf" />
+	<file src="Data/TREBUCBD.ttf" />
+	<file src="Data/entekhabemap.png" />
+	<file src="Data/Spaz.png" />
+	<file src="Data/SNIPER.png" />
+	<file src="Data/mp5.png" />
+	<file src="Data/M4.png" />
+	<file src="Data/desert.png" />
+	<file src="Data/rifle.png" />
+	<file src="Data/tec9.png" />
+	<file src="Data/ak47.png" />
+	<file src="Data/Spaz2.png" />
+	<file src="Data/SNIPER2.png" />
+	<file src="Data/mp52.png" />
+	<file src="Data/M42.png" />
+	<file src="Data/desert2.png" />
+	<file src="Data/rifle2.png" />
+	<file src="Data/tec92.png" />
+	<file src="Data/ak472.png" />
+	<file src="Data/map1.png" />
+	<file src="Data/map11.png" />
+	<file src="Data/map2.png" />
+	<file src="Data/map22.png" />
+	<file src="Data/map3.png" />
+	<file src="Data/map33.png" />
+	<file src="Data/map4.png" />
+	<file src="Data/map44.png" />
+	<file src="Data/map5.png" />
+	<file src="Data/map55.png" />
+	<file src="Data/Mapasli1.png" />
+	<file src="Data/Mapasli2.png" />
+	<file src="Data/Mapasli3.png" />
+	<file src="Data/Mapasli4.png" />
+	<file src="Data/Mapasli5.png" />
+	<file src="Data/Mapsoon.png" />
+	<file src="Data/Time1.png" />
+	<file src="Data/Time2.png" />
+	<file src="Data/Time3.png" />
+	<file src="Data/Time11.png" />
+	<file src="Data/Time22.png" />
+	<file src="Data/Time33.png" />
+	<file src="Data/bgp.png" />
+	<file src="Data/bg2.png" />
+    <file src="Data/paintball.png" />
+	<file src="Data/paintball1.png" />
+	<file src="Data/bg.png" />
+	
+    <!--sound-->
+	<file src="Data/error.mp3"/>
+	<file src="Data/click.mp3"/>
+	<file src="Data/errorp.mp3"/>
+	<file src="Data/movafagh.mp3"/>
+	<file src="Data/info.mp3"/>
+	<file src="Data/Winner.wav"/>
+
+	<file src="VoiceEffects/dominating.mp3" />
+	<file src="VoiceEffects/godlike.mp3" />
+	<file src="VoiceEffects/headshot.mp3" />
+	<file src="VoiceEffects/holyshiiit.mp3" />
+	<file src="VoiceEffects/Mordan.mp3" />
+	
+
+	
+	<!-- Map -->
+	 <info type="map" version="1.0.0"></info>
+    <map src="Map/Map.map" dimension="0"></map>
+	<map src="Map/sth-dust2.map" dimension="0" />
+    <script src="Map/replacing.lua" type="client" />
+    <file src="Map/dust2.col" />
+    <file src="Map/dust2.txd" />
+    <file src="Map/dust2.dff" />
+
+	
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="Map/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="Map/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	
+</meta>

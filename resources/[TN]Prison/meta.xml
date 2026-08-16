@@ -1,0 +1,26 @@
+<meta>
+	<script src="server.lua" type="server" cache="false" />
+	
+	<script src="client.lua" type="client" cache="false" />
+
+	<script src="client_PC.lua" type="client" cache="false" />
+	
+
+	
+	<file src="Images/HackIcon.png"/>
+	<file src="Images/PannelAzadi.png"/>
+	<file src="Images/pc.png"/>
+	<file src="Images/windows10.png"/>
+	
+	<file src="Line.png"/>
+	<file src="BackGround.png"/>
+	<file src="Circle.png"/>
+	<file src="Circle2.png"/>
+	<file src="Circle3.png"/>
+	<file src="failed.mp3"/>
+	<file src="unlock.mp3"/>
+	<file src="data/buzz.wav"/>
+	<file src="IRANSans.ttf"/>
+
+	<export function="TheUseMile" type="server" />
+</meta>

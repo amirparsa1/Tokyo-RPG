@@ -1,0 +1,20 @@
+<meta>
+    <info author="Paydar Team" name="Event System" type="script" />
+    <script src="server.lua" type="server" />
+	<script src="client.lua" type="client" cache="false" />
+	<file src="Data/eventstarted.mp3" />
+	<file src="Data/bg.jpg" />
+	<file src="Data/event.png" />
+	<file src="Data/bg.png" />
+	<file src="Data/kadr.png" />
+	<file src="Data/GOTHIC.ttf" />
+	<file src="Data/TREBUCBD.ttf" />
+	
+		<!--sound-->
+	<file src="sound/error.mp3"/>
+	<file src="sound/click.mp3"/>
+	<file src="sound/errorp.mp3"/>
+	<file src="sound/movafagh.mp3"/>
+</meta>
+
+

@@ -1,0 +1,77 @@
+<meta>
+	<info author="ExoPrim" type="script" version="1.0" />
+	
+	<file src="Data/img/F50.png" />
+	<file src="Data/img/W50.png" />
+	<file src="Data/img/bar.png" />
+	<file src="Data/img/bar2.png" />
+	<file src="Data/img/Weapon_BG.png" />
+	<file src="Data/img/fundo.png" />
+	<file src="Data/img/fundo3.png" />
+	<file src="Data/img/fundo5.png" />
+	<file src="Data/img/hp.png" />
+	<file src="Data/img/datebox.png" />
+	<file src="Data/img/shield.png" />
+	<file src="Data/FONT.ttf" />
+	<file src="Data/img/0.png" />
+	<file src="Data/img/1.png" />
+	<file src="Data/img/2.png" />
+	<file src="Data/img/3.png" />
+	<file src="Data/img/4.png" />
+	<file src="Data/img/5.png" />
+	<file src="Data/img/Clock.png" />
+	<file src="Data/img/6.png"/>
+	<file src="Data/img/7.png"/>
+	<file src="Data/img/8.png"/>
+	<file src="Data/img/9.png"/>
+	<file src="Data/img/10.png"/>
+	<file src="Data/img/11.png"/>
+	<file src="Data/img/12.png"/>
+	<file src="Data/img/13.png"/>
+	<file src="Data/img/14.png"/>
+	<file src="Data/img/15.png"/>
+	<file src="Data/img/16.png"/>
+	<file src="Data/img/17.png"/>
+	<file src="Data/img/22.png"/>
+	<file src="Data/img/23.png"/>
+	<file src="Data/img/24.png"/>
+	<file src="Data/img/25.png"/>
+	<file src="Data/img/26.png"/>
+	<file src="Data/img/27.png"/>
+	<file src="Data/img/28.png"/>
+	<file src="Data/img/29.png"/>
+	<file src="Data/img/30.png"/>
+	<file src="Data/img/31.png"/>
+	<file src="Data/img/32.png"/>
+	<file src="Data/img/33.png"/>
+	<file src="Data/img/34.png"/>
+	<file src="Data/img/35.png"/>
+	<file src="Data/img/36.png"/>
+	<file src="Data/img/37.png"/>
+	<file src="Data/img/38.png"/>
+	<file src="Data/img/39.png"/>
+	<file src="Data/img/40.png"/>
+	<file src="Data/img/41.png"/>
+	<file src="Data/img/42.png"/>
+	<file src="Data/img/43.png"/>
+	<file src="Data/img/44.png"/>
+	<file src="Data/img/45.png"/>
+	<file src="Data/img/46.png"/>
+	<file src="Data/img/Anten2.png" />
+	<file src="Data/img/Anten3.png" />
+	<file src="Data/img/Anten4.png" />
+	<file src="Data/img/Anten5.png" />
+	<file src="Data/img/Money_BG.png" />
+	
+	<file src="Data/wanted/1.png" />
+	<file src="Data/wanted/0.png" />
+	<file src="Data/wanted/2.png" />
+	<file src="Data/wanted/3.png" />
+	<file src="Data/wanted/4.png" />
+	<file src="Data/wanted/5.png" />
+	<file src="Data/wanted/6.png" />
+	
+	<file src="Data/img/background.png"/>
+	<file src="Data/img/aks.png"/>
+	<script src="client.lua" type="client" cache="false" />
+</meta>

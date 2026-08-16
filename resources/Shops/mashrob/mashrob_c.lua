@@ -1,0 +1,10 @@
+function shake ( )
+setCameraDrunkLevel(255)
+setTimer( function()
+setCameraDrunkLevel(1)
+setCameraDrunkLevel(0)
+triggerServerEvent("resetkon", getLocalPlayer(), getLocalPlayer() )
+end, 60000, 1)
+end
+addEvent( "shake", true )
+addEventHandler( "shake", localPlayer, shake )

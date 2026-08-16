@@ -1,0 +1,6 @@
+<meta>
+    <info author="ExoPrim" name="Cinematic" version="1.0" type="script"/>
+    <script src="c_hide.lua" type="client" cache="false"/>
+    <file src="Files/Cinematic.png" cache="false"/>
+    
+</meta>

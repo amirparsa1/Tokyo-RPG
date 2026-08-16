@@ -1,0 +1,50 @@
+<meta>
+    <script src="Interior_S.lua" type="server" cache="false"/>
+    <script src="Interior_C.lua" type="client" cache="false" />
+	<file src="Data/Enter.mp3"/>
+    <file src="Enter.mp3"></file>
+    <file src="Locked.mp3"></file>
+	<file src="font1.ttf"></file>
+	<file src="Data/Btn.png"/>
+	<file src="Data/shop.png"/>
+	<file src="assets/Dayere.png"/>
+	<file src="assets/Cigarette.png"/>
+	<file src="assets/CigaretteA.png"/>
+	<file src="assets/Lighter.png"/>
+	<file src="assets/LighterA.png"/>
+	<file src="assets/SimCard.png"/>
+	<file src="assets/SimCardA.png"/>
+	<file src="assets/MarketBG.png"/>
+	<file src="assets/MarketBuy.png"/>
+	<file src="assets/MarketClose.png"/>
+	<file src="Background.png"/>
+	<file src="close.png"/>
+	<file src="right.png"/>
+	<file src="left.png"/>
+	<script src="biz_s.lua" type="server" />
+	<script src="biz_c.lua" type="client" cache="false"/>
+	<file src="assets/choose.png" />
+	<file src="assets/Exchange.png" />
+	<file src="assets/BizBG.png" />
+	<file src="assets/Frame.png" />
+	<file src="assets/Close.png" />
+	<file src="assets/CloseA.png" />
+	<file src="assets/Enter.png" />
+	<file src="assets/EnterA.png" />
+	<file src="assets/Exit.png" />
+	<file src="assets/ExitA.png" />
+	<file src="assets/Purchase.png" />
+	<file src="assets/PurchaseA.png" />
+	<file src="assets/SellServer.png" />
+	<file src="assets/SellServerA.png" />
+	<file src="assets/Rage.ttf" />
+	<file src="assets/Locked.mp3"/>
+	<file src="assets/Enter.mp3"/>
+	<file src="assets/Click.mp3"/>
+	<file src="assets/Error.mp3"/>
+	<file src="assets/1.jpg"/>
+	<file src="assets/Weapon/BG.png" />
+	<file src="assets/Click.png" />
+
+	<export function="checkBizToFee" type="server"/>
+</meta>

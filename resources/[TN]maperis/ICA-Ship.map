@@ -1,0 +1,6 @@
+<map edf:definitions="editor_main">
+    <object id="object (freighter_sfe) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="10230" scale="1" doublesided="false" collisions="true" posX="721.79999" posY="-2992.3" posZ="6.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (freightboxes) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="10231" scale="1" doublesided="false" collisions="true" posX="720.90002" posY="-2993.8" posZ="8.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (freighter2b_SFE) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="10229" scale="1" doublesided="false" collisions="true" posX="721.59998" posY="-2993.7" posZ="5.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (freight_SFW_door) (1)" breakable="false" interior="0" alpha="255" dimension="0" model="2944" scale="1" doublesided="false" collisions="true" frozen="true" posX="769.09998" posY="-2991.1001" posZ="11.3" rotX="0" rotY="0" rotZ="0"></object>
+</map>

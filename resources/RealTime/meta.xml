@@ -1,0 +1,4 @@
+<meta>
+	<info type="script" name="RealTime" author="MANIKILLER" version="1.0.0" />
+    <script src='client.lua' type='client' />
+</meta>

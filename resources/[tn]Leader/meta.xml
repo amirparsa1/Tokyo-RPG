@@ -1,0 +1,11 @@
+<meta>
+	<script src="client.lua" type="client" cache="false" />
+	<script src="server.lua" type="server" />
+	<file src="Data/Font.ttf" />
+	<file src="Data/Background.png" />
+	<file src="Data/Close.png" />
+	<file src="Data/GiveFactionWarn.png" />
+	<file src="Data/Kick.png" />
+	<file src="Data/WhiteBG.png" />
+	<file src="Data/Rv.png" />
+</meta>

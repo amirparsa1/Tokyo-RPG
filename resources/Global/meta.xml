@@ -1,0 +1,137 @@
+<meta>
+    <info author="ExoPrim" name="Global-System" type="script" />
+	<script src="SafeZone.lua" type="server" />
+	<!-- Addres -->
+	<script src="Addres/client.lua" type="client"  cache="false"/>
+	<script src="Addres/server.lua" type="server" />
+	<file src="Addres/GOTHIC.ttf"/>
+	
+	<!-- register -->
+    <script src="register/server.lua" type="server" />
+	<script src="register/client.lua" type="client" cache="false" />
+	<file src="register/Data/font.ttf"/>
+	<file src="register/Data/font2.ttf"/>
+	<file src="register/Data/accept.png"/>
+	<file src="register/Data/accept2.png"/>
+	<file src="register/Data/posht.png"/>
+	<file src="register/Data/BG_Box.png"/>
+	<file src="register/Data/female.png"/>
+	<file src="register/Data/male.png"/>
+	<file src="register/Data/female2.png"/>
+	<file src="register/Data/male2.png"/>
+	<file src="register/Data/Red_Line.png"/>
+	<file src="register/Data/femalei.png"/>
+	<file src="register/Data/bgpage.png"/>
+	<!-- register sound-->
+	<file src="register/sound/error.mp3"/>
+	<file src="register/sound/movafagh.mp3"/>
+	<file src="register/sound/info.mp3"/>
+	<file src="register/sound/click.mp3"/>
+	
+
+	
+	<!-- accounts -->
+	<script src="accounts/spawn.lua" type="server" />
+	<script src="accounts/vehicle.lua" type="server" />
+	
+	<!-- rules -->
+	<script src="rules/client.lua" type="client" cache="false" />
+	<file src="rules/Data/alamatSoal.png"/>
+	<file src="rules/Data/font.ttf"/>
+	
+	<!-- local folder files -->
+	<export function="openPanels" type="server" />
+	<script src="call110.lua" type="server" />
+	<export function="spawningPlayerForAcc" type="server" />
+	<export function="createVehiclesForAcc" type="server" />
+	<script src="guestlogin.lua" />
+
+    <script src="respawn.lua" />
+	<script src="sbFix.lua" />
+	<script src="generalCommands.lua" />
+	<script src="cnn.lua" type="server" />
+	<script src="pay.lua" type="server" />
+	<script src="global.lua" type="server" />
+	<script src="mouse.lua" type="client" cache="false" />
+	<script src="fps.lua" type="client" cache="false" />
+	<script src="firstperson.lua" type="client" cache="false" />
+	<script src="dice.lua" type="server" />
+	<script src="afkicon.lua" type="client" cache="false" />
+	
+	<!-- Pay Day -->
+	<script src="PayDay/Server.lua" type="server" />
+	<script src="PayDay/Client.lua" type="client" />
+	<file src="PayDay/paycheck.mp3" />	
+   
+   
+   	<!-- Clear Wanted -->
+	<script src="ClearWanted/Server.lua" type="server" />
+
+	
+	   	<!-- Clear Wanted -->
+	<script src="PlayTime/Server.lua" type="server" />
+	
+	<!-- Mashin Free 
+	<map src="Cars/FreeCars.map" dimension="0"></map>-->
+	<script src="Cars/RespawnCars.lua" type="server" />
+	 
+	 
+	 <!-- Maps -->
+	<info type="map" version="1.0.0"></info>
+	
+	
+   
+	<map src="Map/Casino.map" dimension="0"></map>
+	<map src="Map/PompBenzinLS.map" dimension="0"></map>
+	<map src="Map/CarShopMap.map" dimension="0"></map>
+	
+
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="map/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="map/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	
+
+	
+	
+	<!-- Count Down (Beshmar) -->
+	<script src="CountDown/client.lua" type="client"/>
+	<script src="CountDown/server.lua" type="server"/>
+	
+	
+	<!-- Chatre nejat -->
+	<min_mta_version server="1.3.1"/>
+	<script src="parachute/utility.lua" type="client"/>
+	<script src="parachute/parachute.lua"/>
+	<script src="parachute/parachute_cl.lua" type="client"/>
+	<script src="parachute/skydiving_cl.lua" type="client"/>
+	<script src="parachute/openChute.lua" type="client"/>
+	<script src="parachute/client_anim.lua" type="client"/>
+	<file src="parachute/parachuteopen.mp3" />
+	
+	<export function="removeParachute" type="client"/>
+	<export function="stopSkyDiving" type="client"/>
+	
+	<export function="isPlayerSkyDiving" type="client"/>
+	<export function="isPlayerParachuting" type="client"/>
+	
+	
+	<!-- Charkho_Falak 
+	<script src="Charkho_Falak/ferris_s.lua" type="server" />
+	<script src="Charkho_Falak/data_pos.lua" type="server" />
+	<file src="Charkho_Falak/fcabin.col" />-->
+	
+		<!-- MyPoint -->
+	<script src="MyPoint/server.lua" type="server" />
+	
+
+</meta>

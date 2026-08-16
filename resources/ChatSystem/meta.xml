@@ -1,0 +1,16 @@
+<meta>
+	<info author="ExoPrim" name="SERVER CHAT" description="" version="1.1" type="script" />
+	<oop>true</oop>
+	
+	<script src="family.lua" type="server" />
+	<script src="nearByMessage.lua" />
+	<script src="factionChat.lua" type="server" />
+	<script src="staff-chat.lua" type="server" />
+	<script src="miscChat.lua" type="server" />
+	<export function="sendNearByChat" type="server" />
+	<export function="sendDoChat" type="server" />
+	<script src="bubble_round.lua" type="client" />	
+	<script src="bubble_client.lua" type="client" />
+	<script src="bubble_server.lua" type="server" />
+	<export function="outputMessage" type="server"/>
+</meta>

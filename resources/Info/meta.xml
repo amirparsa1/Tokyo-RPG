@@ -1,0 +1,8 @@
+<meta>
+  <info author="Plus MTA Development Team" name="Player Info" version="1.1" type="script"/>
+	<script src="client.lua" type="client" cache="false" />
+	<file src="Data/date_font.ttf" />
+	<file src="Data/ANTQUABI.ttf" />
+	<file src="Data/GOTHIC.ttf" />
+	<file src="Data/Kadr.png"/>
+</meta>

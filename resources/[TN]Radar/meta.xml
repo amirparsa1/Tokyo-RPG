@@ -1,0 +1,87 @@
+﻿<meta>
+    <script src="config.lua" type="shared" cache="false" />
+	<file src="files/Roboto.ttf" type="client" />
+	<file src="files/fontawesome-webfont.ttf" type="client" />
+    <file src="radar/files/map.png" type="client" />
+    <file src="radar/files/gpslosttext.png" type="client" />
+    <file src="radar/files/gpslosticon.png" type="client" />
+    <file src="radar/files/nosignaltext.png" type="client" />
+    <file src="radar/files/arrow.png" type="client" />
+	<file src="theFont.ttf"  />
+    <file src="radar/files/f11radarclose.mp3" type="client" />
+    <file src="radar/files/f11radaropen.mp3" type="client" />
+	
+    <script src="radar/sourceC.lua" type="client" cache="false" />
+    <script src="client.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    <export function="createCustomBlip" type="client"  />
+    <export function="deleteCustomBlip" type="client" />
+    <export function="getNode" type="client" />
+    <export function="miniMapStatus" type="client" />
+
+
+    <file src="radar/files/blips/0.png"/>
+	<file src="radar/files/blips/1.png"/>
+	<file src="radar/files/blips/2.png"/>
+	<file src="radar/files/blips/3.png"/>
+	<file src="radar/files/blips/4.png"/>
+	<file src="radar/files/blips/5.png"/>
+	<file src="radar/files/blips/6.png"/>
+	<file src="radar/files/blips/7.png"/>
+	<file src="radar/files/blips/8.png"/>
+	<file src="radar/files/blips/9.png"/>
+	<file src="radar/files/blips/10.png"/>
+	<file src="radar/files/blips/11.png"/>
+	<file src="radar/files/blips/12.png"/>
+	<file src="radar/files/blips/13.png"/>
+	<file src="radar/files/blips/14.png"/>
+	<file src="radar/files/blips/15.png"/>
+	<file src="radar/files/blips/16.png"/>
+	<file src="radar/files/blips/17.png"/>
+	<file src="radar/files/blips/18.png"/>
+	<file src="radar/files/blips/19.png"/>
+	<file src="radar/files/blips/20.png"/>
+	<file src="radar/files/blips/21.png"/>
+	<file src="radar/files/blips/22.png"/>
+	<file src="radar/files/blips/23.png"/>
+	<file src="radar/files/blips/24.png"/>
+	<file src="radar/files/blips/25.png"/>
+	<file src="radar/files/blips/26.png"/>
+	<file src="radar/files/blips/27.png"/>
+	<file src="radar/files/blips/28.png"/>
+	<file src="radar/files/blips/29.png"/>
+	<file src="radar/files/blips/30.png"/>
+	<file src="radar/files/blips/31.png"/>
+	<file src="radar/files/blips/32.png"/>
+	<file src="radar/files/blips/33.png"/>
+	<file src="radar/files/blips/34.png"/>
+	<file src="radar/files/blips/35.png"/>
+	<file src="radar/files/blips/36.png"/>
+	<file src="radar/files/blips/37.png"/>
+	<file src="radar/files/blips/38.png"/>
+	<file src="radar/files/blips/39.png"/>
+	<file src="radar/files/blips/40.png"/>
+	<file src="radar/files/blips/41.png"/>
+	<file src="radar/files/blips/42.png"/>
+	<file src="radar/files/blips/43.png"/>
+	<file src="radar/files/blips/44.png"/>
+	<file src="radar/files/blips/45.png"/>
+	<file src="radar/files/blips/46.png"/>
+	<file src="radar/files/blips/47.png"/>
+	<file src="radar/files/blips/48.png"/>
+	<file src="radar/files/blips/49.png"/>
+	<file src="radar/files/blips/50.png"/>
+	<file src="radar/files/blips/51.png"/>
+	<file src="radar/files/blips/52.png"/>
+	<file src="radar/files/blips/53.png"/>
+	<file src="radar/files/blips/54.png"/>
+	<file src="radar/files/blips/55.png"/>
+	<file src="radar/files/blips/56.png"/>
+	<file src="radar/files/blips/57.png"/>
+	<file src="radar/files/blips/58.png"/>
+	<file src="radar/files/blips/59.png"/>
+	<file src="radar/files/blips/60.png"/>
+	<file src="radar/files/blips/61.png"/>
+	<file src="radar/files/blips/62.png"/>
+	<file src="radar/files/blips/63.png"/> 
+</meta>

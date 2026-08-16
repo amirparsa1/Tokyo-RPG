@@ -1,0 +1,166 @@
+<meta>
+	<script src="Scripts/inventory_s.lua" type="server" cache="false"/>
+	<script src="Scripts/inventory_c.lua" type="client" cache="false"/>
+	<script src="Scripts/skin.lua" type="client" cache="false"/>
+	<file src="finder/finder.png" />
+
+	<file src="finder/finder.ttf"></file>
+
+	
+    <file src="Files/Close.png" />
+    <file src="Files/Ghavasi_BG.png" />
+    <file src="Files/Kandan.png" />
+    <file src="Files/Pooshidan.png" />
+    <file src="Files/Porkardan.png" />
+    <file src="Files/Oxygen.png" />
+    <file src="Files/ghavas.txd" />
+    <file src="Files/ghavas.dff" />
+	<file src="Sounds/open.m4a" />
+    <file src="Panels/Clean.png" cache="false" />
+	<file src="Panels/Close.png" cache="false" />
+	<file src="Panels/Craft.png" cache="false" />
+	<file src="Panels/CraftBG.png" cache="false" />
+	<file src="Panels/DoneKoore.png" cache="false" />
+	<file src="Panels/Fire.png" cache="false" />
+	<file src="Panels/KooreBG.png" cache="false" />
+	<file src="assets/1.mp3"/>
+	<file src="assets/2.mp3"/>
+	<file src="assets/animations.ifp"/>
+	<file src="assets/bg.png"/>
+	<file src="assets/bg2.png"/>
+	<file src="assets/fish1.png"/>
+	<file src="assets/font1.ttf"/>
+	<file src="assets/IranSans.ttf"/>
+	<file src="assets/Green.png"/>
+	<file src="assets/Item.png"/>
+	<file src="assets/monitor.png"/>
+	<file src="assets/bgup.png"/>
+	<file src="assets/Cinematic.png" />
+
+	<file src="Files/Green.png"/>
+	<file src="Files/Inventory.png"/>
+	<file src="Files/Item.png"/>
+	
+	<file src="Fonts/Rage.ttf"/>
+	<file src="Fonts/font.ttf"/>
+	
+	<file src="Items/0.png"/>
+	
+	<file src="Items/1.png"/>
+	<file src="Items/2.png"/>
+	<file src="Items/3.png"/>
+	<file src="Items/4.png"/>
+	<file src="Items/5.png"/>
+	<file src="Items/6.png"/>
+	<file src="Items/7.png"/>
+	<file src="Items/8.png"/>
+	<file src="Items/9.png"/>
+	<file src="Items/10.png"/>
+	<file src="Items/11.png"/>
+	<file src="Items/12.png"/>
+	<file src="Items/13.png"/>
+	<file src="Items/14.png"/>
+	<file src="Items/15.png"/>
+	<file src="Items/16.png"/>
+	<file src="Items/17.png"/>
+	<file src="Items/18.png"/>
+	<file src="Items/19.png"/>
+	<file src="Items/20.png"/>
+	<file src="Items/21.png"/>
+	<file src="Items/22.png"/>
+	<file src="Items/23.png"/>
+	<file src="Items/24.png"/>
+	<file src="Items/25.png"/>
+	<file src="Items/26.png"/>
+	<file src="Items/27.png"/>
+	<file src="Items/28.png"/>
+	<file src="Items/29.png"/>
+	<file src="Items/30.png"/>
+	<file src="Items/31.png"/>
+	<file src="Items/32.png"/>
+	<file src="Items/33.png"/>
+	<file src="Items/34.png"/>
+	<file src="Items/35.png"/>
+	<file src="Items/36.png"/>
+	<file src="Items/37.png"/>
+	<file src="Items/38.png"/>
+	<file src="Items/39.png"/>
+	<file src="Items/40.png"/>
+	<file src="Items/41.png"/>
+	<file src="Items/42.png"/>
+	<file src="Items/43.png"/>
+	<file src="Items/44.png"/>
+	<file src="Items/45.png"/>
+	<file src="Items/46.png"/>
+	<file src="Items/47.png"/>
+	<file src="Items/48.png"/>
+	<file src="Items/49.png"/>
+	<file src="Items/50.png"/>
+	<file src="Items/51.png"/>
+	<file src="Items/52.png"/>
+	<file src="Items/53.png"/>
+	<file src="Items/54.png"/>
+	<file src="Items/55.png"/>
+	<file src="Items/56.png"/>
+	<file src="Items/57.png"/>
+	<file src="Items/58.png"/>
+	<file src="Items/59.png"/>
+	<file src="Items/60.png"/>
+	<file src="Items/61.png"/>
+	<file src="Items/62.png"/>
+	<file src="Items/63.png"/>
+	<file src="itemsound/5.mp3"/>
+	
+	<file src="Sounds/Ring0.mp3"/>
+	<file src="Sounds/Ring1.mp3"/>
+	<file src="Sounds/Ring2.mp3"/>
+	<file src="Sounds/Ring3.mp3"/>
+	<file src="Sounds/Ring4.mp3"/>
+	<file src="Sounds/Ring5.mp3"/>
+	<file src="Sounds/SMS.mp3"/>
+	
+	
+	
+	
+	
+	
+    
+    <file src="Files/IRANSans.ttf"></file>
+    
+    <file src="Files/FishAnims.ifp"></file>
+    <file src="Files/FishingRod.dff"></file>
+    <file src="Files/FishingRod.txd"></file>
+    <file src="Sounds/s1.mp3"></file>
+    <file src="Sounds/s2.mp3"></file>
+    <file src="Images/Mid.png"></file>
+    <file src="Images/Arrow.png"></file>
+    <file src="Images/Mouse.png"></file>
+	<file src="Images/BGFullScreen.png"></file>
+	
+	
+	
+	
+    <map src="Map/ghavasi.map" cache="false" dimension="0"></map>
+	<map src="Map/Fish__1-MAP.map" cache="false" dimension="0"></map>
+	<map src="Map/Fixed-Bug.map" cache="false" dimension="0"></map>
+    <map src="Map/BugGhavasi.map" cache="false" dimension="0"></map>
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="Map/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="Map/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	<export function="isPlayerHaveThisItem" type="server" />
+	<export function="GivePlayerItem" type="server" />
+	<export function="GetPlayerFreeSlot" type="server" />
+	<export function="createmile" type="server" />
+	
+	
+</meta>

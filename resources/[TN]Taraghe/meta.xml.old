@@ -1,0 +1,40 @@
+<meta>
+    <info author="Arlixx" type="script" />
+	
+    <settings>
+         <setting name="command" value="fw" /> 
+         <setting name="maxRockets" value="2" /> 
+     </settings>
+
+
+    <script src="Rocket_S.lua" type="server" />
+    <script src="Rocket_C.lua" type="client" cache="false"/>
+
+    <file src="files/shootlight.dff"></file>
+    <file src="files/smoke_flare.dff"></file>
+    <file src="files/fwSound.mp3"></file>
+    <file src="files/smoke30m.dff"></file>
+    <file src="files/pop.mp3"/>
+    <file src="files/shot.mp3"/>
+    <file src="files/spray-start.mp3"/>
+    <file src="files/spray.mp3"/>
+
+	<!-- command -->
+    <script src="s_command.lua" type="server" />
+    <script src="Helper_S.lua" type="server" />
+    <script src="AdminBase.lua" type="server" />
+    <script src="Dice.lua" type="server" />
+    <script src="client.lua" type="client" cache="false" />
+    <file src="Box.mp3" />
+    <file src="RkoSound.mp3" />
+    <script src="Fly_S.lua" type="server" />
+    <script src="Fly_C.lua" type="client" cache="false" />
+    <script src="freecam.lua" type="client" cache="false" />
+	<!-- local folder files -->
+
+	<export function="AdminWarn" type="server" />
+	<export function="GetPlayerAdminRank" type="server" />
+	<export function="GetPlayerHelperRank" type="server" />
+	<export function="CreateCr1" type="server" />
+	<export function="CreateCrClient" type="server" />
+</meta>

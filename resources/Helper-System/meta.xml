@@ -1,0 +1,19 @@
+<meta>
+	<info	
+	author="Paydar Team" 
+	name="HelpMe System"  
+	type="script"
+	version="1.0.3"
+	description="ez #RIGEL :)"
+	/>
+	<script src="server.lua" type="server"/>
+
+	<script src="help-c.lua" type="client"/>
+	
+	<file src="Data/TREBUCBD.ttf"></file>
+	<file src="Data/GOTHIC.ttf"></file>
+	<file src="Data/error.mp3"/>
+	<file src="Data/errorp.mp3"/>
+	<file src="Data/movafagh.mp3"/>
+	
+</meta>

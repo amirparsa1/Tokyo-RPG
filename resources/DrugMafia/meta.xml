@@ -1,0 +1,5 @@
+<meta>	
+	<file src="r.MP3" />
+	<script src="client.lua"  type="client" />
+    <script src="server.lua" />
+</meta>

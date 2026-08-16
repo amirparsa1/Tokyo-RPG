@@ -1,0 +1,50 @@
+<meta>
+    <min_mta_version server="1.5.4-9.11413" client="1.5.4-9.11413" />
+    <info name="ACC-Sys[TN4Ever]" author="ExoPrim" type="gamemode" version="1.6" />
+	<script src="Client.lua" type="client" cache="false" />
+
+    <script src="Server.lua" type="server"  />
+    <file src = "Data/Images/Avatar_1.png"  /> 
+    <file src="opensans-light.ttf" cache="false" />
+    <file src="font.ttf" cache="false" />
+    <file src="font2.ttf" cache="false" />
+    <file src="Data/Images/Avatar_2.png" cache="false" />
+    <file src="Data/Images/logo.png" cache="false" />
+
+    <file src="Data/Sounds/bong.mp3" cache="false" />
+    <file src="Data/Sounds/Music.mp3" cache="false" />
+    <file src="Data/Sounds/wMusic.mp3" cache="false" />
+    <file src="Data/Images/False.png" cache="false" />
+    <file src="Data/Images/True.png" cache="false" />
+    <file src="Data/Images/Login.png" cache="false" />
+    <file src="Data/Images/BG.jpg" cache="false" />
+    <file src="Data/Images/Click.png" cache="false" />
+    <file src="Data/Images/loading.jpg" cache="false" />
+    <file src="Data/Images/OnlinePlayer.png" cache="false" />
+    <file src="Data/Fonts/font.ttf" cache="false" />
+    <file src="Data/Images/SoundOn.png" cache="false" />
+    <file src="Data/Images/SoundOff.png" cache="false" />
+    <file src="Data/Images/H_Login.png" cache="false" />
+    <file src="Data/Images/B_Login.png" cache="false" />
+    <file src="Data/Images/Fast_Login.png" cache="false" />
+    <file src="Data/Images/Box_Welcome.png" cache="false" />
+    <file src="Data/Images/textlogin.png" cache="false" />
+    <file src="Data/Images/Password.png" cache="false" />
+    <file src="Data/Images/l.png" cache="false" />
+    <file src="Data/Images/Name.png" cache="false" />
+    <file src="Data/Images/textregister.png" cache="false" />
+    <file src="Data/Images/buttn.png" cache="false" />
+    <file src="Data/Images/H_Recovery.png" cache="false" />
+    <file src="Data/Images/B_Recovery.png" cache="false" />
+    <file src="Data/Images/H_ChangeSerial.png" cache="false" />
+    <file src="Data/Images/B_ChangeSerial.png" cache="false" />
+    <file src="Data/Images/H_Register.png" cache="false" />
+    <file src="Data/Images/B_Register.png" cache="false" />
+    <file src="Data/Images/R.png" cache="false" />
+    <file src="Data/Sounds/Createacc.mp3" cache="false" />
+    <file src="Data/Sounds/Welcome.mp3" cache="false" />
+    <file src="Data/Sounds/FirstLogin.mp3" cache="false" />
+    <export function="getPlayerAcc" type="server" />
+    <export function="getPlayerFromAcc" type="server" />
+    <export function="setFacP" type="server" />
+</meta>

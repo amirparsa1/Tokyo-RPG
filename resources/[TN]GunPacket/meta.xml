@@ -1,0 +1,64 @@
+<meta>
+    <info author="#Flavio" version="1.0" name="Weapon Select GTA V" type="misc" /> 
+	<!-- SCRIPT FILES -->
+    <script src="client/client.lua" type="client" cache="false"/>	
+    <script src="server/server.lua" type="server"/>
+	<!-- SFX EFFECTS -->
+    <file src="sfx/effect.mp3" />
+	<!-- GFX WEAPONS -->	
+	<file src="gfx/ak-47.png" />
+	<file src="gfx/baseball_bat.png" />	
+    <file src="gfx/brass_knuckles.png" />		
+	<file src="gfx/camera.png" />		
+	<file src="gfx/cane.png" />		
+	<file src="gfx/chainsaw.png" />		
+	<file src="gfx/desert_eagle.png" />		
+	<file src="gfx/detonator.png" />		
+	<file src="gfx/dildo_1.png" />			
+	<file src="gfx/dildo_2.png" />		 
+	<file src="gfx/fire_extinguisher.png" />		
+	<file src="gfx/flame_thrower.png" />		
+	<file src="gfx/flowers.png" />	
+	<file src="gfx/golf_club.png" />	
+	<file src="gfx/grenade.png" />	
+	<file src="gfx/katana.png" />	
+	<file src="gfx/knife.png" />	
+	<file src="gfx/m4.png" />	
+	<file src="gfx/micro_uzi.png" />	
+	<file src="gfx/micro_uzi_double.png" />	
+	<file src="gfx/minigun.png" />	
+	<file src="gfx/missile_launcher.png" />			
+	<file src="gfx/molotov.png" />	
+	<file src="gfx/mp5.png" />	
+	<file src="gfx/night_stick.png" />	
+	<file src="gfx/nightvision_goggles.png" />	
+	<file src="gfx/parachute.png" />	
+	<file src="gfx/pistol.png" />			
+	<file src="gfx/pistol_double.png" />	
+	<file src="gfx/pool_cue.png" />	
+	<file src="gfx/rifle.png" />	
+	<file src="gfx/rpg.png" />	
+	<file src="gfx/sachet_charge.png" />	
+	<file src="gfx/sawn_off.png" />		
+	<file src="gfx/sawn_off_double.png" />	
+	<file src="gfx/shotgun.png" />	
+	<file src="gfx/shovel.png" />	
+	<file src="gfx/silenced_pistol.png" />	
+	<file src="gfx/sniper_rifle.png" />	
+	<file src="gfx/spas_12.png" />			
+	<file src="gfx/spray_paint.png" />	
+	<file src="gfx/tear_gas.png" />	
+	<file src="gfx/tec_9.png" />	
+	<file src="gfx/tec_9_double.png" />	
+	<file src="gfx/thermal_goggles.png" />	
+	<file src="gfx/unarmed.png" />	
+	<file src="gfx/vibe_1.png" />	
+	<file src="gfx/vibe_2.png" />	
+    <!-- GFX MISC -->
+	<file src="gfx/wheel_current.png" />
+	<file src="gfx/wheel_part.png" />			
+	<file src="gfx/wheel_selected.png" />	
+    <!-- SHADER -->
+	<script src="shader/BlurShader.lua" type="client" cache="false"/>
+	<file src="shader/BlurShader.fx" type="client"/>		
+</meta>

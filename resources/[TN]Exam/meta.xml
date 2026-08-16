@@ -1,0 +1,27 @@
+<meta>
+    <info author="TheNight" version="0.1" type="script" />
+    <script src="lic.lua" type="server" />
+    <script src="lic_client.lua" type="client" cache="false"/>
+	<file src="Data/Images/starttest.png" type="client" />
+	<file src="Data/Images/qavanin.png" type="client" />
+	<file src="Data/Images/close.png" type="client" />
+	<file src="font.ttf"/>
+	<file src="font2.ttf"/>
+	<file src="Data/Images/cancel.png" type="client" />
+	<file src="Data/Images/kadr.png" type="client" />
+	<file src="Data/Images/kadrsoal.png" type="client" />
+	<file src="Data/Images/memo.png" type="client" />
+	<file src="Data/Images/memo2.png" type="client" />
+	<file src="Data/Images/memo3.png" type="client" />
+	<file src="Data/Images/sw.png" type="client" />
+	<file src="Data/Images/white.png" type="client" />
+	<file src="Data/Images/qabool.png" type="client" />
+	<file src="Data/Images/mardood.png" type="client" />
+	<file src="Data/Images/ok.png" type="client" />
+
+
+
+	
+	
+
+</meta>

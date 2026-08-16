@@ -1,0 +1,49 @@
+<meta>
+    <file src="Park/park.col" cache="false" />
+    <file src="Park/park.dff" cache="false" />
+    <file src="Park/park.txd" cache="false" />
+    <file src="cjail/cjail.col" cache="false" />
+    <file src="cjail/cjail.dff" cache="false" />
+    <file src="cjail/cjail.txd" cache="false" />
+    <file src="vine/night.col" cache="false" />
+    <file src="vine/night.dff" cache="false" />
+    <file src="vine/night.txd" cache="false" />
+    <file src="Parking/garage.col" cache="false" />
+    <file src="Parking/garage.dff" cache="false" />
+    <file src="Parking/garage.txd" cache="false" />
+    <file src="Park/rockstar.col" cache="false" />
+    <file src="Park/rockstar.dff" cache="false" />
+    <file src="Park/rockstar.txd" cache="false" />
+    <file src="Dico/Disco.col" cache="false" />
+    <file src="Dico/Disco.dff" cache="false" />
+    <file src="Dico/Disco.txd" cache="false" />
+    <file src="pickups/color_blue.txd" cache="false" />
+    <file src="pickups/color_blue_garage.txd" cache="false" />
+    <file src="pickups/color_blue_house.txd" cache="false" />
+    <file src="pickups/color_family_garage.txd" cache="false" />
+    <file src="pickups/color_green.txd" cache="false" />
+    <file src="pickups/color_red.txd" cache="false" />
+    <file src="pickups/color_yellow.txd" cache="false" />
+    <file src="pickups/color_yellow_house.txd" cache="false" />
+    <file src="pickups/icon.dff" cache="false" />
+    <file src="pickups/icon.txd" cache="false" />
+    <file src="pickups/property_business.dff" cache="false" />
+    <file src="pickups/property_disabled.dff" cache="false" />
+    <file src="pickups/property_garage.dff" cache="false" />
+    <file src="pickups/property_house.dff" cache="false" />
+    <file src="pickups/teleporter.dff" cache="false" />
+    <file src="oilrig/oilrig.col" cache="false" />
+    <file src="oilrig/oilrig.dff" cache="false" />
+    <file src="oilrig/oilrig.txd" cache="false" />
+
+
+    <file src="VipSkins/Zgamer/bfyst.dff" cache="false" />
+    <file src="VipSkins/Zgamer/bfyst.txd" cache="false" />
+    <file src="VipSkins/Zgamer/bmost.dff" cache="false" />
+    <file src="VipSkins/Zgamer/bmost.txd" cache="false" />
+    <file src="VipSkins/Zgamer/merit.dff" cache="false" />
+    <file src="VipSkins/Zgamer/merit.txd" cache="false" />
+    <file src="Keshti/nullkeshti.dff"/>
+    <file src="Keshti/nullkeshti.col"/>
+    <script src="client.lua" type="client" cache="false"/>
+</meta>

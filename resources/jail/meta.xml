@@ -1,0 +1,5 @@
+<meta>
+    <info author="**Enix Game Scripters Team**" description="Show Jail Time And Other" version="1.0" type="script" />
+	<script src="server.lua" />
+	<script src="client.lua" type="client"/>
+</meta>

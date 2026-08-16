@@ -1,0 +1,11 @@
+<meta>
+    <script src ="server.lua" type="server"/>
+    <script src ="client.lua" type="client" catch="false"/>
+    <file src="Data/ExBg.png" catch="false"/>
+    <file src="Data/Ex.png" catch="false"/>
+    <file src="Data/Close.png" catch="false"/>
+    <file src="Data/Rage.ttf" catch="false"/>
+    <file src="Data/bgtyp.png" catch="false"/>
+    <file src="Data/money_azg.png" catch="false"/>
+    <file src="Data/gold_xipq.png" catch="false"/>
+</meta>

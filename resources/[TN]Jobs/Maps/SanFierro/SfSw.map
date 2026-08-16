@@ -1,0 +1,18 @@
+<map edf:definitions="editor_main">
+    <vehicle id="SW1" paintjob="3" interior="0" alpha="255" model="574" plate="93WD 9HI" dimension="0" posX="-1817.2998" posY="-154" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW2" paintjob="3" interior="0" alpha="255" model="574" plate="AKBU 9GO" dimension="0" posX="-1817.4004" posY="-156.7998" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW3" paintjob="3" interior="0" alpha="255" model="574" plate="3C34 0RU" dimension="0" posX="-1817.4004" posY="-159.5" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW4" paintjob="3" interior="0" alpha="255" model="574" plate="BBBG DYE" dimension="0" posX="-1817.4004" posY="-162.2998" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW5" paintjob="3" interior="0" alpha="255" model="574" plate="68CO 3O1" dimension="0" posX="-1817.4004" posY="-165.09961" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW6" paintjob="3" interior="0" alpha="255" model="574" plate="E678 NCE" dimension="0" posX="-1817.4004" posY="-167.90039" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW7" paintjob="3" interior="0" alpha="255" model="574" plate="SQ4G 4N1" dimension="0" posX="-1817.4004" posY="-170.7002" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW8" paintjob="3" interior="0" alpha="255" model="574" plate="6FXI SIL" dimension="0" posX="-1817.4004" posY="-173.40039" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW9" paintjob="3" interior="0" alpha="255" model="574" plate="B8VG Y0I" dimension="0" posX="-1817.4004" posY="-176.2002" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW10" paintjob="3" interior="0" alpha="255" model="574" plate="7IF5 HRI" dimension="0" posX="-1817.4004" posY="-179" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW11" paintjob="3" interior="0" alpha="255" model="574" plate="7ZO7 JHO" dimension="0" posX="-1817.4004" posY="-181.7998" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <vehicle id="SW12" paintjob="3" interior="0" alpha="255" model="574" plate="V8C3 N3T" dimension="0" posX="-1817.4004" posY="-184.7002" posZ="9.2" rotX="0" rotY="0" rotZ="90" color="254,254,254,0,0,0,0,0,0,0,0,0"></vehicle>
+    <object id="object (DYN_BOX_PILE_3) (1)" breakable="true" interior="0" alpha="255" model="1440" doublesided="false" scale="1" dimension="0" posX="-1825.8" posY="-181.39999" posZ="8.9" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (dump1) (1)" breakable="true" interior="0" alpha="255" model="1227" doublesided="false" scale="1" dimension="0" posX="-1825.8" posY="-184.60001" posZ="9.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (DYN_BOX_PILE_2) (1)" breakable="true" interior="0" alpha="255" model="1438" doublesided="false" scale="1" dimension="0" posX="-1815.6" posY="-149.8" posZ="8.4" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_LADDER) (1)" breakable="true" interior="0" alpha="255" model="1428" doublesided="false" scale="1" dimension="0" posX="-1827.4" posY="-162.10001" posZ="9.2" rotX="0" rotY="0" rotZ="270"></object>
+</map>

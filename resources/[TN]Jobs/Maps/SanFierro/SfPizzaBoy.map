@@ -1,0 +1,8 @@
+<map edf:definitions="editor_main">
+    <vehicle id="Pizza1" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="VX4R Z1E" dimension="0" posX="-1721" posY="1356.6" posZ="6.9" rotX="0" rotY="0" rotZ="137" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Pizza2" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="E1PN N96" dimension="0" posX="-1719.7" posY="1355.2" posZ="6.9" rotX="0" rotY="0" rotZ="137" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Pizza3" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="QCDC HL9" dimension="0" posX="-1718.3" posY="1353.9" posZ="6.8" rotX="0" rotY="0" rotZ="137" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Pizza4" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="GVQI YGK" dimension="0" posX="-1721.2" posY="1363" posZ="6.9" rotX="0" rotY="0" rotZ="50" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Pizza5" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="IH7X CNC" dimension="0" posX="-1720" posY="1364.4" posZ="6.9" rotX="0" rotY="0" rotZ="49.999" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+    <vehicle id="Pizza6" sirens="false" paintjob="3" interior="0" alpha="255" model="448" plate="SWLF BGJ" dimension="0" posX="-1718.6" posY="1365.8" posZ="6.9" rotX="0" rotY="0" rotZ="49.999" color="233,121,11,233,121,11,0,0,0,0,0,0"></vehicle>
+</map>

@@ -1,0 +1,17 @@
+<map edf:definitions="editor_main">
+    <vehicle id="postman1" paintjob="3" interior="0" alpha="255" model="461" plate="S8OX 92M" dimension="0" posX="1196" posY="-1827.0996" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman2" paintjob="3" interior="0" alpha="255" model="461" plate="OQHZ 6PO" dimension="0" posX="1198.7002" posY="-1827.0996" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman3" paintjob="3" interior="0" alpha="255" model="461" plate="IQ18 HN6" dimension="0" posX="1201.5" posY="-1827.0996" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman4" paintjob="3" interior="0" alpha="255" model="461" plate="EHBG GOM" dimension="0" posX="1204.0996" posY="-1827" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman5" paintjob="3" interior="0" alpha="255" model="461" plate="NP9R BOZ" dimension="0" posX="1207" posY="-1827" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman6" paintjob="3" interior="0" alpha="255" model="461" plate="XWAO 1KV" dimension="0" posX="1209.7998" posY="-1826.9004" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman7" paintjob="3" interior="0" alpha="255" model="461" plate="ZS0P DY5" dimension="0" posX="1212.7998" posY="-1826.9004" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman8" paintjob="3" interior="0" alpha="255" model="461" plate="MPDU HO9" dimension="0" posX="1215.9004" posY="-1826.9004" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman9" paintjob="3" interior="0" alpha="255" model="461" plate="SSGZ G81" dimension="0" posX="1218.7002" posY="-1826.9004" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman10" paintjob="3" interior="0" alpha="255" model="461" plate="3A4G 7UF" dimension="0" posX="1221.4004" posY="-1826.9004" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman11" paintjob="3" interior="0" alpha="255" model="461" plate="R850 3NC" dimension="0" posX="1224.3" posY="-1826.9" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman12" paintjob="3" interior="0" alpha="255" model="461" plate="M0RQ SLC" dimension="0" posX="1227.1" posY="-1826.9" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman13" paintjob="3" interior="0" alpha="255" model="461" plate="DDYK HUA" dimension="0" posX="1229.9" posY="-1826.9" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman15" paintjob="3" interior="0" alpha="255" model="461" plate="7PLB CTY" dimension="0" posX="1235.5" posY="-1826.8" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+    <vehicle id="postman14" paintjob="3" interior="0" alpha="255" model="461" plate="LMRG 7K3" dimension="0" posX="1232.7" posY="-1826.8" posZ="13.1" rotX="0" rotY="0" rotZ="180" color="22,34,72,245,245,245,0,0,0,0,0,0"></vehicle>
+</map>

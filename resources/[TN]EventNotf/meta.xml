@@ -1,0 +1,11 @@
+<meta>
+	<info author="luilly" name="Notification gta v" type="script" version="1.0" />
+
+	<script src="client.lua" type="client" />
+
+	<script src="server.lua" type="server" />
+<file src="kadr.png"/>
+<file src="event.png"/>
+	<export function="outputGtaV" type="server"/>
+	<export function="outputGtaV" type="client"/>
+</meta>

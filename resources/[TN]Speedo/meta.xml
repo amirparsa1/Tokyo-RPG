@@ -1,0 +1,25 @@
+<meta>
+    <info author="ExoPrim" name="S.O.M" version="0.1.0" type="misc"/>
+
+    <script src="server.lua" type="server"/>
+	<script src="client.lua" type="client" cache="false"/>
+
+
+
+	<file src="files/benz.png" />
+	<file src="files/benz2.png" />
+	<file src="files/engine.png" />
+	<file src="files/Dasti.png" />
+	<file src="files/light.png" />
+	<file src="files/lock.png" />
+	<file src="files/Spedo.png" />
+	<file src="files/strelkaspedo.png" />
+	<file src="files/strelkabenz.png" />
+	<file src="files/unlock.png" />
+	<file src="sounds/1.mp3" />
+	<file src="sounds/2.mp3" />
+	<file src="sounds/3.mp3" />
+	<file src="files/AEROMATICSBOLD.ttf" />
+	<file src="files/AEROMATICSBOLDITALIC.ttf" />
+	<file src="files/AEROMATICSITALIC.ttf" />
+</meta>

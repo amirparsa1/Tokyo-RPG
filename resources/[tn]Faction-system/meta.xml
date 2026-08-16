@@ -1,0 +1,183 @@
+<meta>
+    
+    <!-- Scripts -->
+    
+    <script src="Interiors/interiorFBI/Interior_S.lua" type="server" />
+    <script src="Interiors/interiorFBI/Interior_C.lua" type="client" cache="false" />
+    <file src="Interiors/interiorFBI/Enter.mp3" />
+    <file src="Interiors/interiorFBI/bgpage.png" />
+    
+    
+    
+    
+    
+    <!--Config Guard-->
+    <script src="Mafia/Guard/Server.lua" type="server" />
+    <!--Config FMS-->
+    <script src="Mafia/Config/FMS/config.lua" type="server" />
+    
+    <!--Config Azerot-->
+    <script src="Mafia/Config/Azerot/config.lua" type="server" />
+    
+    <!--Config Fury-->
+    <script src="Mafia/Config/Fury/config.lua" type="server" />
+    
+    <!--Config Yakuza-->
+    <script src="Mafia/Config/Yakuza/config.lua" type="server" />
+    
+    <!--Config Jefferson-->
+    <script src="Mafia/Config/Jefferson/config.lua" type="server" />
+    
+    <!--  Maps Mafia -->
+    <map src="Mafia/Map/HQ.map" dimension="0"></map>
+    <map src="Mafia/Map/Guard.map" dimension="0"></map>
+    
+    <!-- War System -->
+    <script src="Mafia/War/Mafia_War_S.lua" type="server" />
+    <script src="Mafia/War/Mafia_War_C.lua" type="client" cache="false" />
+    
+    <script src="Mafia/War/Mafia_Safe_S.lua" type="server" />
+    <script src="Mafia/War/Mafia_Safe_C.lua" type="client" cache="false" />
+    
+    
+    
+    <script src="Main_Script.lua" type="server" />
+    <script src="Scripts/Faction_Cars.lua" type="server" />
+    <script src="Scripts/Faction_Gates.lua" type="server" />
+    
+    <script src="Scripts/Shahrdari.lua" type="server" />
+    
+    <script src="Scripts/Department.lua" type="server" />
+    <script src="Scripts/Department_C.lua" type="client" cache="false" />
+    
+    <script src="Scripts/News_Reporter.lua" type="server" />
+    <script src="Scripts/Hitman_S.lua" type="server" />
+    <script src="Scripts/News_Reporter_C.lua" type="client" cache="false" />
+    
+    <script src="Scripts/Taxi_S.lua" type="server" />
+    <script src="Scripts/Medic_S.lua" type="server" />
+    <script src="Scripts/Mechanic_S.lua" type="server" />
+    <script src="Scripts/Mechanic_C.lua" type="client" cache="false" />
+    
+    <script src="Scripts/Dadgostari_S.lua" type="server" />
+    <script src="Scripts/Daesh_S.lua" type="server" />
+    <script src="Scripts/Dadgostari_C.lua" type="client" cache="false" />
+    
+    <script src="Scripts/Service_S.lua" type="server" />
+    <script src="Scripts/Service_C.lua" type="client" cache="false" />
+    
+    <script src="Scripts/Graff_S.lua" type="server" />
+    <script src="Scripts/Graff_C.lua" type="client" cache="false" />
+    
+    <!-- Data -->
+    <file src="Data/memo.png" />
+    <file src="Data/white.png" />
+    <file src="Data/kadr.png" />
+    <file src="Data/gun.png" />
+    <file src="Data/drug.png" />
+    <file src="Data/tax.png" />
+    <file src="Data/dPannel.png" />
+    <file src="Data/accept.png" />
+    <file src="Data/background.png" />
+    <file src="Data/icon.png" />
+    <file src="Data/icon4.png" />
+    <file src="Data/taximeter.png"></file>
+    <file src="Data/taximeter1.png"></file>
+    <file src="Data/start.png"></file>
+    <file src="Data/12_1.png" />
+    <file src="Data/12_2.png" />
+    <file src="Data/12_3.png" />
+    <file src="Data/13_1.png" />
+    <file src="Data/13_2.png" />
+    <file src="Data/13_3.png" />
+    <file src="Data/14_1.png" />
+    <file src="Data/14_2.png" />
+    <file src="Data/14_3.png" />
+    <file src="Data/15_1.png" />
+    <file src="Data/15_2.png" />
+    <file src="Data/15_3.png" />
+    <file src="Data/16_1.png" />
+    <file src="Data/16_2.png" />
+    <file src="Data/16_3.png" />
+    <file src="Data/17_1.png" />
+    <file src="Data/17_2.png" />
+    <file src="Data/17_3.png" />
+    <file src="Data/18_1.png" />
+    <file src="Data/18_2.png" />
+    <file src="Data/18_3.png" />
+    <file src="Data/19_1.png" />
+    <file src="Data/19_2.png" />
+    <file src="Data/19_3.png" />
+    <file src="Data/20_1.png" />
+    <file src="Data/20_2.png" />
+    <file src="Data/20_3.png" />
+    <file src="Data/21_1.png" />
+    <file src="Data/21_2.png" />
+    <file src="Data/21_3.png" />
+    
+    <file src="Data/garage1.txd" />
+    <file src="Data/garage2.txd" />
+    <file src="Data/hoist.col" />
+    <file src="Data/hoist.dff" />
+    <file src="Data/ramp.col" />
+    <file src="Data/ramp.dff" />
+    <file src="Data/vehiclelift.txd" />
+    <file src="Data/NrNotf.ogg" />
+    <file src="Data/WarStart.mp3" />
+    <file src="Data/MegaPhone.mp3" />
+    <file src="Data/Gate.wav" />
+    <file src="Data/GateOpen.mp3" />
+    <file src="Data/GateClose.mp3" />
+    <file src="Data/Exit.png" />
+    <file src="Data/Mafia.png" />
+    <file src="Data/Put.png" />
+    <file src="Data/Take.png" />
+    <file src="Data/Font.ttf" />
+    <file src="Data/Font2.ttf" />
+    <file src="Data/Photo.png" />
+    <file src="Data/Board.png" />
+    <file src="Data/Submit.png" />
+    <file src="Data/Close.png" />
+    <file src="Data/News.png" />
+    <file src="Data/Service.png" />
+    <file src="Data/Click.png" />
+    <file src="Data/ClickTaxi.png" />
+    <file src="Data/TaxiFont.ttf" />
+    <file src="Data/backup.mp3" />
+    <file src="Data/enfejar.mp3" />
+    <file src="Data/TaxiMap.png" />
+    
+    <!-- Maps -->
+    
+    <!-- General -->
+    <map src="Maps/Hitman.map" dimension="0"></map>
+    <map src="Maps/HospitalInt.map" dimension="0"></map>
+    <map src="Maps/JailMarkazi.map" dimension="0"></map>
+    <map src="Maps/MechanicInterior.map" dimension="0"></map>
+    <map src="Maps/NationalGuard.map" dimension="0"></map>
+    <map src="Maps/NRInt.map" dimension="0"></map>
+    <map src="Maps/SchoolInt.map" dimension="0"></map>
+    
+    <!-- Los Santos -->
+    <map src="Maps/Ls_Factions/LsFbi.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsMechanic.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsTaxi.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsMedic.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsNr.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsRahnamaii.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsPd.map" dimension="0"></map>
+    <map src="Maps/Ls_Factions/LsTommy.map" dimension="0"></map>
+    
+    
+    
+    <script src="Maps/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="Maps/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+    <export function="DepartmentMessage" type="server" />
+    
+    
+    <export function="removePlayerLocation" type="server" />
+    <export function="setPlayerLocation" type="server" />
+    <export function="getPlayerLocation" type="server" />
+    <export function="refreshBlip" type="server" />
+    <min_mta_version client="1.5.8-9.20704"></min_mta_version>
+</meta>

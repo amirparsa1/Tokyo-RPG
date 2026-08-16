@@ -1,0 +1,6 @@
+<meta>
+
+	<script src="pns.lua" type="server" chase="false"/>
+	<map src="map.map" dimension="0"></map>
+
+</meta>

@@ -1,0 +1,7 @@
+<meta>
+    <info author="TheNight" name="3D Sound System" type="script" version="1.1.4" />	
+    <script src="server.lua" />
+	<script src="client.lua" type="client" cache="false"/>
+	<file src="resim/resim.png" />
+	<file src="resim/button.png" />	
+</meta>

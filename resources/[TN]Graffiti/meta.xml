@@ -1,0 +1,6 @@
+<meta>
+    <info author="ExoPrim" type="script" name="Graffiti System" version="0.1.0" />
+    <export function="getSomeGraffiti" type="server" />
+    <script src="G-server.lua" type="server" />
+    <script src = "G-client.lua" type="client" cache="false"/>
+</meta>

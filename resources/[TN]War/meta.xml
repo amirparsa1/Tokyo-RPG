@@ -1,0 +1,23 @@
+<meta>
+	<script src="mafia_s.lua" type="server"/>
+	<script src="mafia_c.lua" type="client" cache="false"/>
+	<file src="Files/bg.png"/>
+	<file src="Files/Font1.ttf"/>
+	<file src="IRANSans.ttf"/>
+	<file src="Files/10.png"/>
+	<file src="Files/11.png"/>
+	<file src="Files/12.png"/>
+	<file src="Files/13.png"/>
+	<file src="Files/14.png"/>
+	<file src="Files/15.png"/>
+	<file src="Files/warbg.png"/>
+	<file src="Files/vs.png"/>
+	<file src="Files/soon.png"/>
+	<file src="Files/bg2.png"/>
+    <script src="interior/Interior_S.lua" type="server" />
+    <script src="interior/Interior_C.lua" type="client" cache="false" />
+    <file src="interior/Enter.mp3" />
+	<file src="interior/bgpage.png" />   
+<export function="setFactionData" type="server"/>
+<export function="getFactionData" type="server"/>
+</meta>

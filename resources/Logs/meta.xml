@@ -1,0 +1,6 @@
+<meta>
+    <info author="zezaw" type="script" version="1.0.0" />
+    <script src="Server.lua" type="server" />
+    <export function="newLog" type="server" />
+    <export function="newLogSpam" type="server" />
+</meta>

@@ -1,0 +1,21 @@
+<map edf:definitions="editor_main">
+    <vehicle id="examcar1" paintjob="3" interior="0" alpha="255" model="404" plate="13L7 H1R" dimension="0" posX="1777.2998046875" posY="-1905.7001953125" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="examcar2" paintjob="3" interior="0" alpha="255" model="404" plate="CYFK 161" dimension="0" posX="1777.2998046875" posY="-1909.7001953125" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="examcar3" paintjob="3" interior="0" alpha="255" model="404" plate="V4QL 7S0" dimension="0" posX="1777.2001953125" posY="-1913.7001953125" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="examcar4" paintjob="3" interior="0" alpha="255" model="404" plate="WGUK MMF" dimension="0" posX="1777.2001953125" posY="-1917.599609375" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="examcar5" paintjob="3" interior="0" alpha="255" model="404" plate="N77E NZJ" dimension="0" posX="1777.2001953125" posY="-1921.2998046875" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="examcar6" paintjob="3" interior="0" alpha="255" model="404" plate="4GDI FL5" dimension="0" posX="1777.2998046875" posY="-1925.2998046875" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+	<vehicle id="examcar7" paintjob="3" interior="0" alpha="255" model="404" plate="4GDI FL5" dimension="0" posX="1777.2998046875" posY="-1929.099609375" posZ="13.1" rotX="0" rotY="0" rotZ="301.2451171875" color="255,255,0,255,255,255,0,0,0,0,0,0"></vehicle>
+
+	  
+    <vehicle id="exambike1" paintjob="3" interior="0" alpha="255" model="461" plate="WE55 FXC" dimension="0" posX="1782" posY="-1885.7998046875" posZ="13" rotX="0" roty="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike2" paintjob="3" interior="0" alpha="255" model="461" plate="5D6I Q4K" dimension="0" posX="1783.7001953125" posY="-1885.7998046875" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike5" paintjob="3" interior="0" alpha="255" model="461" plate="68W1 3BA" dimension="0" posX="1785.2998046875" posY="-1885.900390625" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike4" paintjob="3" interior="0" alpha="255" model="461" plate="C3X3 4PZ" dimension="0" posX="1787" posY="-1885.900390625" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike6" paintjob="3" interior="0" alpha="255" model="461" plate="YT0A WW2" dimension="0" posX="1788.7001953125" posY="-1885.7998046875" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike3" paintjob="3" interior="0" alpha="255" model="461" plate="HGEM V5T" dimension="0" posX="1790.400390625" posY="-1885.7001953125" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    <vehicle id="exambike7" paintjob="3" interior="0" alpha="255" model="461" plate="FYT0 Z8H" dimension="0" posX="1792.099609375" posY="-1885.7001953125" posZ="13" rotX="0" rotY="0" rotZ="211.2451171875" color="255,255,255,255,255,255,0,0,0,0,0,0"></vehicle>
+    
+    
+   
+</map>

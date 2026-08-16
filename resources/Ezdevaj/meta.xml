@@ -1,0 +1,8 @@
+<meta>
+	<info author="FearZone Script" name="Mini Games" type="script" />
+	
+	<!-- Married -->
+	<script src="Server.lua" type="server" />
+	<script src="Client.lua" type="client" cache="false" />
+	
+</meta>

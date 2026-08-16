@@ -1,0 +1,9 @@
+<meta>
+    <info author="Plus MTA Development Team" name="Globals System" type="script" />
+	
+
+	<!-- Gate -->
+	<script src="Gate1/Server.lua" type="server" />
+	
+
+</meta>

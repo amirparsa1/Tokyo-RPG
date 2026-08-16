@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<meta>
+    <min_mta_version server="1.5.4-9.11413" client="1.5.4-9.11413" />
+		<info author="ExoPrim" name="Admin System" type="script" />
+		<script src="admin_s.lua" type="server" />
+		<script src="start.lua" type="server" />
+		<script src="spam.lua" type="server" />
+		<script src="report_s.lua" type="server" />
+		<script src="admin_c.lua" type="client" cache="false" />
+	<!-- Gravity Gun -->
+		<script src="Gravity_Gun/ggun.lua" />
+		<script src="Gravity_Gun/ggunc.lua" type="client" cache="false" />
+
+
+		<export function="AdminMessages" type="server"/>
+		<export function="AllMessages" type="server"/>
+		<export function="togglePlayerGravityGun" type="server" />
+		<export function="isGravityGunEnabled" type="server" />
+		<script src="Gravity_Gun/ggun_toggle.lua" type="server" />
+
+</meta>

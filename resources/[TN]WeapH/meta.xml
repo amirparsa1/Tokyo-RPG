@@ -1,0 +1,51 @@
+<meta>
+	<info author="ExoPrim" type="script" version="1.1.0" />
+	<script src="headshot.lua" type="server" />
+	<script src="reload.lua"/>
+	<script src="reload_c.lua" type="client"/>
+		<script src="recoil_s.lua" type="server" />
+	<script src="recoil_c.lua" type="client" cache="false" />
+	
+	<file src="texture.fx" />
+	
+	<file src="img/1.png" />
+	<file src="img/2.png" />
+	<file src="img/3.png" />
+	<file src="img/4.png" />
+	<file src="img/5.png" />
+	<file src="img/6.png" />
+	<file src="img/7.png" />
+	<file src="img/8.png" />
+	<file src="img/9.png" />
+	<file src="img/10.png" />
+	<file src="img/11.png" />
+	<file src="img/12.png" />
+	<file src="img/13.png" />
+	<file src="img/14.png" />
+	<file src="img/15.png" />
+	<file src="img/16.png" />
+	<file src="img/17.png" />
+	<file src="img/18.png" />
+	<file src="img/19.png" />
+	<file src="img/20.png" />
+	<file src="img/21.png" />
+	<file src="img/22.png" />
+	<file src="img/23.png" />
+	<file src="img/24.png" />
+	<file src="img/25.png" />
+	<file src="img/26.png" />
+	<file src="img/27.png" />
+	<file src="img/28.png" />
+	<file src="img/29.png" />
+	<file src="img/30.png" />
+	<file src="img/31.png" />
+	
+	<export function="LoadRecoilOnLogin" type="server"/>
+	<settings>
+		<setting name="*removeHeadOnHeadshot" value="true"
+			friendlyname="Blows off player's head on headshot"
+			group="General"
+			accept="false,true"
+			desc="Should player lose his head when he gets headshot?" />
+	</settings>
+</meta>

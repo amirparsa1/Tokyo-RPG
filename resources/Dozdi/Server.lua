@@ -1,0 +1,148 @@
+local accSys = exports["Accounts-system"]
+local miscSys = exports["Misc"]
+
+local canTheft = {}
+local canAnti = {}
+local fasele = 1
+
+function convertNumber( number )  
+	local formatted = number  
+	while true do      
+		formatted, k = string.gsub( formatted, "^(-?%d+)(%d%d%d)", '%1,%2' )    
+		if ( k==0 ) then      
+			break   
+		end  
+	end  
+	return formatted
+end
+
+addCommandHandler("dozdi",
+function (thePlayer, command, player)
+	local find = miscSys:findPlayer(player)
+	local findMoney = getPlayerMoney(find)
+	local x,y,z = getElementPosition(thePlayer)
+	local mx,my,mz = getElementPosition(find)
+	local de = getDistanceBetweenPoints3D(x,y,z,mx,my,mz)
+	local level = getElementData(accSys:getPlayerAcc(find), "pLevel")
+	local myFaction = getElementData(accSys:getPlayerAcc(thePlayer), "pMember")
+	local hisFaction = getElementData(accSys:getPlayerAcc(find), "pMember")
+
+	if player then
+		if find then
+			if myFaction == 0 or myFaction > 3 then
+				if thePlayer ~= find then
+					if de < fasele then
+						if getElementInterior(find) == 0 then
+							if not isPedInVehicle(find) then
+							if not isElementInWater(find) then
+								if level > 5 then
+									if hisFaction == 0 or hisFaction > 3 then
+										if canTheft[find] ~= true then
+											if findMoney > 10 then
+												triggerClientEvent("TheftSound", resourceRoot, find)
+												bindKey( find, "R", "down", AntiTheft )
+												triggerClientEvent ( find, "BaidAksDozd", find) -- #zezaw
+
+
+												canAnti[find] = true
+												setElementFrozen(find, true)
+												toggleAllControls(find, false, true, false)
+												setElementFrozen(thePlayer, true)
+												toggleAllControls(thePlayer, false, true, false)
+												canTheft[find] = true
+											setTimer(
+											function()
+												if canAnti[find] == true then
+													if findMoney > 4999 then
+														takePlayerMoney(find, 5000)
+														givePlayerMoney(thePlayer, 5000)
+														setElementFrozen(find, false)
+														toggleAllControls(find, true)
+														setElementFrozen(thePlayer, false)
+														toggleAllControls(thePlayer, true)
+														canAnti[find] = nil
+														unbindKey( find, "R", "down", AntiTheft )
+														setPedAnimation(thePlayer,"flowers","flower_attack_m",-1,false, false, false, false)
+														setPedAnimation(find,"flowers","flower_hit",-1,false, false, false, false)
+														triggerClientEvent("TheftDoneSound", resourceRoot, find)
+														outputChatBox("#00ff00Shoma Az Jibe "..getPlayerName(find).." Meghdare $5,000 Dozdi Kardid!", thePlayer, 255, 255, 255, true)
+														outputChatBox("#ff0000[Tavajoh] #ffffffJibe Shoma Tavasote "..getPlayerName(thePlayer).." Zade Shod!", find, 255, 255, 255, true)
+													elseif findMoney < 5000 then
+														takePlayerMoney(find, findMoney)
+														givePlayerMoney(thePlayer, findMoney)
+														setElementFrozen(find, false)
+														toggleAllControls(find, true)
+														setElementFrozen(thePlayer, false)
+														toggleAllControls(thePlayer, true)
+														canAnti[find] = nil
+														unbindKey( find, "R", "down", AntiTheft )
+														setPedAnimation(thePlayer,"flowers","flower_attack_m",-1,false, false, false, false)
+														setPedAnimation(find,"flowers","flower_hit",-1,false, false, false, false)
+														triggerClientEvent("TheftDoneSound", resourceRoot, find)
+														outputChatBox("#00ff00Shoma Az Jibe "..getPlayerName(find).." Meghdare $"..convertNumber(findMoney).." Dozdi Kardid!", thePlayer, 255, 255, 255, true)
+														outputChatBox("#ff0000[Tavajoh] #ffffffJibe Shoma Tavasote "..getPlayerName(thePlayer).." Zade Shod!", find, 255, 255, 255, true)
+													end
+												else
+													triggerClientEvent("AntiSound", resourceRoot, thePlayer)
+													setElementFrozen(find, false)
+													toggleAllControls(find, true)
+													setElementFrozen(thePlayer, false)
+													toggleAllControls(thePlayer, true)
+													canAnti[find] = nil
+													setPedAnimation(find,"flowers","flower_attack_m",-1,false, false, false, false)
+													setPedAnimation(thePlayer,"flowers","flower_hit",-1,false, false, false, false)
+													setPlayerWantedLevel(thePlayer, getPlayerWantedLevel(thePlayer)+1)
+													outputChatBox("#ff0000 Player "..getPlayerName(find).." Nazasht Az Jibesh Dozdi Koni!", thePlayer, 255, 255, 255, true)
+													outputChatBox("#ff0000 Nazashti "..getPlayerName(thePlayer).." Az Jibet Dozdi kone!", find, 255, 255, 255, true)
+												end
+											end, 2000, 1)
+											setTimer(
+											function()
+												canTheft[find] = nil
+											end, 900000, 1)
+
+										else
+											outputChatBox("#ff0000✖️ #ffffffIn Bichare Pooli To Jibesh Nadare!", thePlayer, 255, 255, 255, true)
+										end
+									else
+										outputChatBox("#ff0000✖️ #ffffffJibe In Bichare Ro Taze Zadan!", thePlayer, 255, 255, 255, true)
+									end
+								else
+									outputChatBox("#ff0000✖️ #ffffffJibe Police Ra Ke Nemishe Zad!", thePlayer, 255, 255, 255, true)
+								end
+							else
+								outputChatBox("#ff0000✖️ #ffffffLevel In Player Bayad (+5) Bashad!", thePlayer, 255, 255, 255, true)
+							end
+							else
+								outputChatBox("#ff0000✖️ #ffffffTo Ab Nemishe Dozdi Kard!", thePlayer, 255, 255, 255, true)
+							end
+						else
+							outputChatBox("#ff0000✖️ #ffffffIn Player Dakhel Mashin Mibashad!", thePlayer, 255, 255, 255, true)
+						end
+					else
+						outputChatBox("#ff0000✖️ #ffffffInja Nemishe Dozdi Kard!", thePlayer, 255, 255, 255, true)
+					end
+				else
+					outputChatBox("#ff0000✖️ #ffffffBaray Inkar Bayad Be Player Nazdik Bashid!", thePlayer, 255, 255, 255, true)
+				end
+			else
+				outputChatBox("#ff0000✖️ #ffffffJibe Khodeto Nemitooni Bezani!", thePlayer, 255, 255, 255, true)
+			end
+		else
+			outputChatBox("#ff0000✖️ #ffffffPolice Ke Nemitone Dozdi Kone!", thePlayer, 255, 255, 255, true)
+		end
+	else
+		outputChatBox("#ff0000✖️ #ffffffPlayer Peyda Nashod!", thePlayer, 255, 255, 255, true)
+	end
+	else
+		outputChatBox("#C0C0C0Bezan: /dozdi  <PartOfName/ID>", thePlayer, 255, 255, 255, true)
+	end
+
+end)
+
+function AntiTheft( thePlayer )
+	if canAnti[thePlayer] == true then
+		canAnti[thePlayer] = nil
+		unbindKey( thePlayer, "R", "down", AntiTheft )
+	end
+end

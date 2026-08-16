@@ -1,0 +1,6 @@
+<meta>
+    <info author="Exoprim" name="Sleep System Script" type="script" />
+	
+	<script src="sleepSystem.lua" type="server" />
+    <script src="client.lua" type="client" />
+</meta>

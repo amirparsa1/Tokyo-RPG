@@ -1,0 +1,36 @@
+txd_2 = engineLoadTXD ( "Texture/2.txd" )
+engineImportTXD ( txd_2, 1873 )
+col_2 = engineLoadCOL ( "Texture/2.col" )
+engineReplaceCOL ( col_2, 1873 )
+dff_2 = engineLoadDFF ( "Texture/2.dff", 0 )
+engineReplaceModel ( dff_2,1873 )
+engineSetModelLODDistance(1873, 200)
+
+col = engineLoadCOL ( "Texture/zendan1.col" )
+engineReplaceCOL ( col, 1865 )
+dff = engineLoadDFF ( "Texture/zendan1.dff" )
+engineReplaceModel ( dff, 1865 )
+engineSetModelLODDistance(1865, 5)
+
+col = engineLoadCOL ( "Texture/zendan2.col" )
+engineReplaceCOL ( col, 1863 )
+dff = engineLoadDFF ( "Texture/zendan2.dff" )
+engineReplaceModel ( dff, 1863 )
+txd = engineLoadTXD ( "Texture/zendan2.txd" )
+engineImportTXD ( txd, 1863 )
+engineSetModelLODDistance(1863, 5)
+
+
+txd_2 = engineLoadTXD ( "Texture/dadgah.txd" )
+engineImportTXD ( txd_2, 4569 )
+col_2 = engineLoadCOL ( "Texture/dadgah.col" )
+engineReplaceCOL ( col_2, 4569 )
+dff_2 = engineLoadDFF ( "Texture/dadgah.dff", 0 )
+engineReplaceModel ( dff_2,4569 )
+engineSetModelLODDistance(1873, 500)
+
+
+removeWorldModel(647, 100, 1541, -1675, 13.5)
+removeWorldModel(2614, 100, 1541, -1675, 13.5)
+removeWorldModel(11245, 100, 1541, -1675, 13.5)
+removeWorldModel(4192, 100, 1541, -1675, 13.5)

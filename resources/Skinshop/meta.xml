@@ -1,0 +1,59 @@
+<meta>
+<info author="GT Mapping" version="1.0.4" type="script" name="Skin Selection Menu" description="Follow us on FB: http://fbl.me/gtmapping" />
+<script src="client.lua" type="client"/>
+<script src="server.lua"/>
+
+               <!-- img -->
+ 
+ 
+<file src="img/bg.png"/>
+<file src="img/transparent.png"/>
+<file src="img/arrow.png"/>
+<file src="img/arrow-blink.png"/>
+<file src="img/female.png"/>
+<file src="img/female-active.png"/>
+<file src="img/male.png"/>
+<file src="img/pbashid.png"/>
+<file src="img/male-active.png"/>
+
+               <!-- sound -->
+			   
+<file src="sound/scroll.mp3"/>
+<file src="sound/start.mp3"/>
+<file src="sound/movafagh.mp3"/>
+<file src="sound/error.mp3"/>
+<file src="sound/errorp.mp3"/>
+<file src="sound/info.mp3"/>
+<file src="font/Times.ttf"/>
+
+			<!-- Interior -->
+
+
+
+
+
+           <!-- map -->
+
+<info type="map" version="1.0.0"></info>
+    <map src="map/skinmap.map" dimension="0"></map>
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.008 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="map/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="map/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	
+	
+	
+</meta>
+
+
+
+

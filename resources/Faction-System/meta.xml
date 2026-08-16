@@ -1,0 +1,113 @@
+<meta>
+    <info author="ExoPrim" name="Faction System" version="0.1.0" />
+	<script src="faction_s.lua" type="server" />
+	<script src="faction_c.lua" type="client" cache="false" />
+	<script src="Find-c.lua" type="client" cache="false"  />
+	
+	
+	<!-- Department -->
+	<script src="Department/dp_command.lua" type="server"/>
+	
+	<!-- PD -->
+	<map src="Department/PD/pd_map.map" dimension="0"></map>
+	<script src="Department/PD/pd_command.lua" type="server"/>
+	<script src="Department/PD/pd_hq.lua" type="server" />
+	
+	<script src="Department/PD/Taser/ClientResource.lua" type="client" cache="false" />
+	<script src="Department/PD/Taser/ClientWeapon.lua" type="client" cache="false" />
+    <file src="Department/PD/Taser/data/Fire.wav" cache="false"/>
+    <file src="Department/PD/Taser/data/taser.txd" cache="false"/>
+	<file src="Department/PD/Taser/data/taser.dff" cache="false"/>
+		
+	<!-- FBI -->
+	<map src="Department/FBI/fbi_map.map" dimension="0"></map>
+	<script src="Department/FBI/fbi_command.lua" type="server" />
+	<script src="Department/FBI/fbi_hq.lua" type="server" />
+	
+	<map src="Department/NG/ng_map.map" dimension="0" cache="false"></map>
+	<script src="Department/NG/ng_command.lua" type="server" />
+	<script src="Department/NG/ng_hq.lua" type="server" />
+
+
+	<script src="Department/CIA/CIA_S.lua" type="server" />
+	<script src="Department/CIA/CIA_Car.lua" type="server" />
+
+	<script src="Special/ICA/ICA.lua" type="server" />
+	<script src="Special/ICA/ICA-Car.lua" type="server" /> 
+
+
+	<!-- Government -->
+	<map src="Government/Mechanic/mechanic_map.map" dimension="0"></map>
+	<map src="Government/Mechanic/mechanic_maps.map" dimension="0"></map>
+	<script src="Government/Mechanic/mechanic_car.lua" type="server" />
+	<script src="Government/Mechanic/mechanic_command.lua" type="server" />
+	
+	<map src="Government/Mayor/mayor_map.map" dimension="0"></map>
+	<script src="Government/Mayor/mayor_command.lua" type="server" />
+	<script src="Government/Mayor/mayor_hq.lua" type="server" />
+	
+	<map src="Government/Medic/medic_map.map" dimension="0"></map>
+	<script src="Government/Medic/command.lua" type="server" />
+	<script src="Government/Medic/medic_car.lua" type="server" />
+
+	<map src="Government/NewsReporter/nr_map.map" dimension="0"></map> 
+	<script src="Government/NewsReporter/nr_car.lua" type="server" />
+	<script src="Government/NewsReporter/command.lua" type="server" />
+	
+	<map src="Mafia/Ballas/ballashq.map" dimension="0"></map>
+	<script src="Mafia/Ballas/bcar.lua" type="server" />
+	
+	<map src="Mafia/Vagos/vagoshq.map" dimension="0"></map>
+	<script src="Mafia/Vagos/vcar.lua" type="server" />
+	
+	<!-- Data Files -->
+	<file src="Data/memo.png" cache="false" />
+	<file src="Data/white.png" cache="false" />
+	<file src="Data/kadr.png" cache="false" />
+	<file src="Data/put.png" cache="false" />
+	<file src="Data/take.png" cache="false" />
+	<file src="Data/gun.png" cache="false" />
+	<file src="Data/drug.png" cache="false" />
+	<file src="Data/tax.png" cache="false" />
+	<file src="Data/font1.ttf" cache="false" />
+	<file src="Data/error.mp3" cache="false" />
+	<file src="Data/click.mp3" cache="false" />
+	<file src="Data/errorp.mp3" cache="false" />
+	<!-- Data Files For Manage Panel -->
+	<file src="Data/Font.ttf" cache="false" />
+	<file src="Data/Background.png" cache="false" />
+	<file src="Data/Close.png" cache="false" />
+	<file src="Data/GiveFactionWarn.png" cache="false" />
+	<file src="Data/Kick.png" cache="false" />
+	<file src="Data/WhiteBG.png" cache="false" />
+	
+	<export function="changeFactionColor" type="server" />
+	 <export function="DepartmentMessage" type="server" />
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.0080000003799796104 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false" cache="false"></script>
+	
+	<!-- ICA Panel -->
+	<file src="Data/ICA/Background.png" />
+	<file src="Data/ICA/Close.png"/>
+	<file src="Data/ICA/H.png"/>
+	<file src="Data/ICA/M1.png"/>
+	<file src="Data/ICA/M2.png"/>
+	<file src="Data/ICA/Start.png"/>
+
+	<!-- Cuff System -->
+
+	<file src="Data/Cuff/Cuff.mp3"/>
+	<file src="Data/Cuff/Cuff.png"/>
+	<file src="Data/Cuff/unCuff.mp3"/>
+</meta>

@@ -1,0 +1,9 @@
+Skin Selection Menu by G&T Mapping
+
+Information:
+To change your skin, press 'F4'. You will be prompted with the Skin Selection Menu after your next spawn. You will not be visible and cannot be harmed during the skin selection process. Your skin will be remembered during the time you are on the server or until the script has restarted. If you reconnect the server and spawn you will be prompted with the Skin Selection Menu again.
+
+You can select your gender by clicking one of the symbols on the left side of the screen.
+
+Help:
+This script is designed so that it should work in most cases and should override any skin that is set upon spawn by other scripts due to a built-in timer. If you experience any problems in regards to your camera or skin change, you can adjust the timers in the settings inside the client.lua. More detailed information can be found in there.

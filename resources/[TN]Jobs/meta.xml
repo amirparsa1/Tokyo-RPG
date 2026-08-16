@@ -1,0 +1,61 @@
+<meta>
+	<info author="ExoPrim" description="Job-System" version="1.0" type="misc"/>
+
+	<file src="files/Click1.png"/>
+	<file src="files/Click2.png"/>
+	<file src="files/s1.mp3"/>
+	<file src="files/s2.mp3"/>
+	<file src="files/s3.mp3"/>
+
+	
+
+
+	<!-- Scripts -->
+	<script src="Main.lua" type="server"/>
+    <script src="Scripts/Sf_Jobs/SfPostMan_S.lua" type="server" />
+    <script src="Scripts/Sf_Jobs/SfPizzaBoy_S.lua" type="server" />
+    <script src="Scripts/Ls_Jobs/LsPostMan_S.lua" type="server" />
+    <script src="Scripts/Ls_Jobs/LsPizzaBoy_S.lua" type="server" />
+    <script src="Scripts/Ls_Jobs/LsShoti.lua" type="server" />
+	<script src="Scripts/shoti_C.lua" type="client" cache="false" />
+    <script src="Scripts/Trucker_C.lua" type="client" cache="false" />
+    <script src="Scripts/Trucker_S.lua" type="server"/>
+    <script src="Scripts/PizzaBoy_C.lua" type="client" cache="false" />
+    <script src="Scripts/PostMan_C.lua" type="client" cache="false" />
+	<script src="Scripts/Jobs_S.lua" type="server"/>
+    <script src="Scripts/Jobs_C.lua" type="client" cache="false" />
+
+
+
+
+
+	<!-- Files -->
+	<file src="Files/Bg.png"/>
+	<file src="Files/Accept.png"/>
+	<file src="Files/Reject.png"/>
+	<file src="Files/Mihan.png"/>
+	<file src="Files/red_line.png"/>
+	<file src="Files/Ghavas.png"/>
+	<file src="Files/Click.png"/>
+	<file src="Files/BG_Box.png"/>
+	<file src="Files/Close2.png"/>
+	<file src="Files/Close.png"/>
+	<file src="Files/Font.ttf"/>
+	<file src="Files/Pizza1.wav"/>
+	<file src="Files/Pizza2.wav"/>
+	<file src="Files/Pizza3.wav"/>
+	<file src="Files/Pizza4.wav"/>
+	<file src="Files/Pizza5.wav"/>
+	<file src="Files/Pizza6.wav"/>
+	<file src="Files/Pizza7.wav"/>
+	<file src="Files/Pizza8.wav"/>
+	<file src="Files/Background.png"/>
+	<file src="Files/PostMan.png"/>
+	<file src="Files/PizzaBoy.png"/>
+	<file src="Files/StreetWasher.png"/>
+	<file src="Files/BusDriver.png"/>
+	<file src="Files/Trucker.png"/>
+	<file src="Files/Soon.png"/>
+    <export function="RespawnJobVehOnExit" type="server" />
+    <export function="StExit" type="server" />
+</meta>

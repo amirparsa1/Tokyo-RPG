@@ -1,0 +1,8 @@
+<meta>
+    <info name="DaftarePishkhan" author="ExoPrim" type="gamemode" version="1.6" />
+    <script src ="client.lua" type="client" catch="false"/>
+    <script src ="server.lua" type="server"/>
+    <file src="Data/bg.png" cache="false"/>
+    <file src="Data/Rage.ttf" cache="false"/>
+    <file src="Data/logo.jpg" cache="false"/>
+</meta>

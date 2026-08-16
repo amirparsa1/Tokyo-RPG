@@ -1,0 +1,6 @@
+<meta>
+    <info author="ExoPrim" type="script" name="Discord Logger" version="0.1.0" />
+    <min_mta_version server="1.5.4-9.11413" client="1.5.4-9.11413" />
+    <export function="SendDiscordLog" type="server" />
+    <script src="server.lua" type="server" />
+</meta>

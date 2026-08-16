@@ -1,0 +1,20 @@
+<meta>
+    <info gamemodes="stealth" type="map" author="SCM" version="1.0.0" description="" />
+    <map src="sth-dust2.map" dimension="0" />
+    <script src="replacing.lua" type="client" />
+    <file src="dust2.col" />
+    <file src="dust2.txd" />
+    <file src="dust2.dff" />
+    <settings>
+        <setting name="#maxplayers" value="[ 32 ]" />
+        <setting name="#gamespeed" value="[ 1 ]" />
+        <setting name="#minplayers" value="[ 0 ]" />
+        <setting name="#gravity" value="[ 0.008000 ]" />
+        <setting name="#waveheight" value="[ 0 ]" />
+        <setting name="#camera" value="[ [ [ 140.746185, 2572.062988, 212.423172 ], [ 86.985321, 2489.713379, 194.303513 ] ] ]" />
+        <setting name="#weather" value="[ 3 ]" />
+        <setting name="#time" value="18:0" />
+        <setting name="#locked_time" value="[ true ]" />
+    </settings>
+<script src='creator.lua' />
+</meta>

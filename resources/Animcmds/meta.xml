@@ -1,0 +1,14 @@
+<meta>
+	<info	
+	author="ExoPrim" 
+	name="Animations"  
+	type="script"
+	version="1.0"
+	description="@Ex0Prim"
+	/>
+	<oop>true</oop>
+
+	<min_mta_version client="1.5.8-9.20704"></min_mta_version>
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client" cache="false"/>
+</meta>

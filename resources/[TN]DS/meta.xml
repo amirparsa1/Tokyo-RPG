@@ -1,0 +1,142 @@
+<meta>
+    <script src="sh_autoshop.lua" type="shared" cache="false"/>
+    <script src="sv_autoshop.lua" type="server"/>
+	<script src="cl_autoshop.lua" type="client" cache="false"/>
+	<file src="files/arrow.png" />
+	<file src="files/ok.png" />
+	<file src="files/notok.png" />
+
+    <file src="files/sound/ghofl.mp3" />
+    <file src="files/sound/dozdgir.mp3" />
+	<file src="files/buygold.png" />
+	<file src="files/exit.png" />
+	<file src="files/fon.png" />
+	<file src="files/buy.png" />
+	<file src="files/money.png" />
+
+
+	<file src="files/fonts/font.ttf"/>
+	<file src="files/fonts/font2.otf"/>
+	
+	
+	<file src="files/colors/blue.png"/>
+	<file src="files/colors/green.png"/>
+	<file src="files/colors/orange.png"/>
+	<file src="files/colors/red.png"/>
+	<file src="files/colors/silver.png"/>
+	<file src="files/colors/white.png"/>
+	<file src="files/colors/black.png"/>
+	
+	
+    <export function="CreateLoggedInVeh" type="shared" />
+    <export function="setVehicleData" type="server" />
+	<map src="MAP.map" dimension="0"></map>
+	
+
+    <!-- BackFire 
+    <script src = "BackFire/backfire_server.lua" type = "server" />
+    <script src = "BackFire/backfire_client.lua" type = "client" cache = "false" />
+    -->
+	<!-- Tunings -->
+    <script src="Tunings/Scripting/Tune_client.lua" type="client" cache="false" ></script>
+    <script src="Tunings/Scripting/Tune_Server.lua" type="server"></script>
+    <script src="Tunings/Scripting/Veh_Color_C.lua" type="client" cache="false" ></script>
+    <script src="Tunings/Scripting/Veh_Color_S.lua" type="server"></script>
+    <script src="Tunings/Door/sourceC.lua" type="client" cache="false" ></script>
+    <script src="Tunings/Door/sourceS.lua" type="server"></script>
+    <script src="Tunings/Neon/sourceC.lua" type="client" cache="false" ></script>
+    <script src="Tunings/Neon/sourceS.lua" type="server"></script>
+    <file src="Tunings/Data/Close.png"></file>
+    <file src="Tunings/Data/Back.png"></file>
+    <file src="Tunings/Data/Tune.png"></file>
+    <file src="Tunings/Data/Test.png"></file>
+    <file src="Tunings/Data/tune_back.jpg"></file>
+    <file src="Tunings/Data/Wheels.jpg"></file>
+    <file src="Tunings/Data/Turbo.jpg"></file>
+    <file src="Tunings/Data/Steer.jpg"></file>
+    <file src="Tunings/Data/Brake.jpg"></file>
+    <file src="Tunings/Data/Misc.jpg"></file>
+    <file src="Tunings/Data/Hydro.jpg"></file>
+    <file src="Tunings/Data/Suspension.jpg"></file>
+    <file src="Tunings/Data/white.png"></file>
+	<file src="Tunings/Data/drag.png"></file>
+	<file src="Tunings/Data/drag1.png"></file>
+	<file src="Tunings/Data/ultra.png"></file>
+	<file src="Tunings/Data/ultra1.png"></file>
+    <file src="Tunings/Data/NitroX2.jpg"></file>
+    <file src="Tunings/Data/NitroX5.jpg"></file>
+    <file src="Tunings/Data/NitroX10.jpg"></file>
+    <file src="Tunings/Data/Ecu.jpg"></file>
+    <file src="Tunings/Data/Drag.jpg"></file>
+    <file src="Tunings/Data/Turbo_2.jpg"></file>
+    <file src="Tunings/Data/Engine_Custom.jpg"></file>
+    <file src="Tunings/Data/Engine_Ultra.jpg"></file>
+    <file src="Tunings/Data/Engine_Super.jpg"></file>
+    <file src="Tunings/Data/Color1.jpg"></file>
+    <file src="Tunings/Data/Color2.jpg"></file>
+    <file src="Tunings/Data/Color3.jpg"></file>
+    <file src="Tunings/Data/Color_Back.jpg"></file>
+    <file src="Tunings/Data/Stereo.jpg"></file>
+    <file src="Tunings/Data/Spoiler.jpg"></file>
+    <file src="Tunings/Data/Paint_Job.jpg"></file>
+    <file src="Tunings/Data/Lsd_Doors.jpg"></file>
+    <file src="Tunings/Data/1073.jpg"></file>
+	<file src="Tunings/Data/bg.png"></file>
+	<file src="Tunings/Data/kadr.png"></file>
+    <file src="Tunings/Data/1074.jpg"></file>
+    <file src="Tunings/Data/1075.jpg"></file>
+    <file src="Tunings/Data/1076.jpg"></file>
+    <file src="Tunings/Data/1077.jpg"></file>
+    <file src="Tunings/Data/1078.jpg"></file>
+    <file src="Tunings/Data/1079.jpg"></file>
+    <file src="Tunings/Data/1080.jpg"></file>
+    <file src="Tunings/Data/1081.jpg"></file>
+    <file src="Tunings/Data/1082.jpg"></file>
+    <file src="Tunings/Data/1083.jpg"></file>
+    <file src="Tunings/Data/1084.jpg"></file>
+    <file src="Tunings/Data/1085.jpg"></file>
+    <file src="Tunings/Data/1096.jpg"></file>
+    <file src="Tunings/Data/1097.jpg"></file>
+    <file src="Tunings/Data/1098.jpg"></file>
+    <file src="Tunings/Data/Neon_Blue.jpg"></file>
+    <file src="Tunings/Data/Neon_Bold_Pink.jpg"></file>
+    <file src="Tunings/Data/Neon_Denim.jpg"></file>
+    <file src="Tunings/Data/Neon_Green.jpg"></file>
+    <file src="Tunings/Data/Neon_Ice.jpg"></file>
+    <file src="Tunings/Data/Neon_Light_Green.jpg"></file>
+    <file src="Tunings/Data/Neon_LightBlue.jpg"></file>
+    <file src="Tunings/Data/Neon_Ocean_Blue.jpg"></file>
+    <file src="Tunings/Data/Neon_Orange.jpg"></file>
+    <file src="Tunings/Data/Neon_Pink.jpg"></file>
+    <file src="Tunings/Data/Neon_Powder_Blue.jpg"></file>
+    <file src="Tunings/Data/Neon_Purple.jpg"></file>
+    <file src="Tunings/Data/Neon_Rasta.jpg"></file>
+    <file src="Tunings/Data/Neon_Red.jpg"></file>
+    <file src="Tunings/Data/Neon_White.jpg"></file>
+    <file src="Tunings/Data/Neon_Yellow.jpg"></file>
+	<file src="Tunings/Data/GOTHIC.ttf"></file>
+	<file src="Tunings/Data/error.mp3"/>
+	<file src="Tunings/Data/click.mp3"/>
+	<file src="Tunings/Data/errorp.mp3"/>
+	<file src="Tunings/Data/movafagh.mp3"/>
+    <!-- scripts -->
+	<file src="Tunings/Scripting/paintjob1.png"/>
+	<file src="Tunings/Scripting/paintjob2.png"/>
+	<file src="Tunings/Scripting/paintjob3.png"/>
+	<file src="Tunings/Scripting/paintjob4.png"/>
+	<file src="Tunings/Scripting/paintjob5.png"/>
+	<file src="Tunings/Scripting/shader.fx"/>
+	<!-- Neons -->
+	<file src="Files/Neons/neonCollision.col" />
+	<file src="Files/Neons/blue.dff" />
+	<file src="Files/Neons/green.dff" />
+	<file src="Files/Neons/pink.dff" />
+	<file src="Files/Neons/red.dff" />
+	<file src="Files/Neons/white.dff" />
+	<file src="Files/Neons/yellow.dff" />
+	<file src="Files/Neons/orange.dff" />
+	<file src="Files/Neons/lightblue.dff" />
+	<file src="Files/Neons/rasta.dff" />
+	<file src="Files/Neons/ice.dff" />
+
+</meta>

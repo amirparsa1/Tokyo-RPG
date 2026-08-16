@@ -1,0 +1,10 @@
+<meta>
+<info name="Vehicle Lights" author="**Enix-Game Scripters Team**" version="1.0.0" type="misc" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="Data/Image/lights128.jpg" />
+	<file src="Data/Image/vehicledash32.png" />
+	<file src="Data/Shader/lights.fx" />
+	<file src="Data/Image/vehiclesteering128.png" />
+	
+</meta>

@@ -1,0 +1,70 @@
+addEvent("PlayEatBurger",true)
+addEventHandler("PlayEatBurger",getLocalPlayer(),function(player)
+		sound = playSound("burger/khordan.mp3",false)
+		setSoundVolume(sound,10)
+end)
+
+
+
+addEvent("PlayEatpizza",true)
+addEventHandler("PlayEatpizza",getLocalPlayer(),function(player)
+		sound = playSound("pizza/pizza.mp3",false)
+		setSoundVolume(sound,10)
+end)
+
+
+
+
+
+--[[
+
+-------- Ped Burger ------------
+
+bugershopped = createPed( 167, 376.9326171875 ,-65.8486328125 ,1001.5078125)
+setElementRotation ( bugershopped, 0 ,0 ,181.6369934082 )
+setElementInterior ( bugershopped, 10 )
+setElementFrozen(bugershopped, true)
+
+
+function cancelPedDamage()
+	cancelEvent() 
+end
+addEventHandler("onClientPedDamage", bugershopped, cancelPedDamage)
+
+
+function bugershoppednpc()
+	setTimer ( function()
+		setPedAnimation(bugershopped,"ped","XPRESSscratch",1,true,false)
+		
+	end, 1000, 0 )
+end
+bugershoppednpc()
+
+--]]
+-------- Ped pizz ------------
+
+
+ashpaz1 = createPed( 168, 374.8603515625 ,-113.62109375 ,1001.4921875)
+setElementRotation ( ashpaz1, 0 ,0 ,0 )
+setElementInterior ( ashpaz1, 5 )
+
+setElementFrozen(ashpaz1, true)
+
+function cancelPedDamage()
+	cancelEvent() 
+end
+addEventHandler("onClientPedDamage", ashpaz1, cancelPedDamage)
+
+function pizzshoppednpc()
+	setTimer ( function()
+		givePedWeapon(ashpaz1, 42, 15000, true)
+
+		setControlState(ashpaz1, "fire", true)
+	end, 1000, 0 )
+end
+pizzshoppednpc()
+
+
+
+
+createBlip ( 1833.78, -1842.6, 13.5781 , 42 )

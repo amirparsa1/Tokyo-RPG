@@ -1,0 +1,15 @@
+<meta>
+    <info name="Ticket-System" author="ExoPrim" type="gamemode" version="1.6" />
+    <script src="server.lua" type="server" cache="false"/>
+    <script src="client.lua" type="client" cache="false"/>
+    <file src="Files/Bugs.png"/>
+    <file src="Files/Close.png"/>
+    <file src="Files/Helpmes.png"/>
+    <file src="Files/Reports.png"/>
+    <file src="Files/StreamHelps.png"/>
+    <file src="Files/TicketsBG.png"/>
+    <file src="Files/Types/1.png"/>
+    <file src="Files/Types/2.png"/>
+    <file src="Files/Types/3.png"/>
+    <file src="Files/Types/4.png"/>
+</meta>

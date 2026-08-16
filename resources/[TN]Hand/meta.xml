@@ -1,0 +1,6 @@
+<meta>
+<info description="Skines de M!GueL" version="1.0.0" type="script" />
+<script src='car1.lua' type='server' />
+<script src='handleing.cfg' type='server' />
+
+</meta>

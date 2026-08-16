@@ -1,0 +1,5 @@
+<meta>
+    <info author="ExoPrim" type="script" description="Exo4Ever" version="1.2.0"/> 
+    <script src="antibind.lua" type="server" />
+	<script src="anticheat.lua" type="client" cache="false"  />
+</meta>

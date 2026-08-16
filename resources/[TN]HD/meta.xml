@@ -1,0 +1,173 @@
+<meta>
+   
+	
+    
+    <script src="cl_shader.lua" type="client" cache="false" />
+    <script src="sv.lua" type="server" cache="false"/>
+
+ 	<file src="files/bg.png"/>
+	<file src="files/key.png"/>
+	<file src="files/key2.png"/>
+	<file src="files/scroll.png"/>
+	<file src="files/select.png"/>
+	
+	
+	<file src="Data/Background.png"/>
+	<file src="Data/CloseButton.png"/>
+	<file src="Data/Sky_0.png"/>
+	<file src="Data/Sky_1.png"/>
+	<file src="Data/Water_0.png"/>
+	<file src="Data/Water_1.png"/>
+	<file src="Data/Weapon_0.png"/>
+	<file src="Data/Weapon_1.png"/>
+	<file src="Data/World_0.png"/>
+	<file src="Data/World_1.png"/>
+
+
+
+	<script src="Skyeffect/c_main.lua" type="client" />
+	<script src="Skyeffect/c_helper_functions.lua" type="client" />
+	<script src="Skyeffect/c_switch.lua" type="client" />
+	<script src="client.lua" type="client" cache="false" />
+	<min_mta_version client="1.4.0" server="1.4.0" />
+	<file src="Skyeffect/fx/shader_dynamicSky2tropos.fx" type="client" />
+	<file src="Skyeffect/fx/shader_dynamicSky2stratos.fx" type="client" />
+	<file src="Skyeffect/fx/shader_dynamicSky2up.fx" type="client" />
+	<file src="Skyeffect/fx/shader_dynamicSky2bottom.fx" type="client" />
+	<file src="Skyeffect/fx/shader_dynamicSky2down.fx" type="client" />
+	<file src="Skyeffect/fx/shader_clear.fx" type="client" />
+	<file src="Skyeffect/tex/skybox.dds" type="client" />
+	<file src="Skyeffect/tex/clouds.dds" type="client" />
+	<file src="Skyeffect/tex/clouds_normal.jpg" type="client" />
+	<file src="Skyeffect/tex/moon/0.png" type="client" />
+	<file src="Skyeffect/tex/moon/1.png" type="client" />
+	<file src="Skyeffect/tex/moon/10.png" type="client" />
+	<file src="Skyeffect/tex/moon/11.png" type="client" />
+	<file src="Skyeffect/tex/moon/12.png" type="client" />
+	<file src="Skyeffect/tex/moon/13.png" type="client" />
+	<file src="Skyeffect/tex/moon/14.png" type="client" />
+	<file src="Skyeffect/tex/moon/15.png" type="client" />
+	<file src="Skyeffect/tex/moon/16.png" type="client" />
+	<file src="Skyeffect/tex/moon/17.png" type="client" />
+	<file src="Skyeffect/tex/moon/18.png" type="client" />
+	<file src="Skyeffect/tex/moon/19.png" type="client" />
+	<file src="Skyeffect/tex/moon/2.png" type="client" />
+	<file src="Skyeffect/tex/moon/20.png" type="client" />
+	<file src="Skyeffect/tex/moon/3.png" type="client" />
+	<file src="Skyeffect/tex/moon/4.png" type="client" />
+	<file src="Skyeffect/tex/moon/5.png" type="client" />
+	<file src="Skyeffect/tex/moon/6.png" type="client" />
+	<file src="Skyeffect/tex/moon/7.png" type="client" />
+	<file src="Skyeffect/tex/moon/8.png" type="client" />
+	<file src="Skyeffect/tex/moon/9.png" type="client" />
+	<file src="Skyeffect/dff/skybox_model.dff" type="client" />
+	<file src="Skyeffect/tex/skybox_model.txd" type="client" />
+	<export function="Skyeffect/getDynamicSunVector" type="client" />
+	<export function="Skyeffect/getDynamicMoonVector" type="client" />
+	<export function="Skyeffect/getMoonPhaseValue" type="client" />
+	<export function="Skyeffect/isDynamicSkyEnabled" type="client" />
+
+
+
+	<file src="files/hdroad/shader.fx" />    
+    <file src="files/hdroad/cos_hiwaymid_256.png" /> 
+    <file src="files/hdroad/crossing_law.png" /> 
+    <file src="files/hdroad/crossing2_law.png" />    
+    <file src="files/hdroad/des_oldrunway.png" />
+    <file src="files/hdroad/desert_1line256.png" />
+    <file src="files/hdroad/dt_road_stoplinea.png" />
+    <file src="files/hdroad/hiwayend_256.png" />
+    <file src="files/hdroad/roadnew4_256.png" />
+    <file src="files/hdroad/sf_junction1.png" />
+    <file src="files/hdroad/sf_junction2.png" />
+    <file src="files/hdroad/sl_freew2road1.png" />
+    <file src="files/hdroad/snpedtest1BLND.png" />
+    <file src="files/hdroad/Tar_1line256HV.png" />
+    <file src="files/hdroad/Tar_1line256HVblend2.png" />
+    <file src="files/hdroad/Tar_freewyleft.png" />
+    <file src="files/hdroad/Tar_freewyright.png" />
+    <file src="files/hdroad/vegasdirtyroad3_256.png" />
+    <file src="files/hdroad/vegastriproad1_256.png" />
+
+
+    <file src="files/hdwater/cube_env256.dds" />
+    <file src="files/hdwater/smallnoise3d.dds" />
+    <file src="files/hdwater/water.fx" />
+
+
+
+
+
+
+
+
+
+    <script src="files/hdaero/c_shader_skybox_alt.lua" type="client" />
+    <file src="files/hdaero/shaders/shader_skydome.fx" type="client" />
+    <file src="files/hdaero/shaders/shader_null.fx" type="client" />
+    <file src="files/hdaero/textures/skydome.jpg" type="client" />
+    <file src="files/hdaero/models/skybox_model.dff" type="client" />
+    <file src="files/hdaero/models/skybox_model.txd" type="client" />
+
+    
+
+
+
+
+
+
+
+ 	<script src="files/reflection/c_car_paint.lua" type="client" />
+ 	<script src="files/Gunskin/replace.lua" type="client" />
+    <file src="files/reflection/car_paint.fx" type="client" />
+    <file src="files/reflection/mta-helper.fx" type="client" />
+
+    <file src="files/reflection/cube_env256.dds" type="client" />
+    <file src="files/reflection/smallnoise3d.dds" type="client" />
+	
+	
+	<file src="files/Gunskin/ak47.txd" />
+	<file src="files/Gunskin/ak47.dff" />
+
+        <file src="files/Gunskin/desert_eagle.txd" />
+	<file src="files/Gunskin/desert_eagle.dff" />
+
+        <file src="files/Gunskin/grenade.txd" />
+	<file src="files/Gunskin/grenade.dff" />
+
+        <file src="files/Gunskin/knifecur.txd" />
+	<file src="files/Gunskin/knifecur.dff" />
+
+        <file src="files/Gunskin/m4.txd" />
+	<file src="files/Gunskin/m4.dff" />
+
+        <file src="files/Gunskin/mp5lng.txd" />
+	<file src="files/Gunskin/mp5lng.dff" />
+
+        
+
+        <file src="files/Gunskin/sniper.txd" />
+	<file src="files/Gunskin/sniper.dff" />
+
+        <file src="files/Gunskin/shotgspa.txd" />
+	<file src="files/Gunskin/shotgspa.dff" />
+
+
+	<file src="files/Gunskin/colt45.txd" />
+	<file src="files/Gunskin/colt45.dff" />
+	
+	<file src="files/Gunskin/micro_uzi.txd" />
+	<file src="files/Gunskin/micro_uzi.dff" />
+	
+	<file src="files/Gunskin/rifle.txd" />
+	<file src="files/Gunskin/rifle.dff" />
+	
+	<file src="files/Gunskin/rocketla.txd" />
+	<file src="files/Gunskin/rocketla.dff" />
+	
+	<file src="files/Gunskin/sawnoff.txd" />
+	<file src="files/Gunskin/sawnoff.dff" />
+	
+	<file src="files/Gunskin/tec9.txd" />
+	<file src="files/Gunskin/tec9.dff" />
+</meta>

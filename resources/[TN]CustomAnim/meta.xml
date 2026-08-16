@@ -1,0 +1,25 @@
+<meta>
+	<info author="ExoPrim" version="1.0" name="Animation For Premium" type="script" />
+	
+	<export function="setPedFortniteAnimation" type="shared" />
+	<export function="setPedParkourAnimation" type="shared" />
+	<export function="setPedVarzeshAnimation1" type="shared" />
+	<export function="setPedVarzeshAnimation2" type="shared" />
+	<export function="setPedBDAnimation1" type="shared" />
+	<export function="setPedBDAnimation2" type="shared" />
+	
+	
+	
+	<file src="raghs.ifp" />
+	<file src="Data/Fortnitept1.ifp" />
+	<file src="Data/Fortnitept2.ifp" />
+	<file src="Data/Fortnitept3.ifp" />
+	<file src="Data/Parkour.ifp" />
+	<file src="Data/Derazneshast.ifp" />
+	<file src="Data/Shena.ifp" />
+	<file src="Data/BD1.ifp" />
+	<file src="Data/BD2.ifp" />
+ 
+ <script src="client.lua" type="client" cache="false" />
+ <script src="server.lua" type="sever" />
+</meta>

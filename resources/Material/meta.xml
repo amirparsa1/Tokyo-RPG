@@ -1,0 +1,17 @@
+<meta>
+	<info author="" name="Material System" type="script" />
+	<script src="MatMap/mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="MatMap/mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	<map src="MatMap/MatMap.map" dimension="0"></map>
+	<script src="material_s.lua" type="server" />
+	<script src="material_c.lua" type="client" cache="false" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	
+	
+	
+	<file src="File/bgpage.png" />
+	<file src="File/font.ttf" />
+	<file src="File/fonts.ttf" />
+
+</meta>

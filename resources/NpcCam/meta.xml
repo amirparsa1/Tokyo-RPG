@@ -1,0 +1,5 @@
+<meta>
+	<info name="Controllable NPC" description=":D" version="1.0.0" author="determinator" type="Script" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

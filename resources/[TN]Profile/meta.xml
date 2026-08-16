@@ -1,0 +1,18 @@
+<meta>
+    <info author="Phoenix MTA Team" name="Global Scripts" type="script" />
+	
+
+    <script src="server.lua" type="server" />
+	<script src="client.lua" type="client" cache="false" />
+	<file src="Data/font.ttf"/>
+	<file src="Data/font2.ttf"/>
+	<file src="Data/Box.png"/>
+	<file src="Data/BG.png"/>
+
+	<!-- register sound-->	<file src="Data/error.mp3" />
+
+	<file src="sound/XP.mp3"/>
+	<file src="sound/item.mp3"/>
+	
+
+</meta>

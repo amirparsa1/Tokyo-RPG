@@ -1,0 +1,204 @@
+local accSys = exports["Accounts-system"]
+local miscSys = exports["misc"]
+
+
+---------------------------------
+-------**Script By ExoPrim**-------
+---------------------------------
+addCommandHandler("setvip",
+function ( thePlayer, command, player, time )
+--if (getElementType(thePlayer) == "player") then
+    if getPlayerSerial(thePlayer) == "11056965D2EF78959718CB70EC8F8493" or getPlayerSerial(thePlayer) == "A8C802B0C19EBFECF3DF93CFE83906B2" or getPlayerSerial(thePlayer) == "2B129BD8ECFA3E3AB85F037DEE324743" then
+		local find = miscSys:findPlayer ( player )
+		if player then
+		if find then
+            if time then
+			    local targetPlayer = getPlayerName ( find )
+                vipsh =  tonumber(getElementData(accSys:getPlayerAcc(find), "pVip"))
+			    setElementData(accSys:getPlayerAcc(find), "pVip", vipsh + time)
+			    outputChatBox("#00ff00☑️ #ffffffShoma Be Player#00ff00"..targetPlayer.." #FFFFFF"..time.." Saat Vip Dadid", thePlayer, 0, 255, 0,true)
+			    outputChatBox("#ff0000Shoma Az Taraf "..getPlayerName(thePlayer).." Be Modate "..time.." Saat Vip Gereftid Shoma Alan "..vipish.." Saat Vip Darid!", find, 0, 255, 0, true)
+			    outputDebugString("Admin "..getPlayerName(thePlayer).." Player "..targetPlayer.." Ra Az Rank'e Admin Kharej Kard!")
+                
+
+                
+            else
+                outputChatBox("#ff0000✖️ #ffffffTime Vared Nashode!", thePlayer, 255, 255, 255, true)
+            end
+
+
+		else
+			outputChatBox("#ff0000✖️ #ffffffPlayer Peyda Nashod!", thePlayer, 255, 255, 255, true)
+		end
+		else
+			outputChatBox("#C0C0C0Bezan: /setvip <PartOfName/ID> <VIPTIME>", thePlayer, 255, 22, 22, true)
+		end
+	end
+--end
+end)
+addCommandHandler("myvip",
+function(thplayer)
+    
+    vipsh =  getElementData(accSys:getPlayerAcc(thplayer), "pVip")
+    outputChatBox("#ff0000Shoma "..vipsh.." Saat Vip Darid!", thplayer, 0, 255, 0, true)
+
+end)
+
+function openvippanel(thePlayer,matchingDimension)
+    if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pVip")) > 0 then
+	    triggerClientEvent("showvippanel", thePlayer, thePlayer)
+    end
+end
+addCommandHandler("ovp",openvippanel)
+
+
+
+
+--setTimer(ssd , 200, 0)
+--function ssd ()
+--	local bg = 1
+--	if bg > 3 then
+--		bg=bg-1
+--	else
+--		bg=bg+1
+--    end
+--end
+function entrar()
+	bindKey(source, "o", "down", openvippanel)
+    --setElementData(player, "bg", 1)
+end
+addEventHandler("onPlayerJoin", getRootElement(), entrar)
+
+function fechar(player)
+	for index, player in ipairs(getElementsByType("player")) do
+		unbindKey(player, "o", "down", openvippanel)
+	end
+end
+addEventHandler("onResourceStop", getResourceRootElement(getThisResource()), fechar)
+---------------------------------
+
+function vhidme()
+
+    if getElementData(source,"inKermRizi") == false then
+        outputChatBox("#00ff00☑️ Shoma Ba Movafaghiat Hide Shodid!", source, 255, 255, 255, true)
+        setElementAlpha(source,0)
+        setElementData(source,"invis",true)
+        setElementData(source,"inKermRizi",true)
+        guiSetProperty(vippanel, "Visible", "False")
+        showCursor(false)
+        setSoundVolume(sound,0.9)
+    elseif getElementData(source,"inKermRizi") == true then
+        outputChatBox("#ff0000✖️ #00ff00Shoma Az Halate #FFFF00VIP #00ff00Hide #ff0000Kharej #00ff00Shodid!", source, 255, 255, 255, true)
+        setElementAlpha(source,255)
+        setElementData(source,"invis",false)
+        setElementData(source,"inKermRizi",false)
+        
+    end
+
+end
+addEvent( "hideshkon",true)
+addEventHandler( "hideshkon",root,vhidme )
+
+
+function beband()
+
+
+
+end
+addEvent( "beband",true)
+addEventHandler( "beband",root,beband )
+
+function givejetpackvip()
+    if ( doesPedHaveJetPack(source) ) then
+        outputChatBox("#ff0000✖️ #00ff00Shoma #FFFF00VIP #00ff00JetPack Khod Ra #ff0000Destroy #00ff00Kardid!", source, 255, 255, 255, true)
+        removePedJetPack(source)
+    else
+        outputChatBox("#00ff00☑️ Shoma Ba Movafaghiat Savare #FFFF00VIP #00ff00JetPack Shodid!", source, 255, 255, 255, true)
+        givePedJetPack(source)
+    end
+end
+addEvent( "givejetpackvip",true)
+addEventHandler( "givejetpackvip",root,givejetpackvip )
+
+veh = {}
+addEvent("vehcar", true)
+addEventHandler("vehcar",root,
+function()
+    
+    --if veh[source] and isElement( veh[source] ) then destroyElement( veh[source] ) 
+    --    veh[source] = nil 
+    --end
+    if veh[source] == null then
+        outputChatBox("#00ff00☑️ Mashin #FFFF00VIP #00ff00Shoma Amade Shod!", source, 255, 255, 255, true)
+        veh[source] = true
+        local x,y,z = getElementPosition(source)
+        veh[source] = createVehicle(562, x,y,z)
+        setVehicleHandling (veh[source], "mass", 1650.0)
+        setVehicleHandling(veh[source], "numberOfGears", 5)
+        setVehicleHandling(veh[source], "maxVelocity", 270.0)
+        setVehicleHandling(veh[source], "engineAcceleration", 25.0 )
+        setVehicleHandling(veh[source], "tractionMultiplier", 1.1)
+        setVehicleHandling(veh[source], "tractionLoss", 1)
+        setVehicleHandling(veh[source], "engineInertia", 7)
+        setVehicleHandling(veh[source], "collisionDamageMultiplier", 0.3)
+        setVehicleHandling(veh[source], "dragCoeff", 1.75 )
+        setVehicleHandling(veh[source], "driveType", "awd")
+        setVehicleHandling(veh[source], "turnMass", 2300)
+        setVehicleHandling(veh[source], "brakeDeceleration", 20.0)
+        setVehicleHandling(veh[source], "brakeBias", 0.8)
+        warpPedIntoVehicle (source,veh[source])
+    else
+        outputChatBox("#ff0000✖️ #00ff00Mashin #FFFF00VIP #00ff00Shoma #ff0000Destroy #00ff00Shod!", source, 255, 255, 255, true)
+        destroyElement( veh[source] )
+        veh[source] = null
+    end
+end)
+
+
+
+
+function emptySimcard()
+--[[	local ourSource = source
+	local randNum = math.random(1000000, 9999999)
+	dbQuery(emptySimcard, {ourSource, randNum}, exports.mysql:getMySQLC(), "SELECT `pID` FROM `users` WHERE `pPnumber` = ?", randNum)]]
+end
+
+
+gun = {}
+addEvent("givegunvip", true)
+addEventHandler("givegunvip",root,
+function()
+    if gun[source] == null then
+        gun[source] = true
+        giveWeapon ( source, 31, 9999 )
+        giveWeapon ( source, 34, 9999 )
+        giveWeapon ( source, 28, 9999 )
+        giveWeapon ( source, 27, 9999 )
+        giveWeapon ( source, 24, 9999 )
+        giveWeapon ( source, 23, 9999 )
+        outputChatBox("#00ff00☑️ Gun Haye #FFFF00VIP #00ff00Shoma Amade Ba Movafaghiat Be Shoma Dade Shod!", source, 255, 255, 255, true)
+    else
+        takeAllWeapons (source)
+        outputChatBox("#ff0000✖️ #00ff00Shoma #FFFF00VIP #00ff00Gun Ra Haye Khod Ra #ff0000Destroy #00ff00Kardid!", source, 255, 255, 255, true)
+        gun[source] = null
+    end
+
+end)
+
+
+
+
+function skinvipser()
+    skinesh = getElementModel(source)
+    if skinesh == 17 then
+        
+        outputChatBox("#ff0000✖️ #00ff00Skin #FFFF00VIP #00ff00Roye Shoma #ff0000Set #00ff00Hast!", source, 255, 255, 255, true)
+    else
+
+        setElementModel ( source, 17 )
+        outputChatBox("#00ff00☑️Skin #FFFF00VIP #00ff00Shoma Emal Shod!", source, 255, 255, 255, true)
+
+    end
+end
+addEvent( "skinvipser",true)
+addEventHandler( "skinvipser",root,skinvipser )

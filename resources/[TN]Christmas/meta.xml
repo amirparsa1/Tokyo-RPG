@@ -1,0 +1,95 @@
+<meta>
+    <info author="ExoPrim" name="Update Zemestan" version="1" type="misc"/>
+	<script src="server.lua" type="server" cache="true" validate="true"/>  
+	<script src="client.lua" type="client" cache="true" validate="true"/>  
+	<file src="models/18.dff"/> 
+	<file src="models/18.txd"/> 
+	<file src="direction_image.png"/>
+	<file src="direction_pointer.png"/>
+	<file src="cursor.png"/>
+	
+	<file src="flakes/cartoon_tile.png"/>
+	<file src="flakes/real_tile.png"/>
+	
+
+
+	<script src="snow_gui.lua" type="client"/>
+	<script src="snow.lua" type="client"/>
+	<script src="snow_s.lua"/>
+	
+	<export function="updateSnowType" type="client"/> <!-- <type> - can be "real" or "cartoon" (or your own specified type) -->
+	<export function="updateSnowDensity" type="client"/> <!-- <new density> <blend> -->
+	<export function="updateSnowWindDirection" type="client"/> <!-- <x> <y> - between 1 and 0 -->
+	<export function="updateSnowWindSpeed" type="client"/> <!-- <speed> -->
+	<export function="updateSnowflakeSize" type="client"/> <!-- <min size> <max size> -->
+	<export function="updateSnowJitter" type="client"/> <!-- <true/false> -->
+	<export function="startSnow" type="client"/>
+	<export function="stopSnow" type="client"/>
+	<export function="setGuiEnabled" type="client"/> <!-- <true/false> -->
+	<export function="setSnowToggle" type="client"/> <!-- <true/false> -->
+	<info type="script" version="0.0.3" author="ccw" name="Shader snow ground"/>
+
+<min_mta_version server="1.1.0" client="1.1.0"/>
+
+<script type="client" src="SnowBall.lua"/>
+
+<file src="models/SnowBall.txd"/>
+
+<file src="models/SnowBall.dff"/>
+
+<script type="client" src="ThrowSnowBall.lua"/>
+
+<script type="client" src="groundC.lua"/>
+
+<file type="client" src="img/newtreea128.png"/>
+
+<file type="client" src="img/snow.jpg"/>
+
+<file type="client" src="img/snow_railroads.jpg"/>
+
+<file type="client" src="img/snow_stone1.jpg"/>
+
+<file type="client" src="img/snow_stone2.jpg"/>
+
+<file type="client" src="img/snow_street.jpg"/>
+
+<file type="client" src="img/snow_street_jarda.jpg"/>
+
+<file type="client" src="img/snow_street_jarda2.jpg"/>
+
+<file type="client" src="img/snow_street_zebra.jpg"/>
+
+<file type="client" src="img/snow_street2.jpg"/>
+
+<file type="client" src="img/snow_street2_old.jpg"/>
+
+<file type="client" src="img/snow_tree.jpg"/>
+
+<file type="client" src="img/snow_wall1.jpg"/>
+
+<file type="client" src="img/snow_wall2.jpg"/>
+
+<file type="client" src="fx/smallnoise3d.dds"/>
+
+<file type="client" src="fx/snow_ground.fx"/>
+
+<file type="client" src="fx/snow_trees.fx"/>
+
+<file type="client" src="fx/snow_naughty_trees.fx"/>
+
+<file type="client" src="fx/mta-helper.fx"/>
+
+<file type="client" src="fx/shader.fx"/>
+
+<file type="client" src="fx/snow_irm_trees.fx"/>
+	<settings>
+		<!-- set whether the snow gui will be available, if false players cannot change their snow settings -->
+		<setting name="gui_enabled" value="[true]"/>
+		
+		<!-- set whether the player can turn snow on/off by themselves -->
+		<setting name="snow_toggle" value="[true]"/>
+
+
+
+	</settings>
+</meta>

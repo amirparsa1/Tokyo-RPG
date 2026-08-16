@@ -1,0 +1,17 @@
+<config>
+    <config>
+        <gate gActive="no" gX="1002.779296875" gY="-643.8330078125" gZ="121.54359436035" gLeft="30" gOwner="" gKey="1234" gID="1" gModel="980" gRotZ="20" nOeMove="0" />
+        <gate gActive="no" gX="1245.46" gY="-767.3830078125" gZ="93.24359436035" gLeft="30" gOwner="" gKey="777" gID="1" gModel="980" gRotZ="0" nOeMove="0" />
+        <gate gActive="no" gX="1151.40" gY="-1218.39" gZ="19.80" gLeft="30" gOwner="Sepehr" gKey="7777" gID="2" gModel="980" gRotZ="0" nOeMove="0" />
+        <gate gActive="no" gX="2463.55957" gY="-1658.8095" gZ="13.304" gLeft="30" gOwner="Sepehr" gKey="021" gID="3" gModel="980" gRotZ="90" nOeMove="0" />
+        <gate gActive="yes" gX="211.14" gY="-1349.41" gZ="51.94" gLeft="30" gOwner="PiCaSsO" gKey="1420" gID="5" gModel="980" gRotZ="45" nOeMove="0" />
+        <gate gActive="yes" gX="951.2802734375" gY="-1102.7" gZ="25" gLeft="30" gOwner="miad_king" gKey="123451" gID="6" gModel="980" gRotZ="90" nOeMove="0" />
+        <gate gActive="yes" gX="282.55" gY="-1260.4" gZ="74.92" gLeft="30" gOwner="_Zgamer_" gKey="3232" gID="7" gModel="980" gRotZ="130" nOeMove="0" />
+        <gate gActive="yes" gX="263.638671875" gY="-1333.34765625" gZ="53.8" gLeft="30" gOwner="AIZEN" gKey="123451" gID="8" gModel="980" gRotZ="37" nOeMove="0" />
+        <gate gActive="yes" gX="1262.82421875" gY="-1267.7353515625" gZ="15" gLeft="30" gOwner="TIME1" gKey="1111" gID="9" gModel="980" gRotZ="182" nOeMove="0" />
+        <gate gActive="yes" gX="1332" gY="-1233" gZ="12.7" gLeft="30" gOwner="TIME1" gKey="1111" gID="10" gModel="976" gRotZ="270" nOeMove="1" />
+        <gate gActive="yes" gX="1092.501953125" gY="778.5791015625" gZ="10.824199676514" gLeft="30" gOwner="-Matador-" gKey="arsi123" gID="13" gModel="980" gRotZ="0" nOeMove="0" />
+        <gate gActive="yes" gX="1092.7050781255" gY="725.115234375" gZ="11.8203125" gLeft="30" gOwner="-Matador-" gKey="arsi123" gID="14" gModel="980" gRotZ="0" nOeMove="0" />
+        <gate gActive="yes" gX="929" gY="-2161.5944824219" gZ="14.6" gLeft="30" gOwner="ToMaR" gKey="arsi123" gID="15" gModel="980" gRotZ="90" nOeMove="0" />
+    </config>
+</config>
