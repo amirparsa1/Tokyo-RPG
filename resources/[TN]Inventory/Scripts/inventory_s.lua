@@ -1,3 +1,34 @@
+-- =============================================================================
+--  SECURITY FIX (bugfix pass 2) -- READ THIS BEFORE EDITING THIS FILE
+--
+--  Every remote handler below takes the acting player as its FIRST ARGUMENT
+--  (`thePlayer`), e.g.
+--      addEventHandler("RequestDropItem", root, function(thePlayer, ItemSlot)
+--
+--  Arguments to a remotely-triggered event are fully controlled by the client.
+--  A cheater could send another player's element and operate on THEIR
+--  inventory -- duplicating, deleting or stealing items:
+--      triggerServerEvent("RequestDropItem", localPlayer, victimPlayer, 3)
+--
+--  MTA's predefined `client` variable is the player who really fired the
+--  event and cannot be forged. assertInvCaller() below rejects any call whose
+--  claimed player is not the actual caller.
+-- =============================================================================
+
+local function assertInvCaller(claimed)
+	if not client or not isElement(client) or getElementType(client) ~= "player" then
+		return false
+	end
+	-- Allow the common (correct) case where the client passed itself.
+	if claimed ~= nil and claimed ~= client then
+		outputDebugString(("[TN]Inventory: %s tried to act as %s -- rejected")
+			:format(getPlayerName(client),
+			        isElement(claimed) and getPlayerName(claimed) or tostring(claimed)), 2)
+		return false
+	end
+	return true
+end
+
 local accSys = exports["Accounts-system"]
 local notfSys = exports["notf"]
 local miscSys = exports["misc"]
@@ -123,6 +154,8 @@ ItemsTable = {
 
 addEvent("RequestShowInventory",true)
 addEventHandler("RequestShowInventory",getRootElement(),function(thePlayer)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if not InvTimer[thePlayer] then
 		if getElementData(thePlayer,"loggedIn") == true then
 			-- Loading
@@ -184,6 +217,8 @@ end
 
 addEvent("updateInventorySlot",true)
 addEventHandler("updateInventorySlot",getRootElement(),function(thePlayer,PreviousSlot,NextSlot,PreviousItem,NextItem)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local InventoryQuery = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM inventory WHERE `InvOwner` = ?",tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pID")) )
 	local result, numrows = dbPoll(InventoryQuery, dbpTime)
 	if (result and numrows > 0) then
@@ -366,6 +401,8 @@ end)
 
 addEvent("RequestDropItem",true)
 addEventHandler("RequestDropItem",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) >= 1 then
@@ -543,6 +580,8 @@ elementID = {}
 addEvent("onItemUse",true)
 
 addEventHandler("onItemUse",getRootElement(),function(thePlayer,ItemID,SlotID)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if elementID[source] == 15 then
 		local x , y , z = getElementPosition(thePlayer)
 		local v,h,r = getElementRotation ( thePlayer )
@@ -636,6 +675,8 @@ Gens = {
 
 addEvent("RequestSpllitGens",true)
 addEventHandler("RequestSpllitGens",getRootElement(),function(thePlayer,ItemSlot,tedadspliit)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) > tonumber(tedadspliit) then
@@ -664,6 +705,8 @@ end)
 
 addEvent("RequestDeleteGens",true)
 addEventHandler("RequestDeleteGens",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) >= 1 then
@@ -692,6 +735,8 @@ addEventHandler("RequestDeleteGens",getRootElement(),function(thePlayer,ItemSlot
 end)
 addEvent("RequestSellGens",true)
 addEventHandler("RequestSellGens",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) >= 1 then
@@ -745,6 +790,8 @@ fishes = {
 
 addEvent("RequestSellItem",true)
 addEventHandler("RequestSellItem",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) >= 1 then
@@ -787,6 +834,8 @@ end)
 
 addEvent("RequestUseItem",true)
 addEventHandler("RequestUseItem",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if exports["[TN]Family"]:CanUseItem() == false then
 		exports["notf"]:addNotification(thePlayer,"Dar Time Family Nemishe Item Use Dad.", 'error')
 	else
@@ -1834,6 +1883,8 @@ end,false,false)
 
 addEvent("onFishingLoose",true)
 addEventHandler("onFishingLoose",getRootElement(),function(thePlayer)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	triggerClientEvent("Fish:StopRender",thePlayer,thePlayer)
 	sendPlayerMessage("#ff0000[FisherMan]:#FFFFFF Motasefane Mahi Shoma Farar Kard!", thePlayer, 255, 255, 255, true)
 	destroyElement (fishing[thePlayer][1])
@@ -1850,6 +1901,8 @@ end)
 
 addEvent("onFishingWin",true)
 addEventHandler("onFishingWin",getRootElement(),function(thePlayer,myFish)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	triggerClientEvent("Fish:StopRender",thePlayer,thePlayer)
 	destroyElement (fishing[thePlayer][1])
 	toggleAllControls ( thePlayer, true )   
@@ -1900,6 +1953,8 @@ JetPack={}
 --- Function Use All Itemas
 
 addEventHandler("onItemUse",getRootElement(),function(thePlayer,ItemID,slot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if elementID[source] == 1 then
 		local hp = getElementHealth(thePlayer)
 		setElementHealth(thePlayer,hp+10)
@@ -2097,6 +2152,8 @@ poison = {}
 
 addEvent("syncWeaponItem",true)
 addEventHandler("syncWeaponItem",getRootElement(),function(thePlayer,weapon,x,y,z,hit)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if not itemTimer[hit] then
 		if getElementData(thePlayer,"explosiveBullet") == true then
 			if x and y and z then
@@ -2344,6 +2401,8 @@ end)
 
 addEvent("requestbuysharj",true)
 addEventHandler("requestbuysharj",getRootElement(),function(thePlayer,sharj)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local nsharj = tonumber(sharj)
 	local qeymat = tonumber(sharj) + 1000
 	
@@ -2389,6 +2448,8 @@ end
 
 addEvent("requestsharjcode",true)
 addEventHandler("requestsharjcode",getRootElement(),function(thePlayer,sharj)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local nsharj = tonumber(sharj)
 	local qeymat = tonumber(sharj) + 1000
 	
@@ -2420,6 +2481,8 @@ spamtimer2 = {}
 
 addEvent("requestusesharj",true)
 addEventHandler("requestusesharj",getRootElement(),function(thePlayer,code1)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	if not spamtimer2[thePlayer] then
 		spamtimer2[thePlayer] = setTimer(function(thePlayer)
 			spamtimer2[thePlayer] = nil
@@ -2505,6 +2568,11 @@ addEventHandler("GhavasNSho", root, GhavasNShoF)
 Kapsol = 0
 addEvent("Money",true)
 addEventHandler("Money",root,function()
+    -- FIX: this handler referenced the global `thePlayer`, which is nil here
+    --      (it was never a parameter of this function), so triggerClientEvent
+    --      below failed. Bind it to the real caller.
+    if not client or not isElement(client) then return end
+    local thePlayer = client
 
     if Ghavasi == true then 
         if Kapsol == 0 then
@@ -6312,7 +6380,10 @@ addEventHandler("Give51", root, Give51F)
 addEvent("setStat", true)
 addEventHandler("setStat", root, 
 function()
-    setPedStat(source, 225, 1000)
+    -- FIX: this remote event used `source`, which the client controls, so any
+    --      player could max out ANY player's stat. Use `client` (unspoofable).
+    if not client or not isElement(client) then return end
+    setPedStat(client, 225, 1000)
 end)
 function cancelStatF()
     setPedStat(source, 225, 1)
@@ -6485,6 +6556,8 @@ local blipcore = createBlip( 2361.3994140625 ,-1339.6298828125 ,24.0078125,43)
 setElementData( blipcore, 'blipName',"Koore")
 addEvent("RequestForgItem",true)
 addEventHandler("RequestForgItem",getRootElement(),function(thePlayer,ItemSlot)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot)
 	if tonumber(ItemID) >= 1 then
 		if tonumber(ItemAmount) >= 1 then
@@ -6537,6 +6610,8 @@ local formols = {
 }
 addEvent("RequestKooreItem",true)
 addEventHandler("RequestKooreItem",getRootElement(),function(thePlayer,ItemSlot1,ItemSlot2,ItemSlot3)
+	if not assertInvCaller(thePlayer) then return end -- FIX: reject spoofed player argument
+	thePlayer = client
 	local ItemID,ItemAmount = GetPlayerSlotInfo(thePlayer,ItemSlot1)
 	local ItemID2,ItemAmount2 = GetPlayerSlotInfo(thePlayer,ItemSlot2)
 	local ItemID3,ItemAmount3 = GetPlayerSlotInfo(thePlayer,ItemSlot3)

@@ -68,6 +68,9 @@ function RenderTopicImage()
 		dxDrawImage( (screenW - 360) / 2, (screenH - 248) / 2, 210, 127, SS )
 	else
 		removeEventHandler("onClientRender", root, RenderTopicImage)
+		-- FIX: SS = nil only dropped the Lua reference; the dx texture stayed
+		--      in video memory. Destroy it explicitly.
+		if isElement(SS) then destroyElement(SS) end
 		SS = nil
 	end
 end
@@ -77,6 +80,8 @@ function RenderNewsImage()
 		dxDrawImage( (screenW - 350) , (screenH - 60) / 2, 200, 123, SS )
 	else
 		removeEventHandler("onClientRender", root, RenderNewsImage)
+		-- FIX: same texture leak as RenderTopicImage (see above).
+		if isElement(SS) then destroyElement(SS) end
 		SS = nil
 	end
 end
@@ -86,9 +91,12 @@ addEventHandler( "ShowTopic", localPlayer,
 function ( Screen )
 	if Screen then
 		NowImage = Screen
+		-- FIX: leaked the previous texture when this fired twice.
+		if isElement(SS) then destroyElement(SS) end
 		SS = dxCreateTexture( Screen )
 		guiSetVisible(BoardBG, true)
 		guiSetText ( NameLabel, ""..getPlayerName(getLocalPlayer()) )
+		removeEventHandler( "onClientRender", root, RenderTopicImage ) -- FIX: prevent stacking duplicate handlers
 		addEventHandler( "onClientRender", root, RenderTopicImage )
 		showCursor(true)
 	end
@@ -100,8 +108,11 @@ function ( ReporterName , Screen , Matn )
 	if ReporterName and Screen and Matn then
 		NowImage = Screen
 		guiSetVisible(NewsBG, true)
+		-- FIX: leaked the previous texture on repeat broadcasts.
+		if isElement(SS) then destroyElement(SS) end
 		SS = dxCreateTexture( Screen )
 		guiSetText( NewsLabel1 , ""..ReporterName..":\n"..Matn.."" )
+		removeEventHandler( "onClientRender", root, RenderNewsImage ) -- FIX: prevent stacking duplicate handlers
 		addEventHandler( "onClientRender", root, RenderNewsImage )
 		setTimer(function()
 			guiSetVisible(NewsBG, false)

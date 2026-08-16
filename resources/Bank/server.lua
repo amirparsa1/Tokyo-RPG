@@ -1,3 +1,33 @@
+-- =============================================================================
+--  SECURITY FIX (bugfix pass 2) -- READ THIS BEFORE EDITING THIS FILE
+--
+--  Every remote handler in this file used `source` as "the player performing
+--  the action". On a server-side handler for an event with
+--  allowRemoteTrigger = true, `source` is whatever element the CLIENT passed
+--  to triggerServerEvent -- it is fully attacker-controlled.
+--
+--  A cheater could run, from their own client:
+--      triggerServerEvent("transferMoney", someOtherPlayer, myName, "999999")
+--  and the server would debit SOMEBODY ELSE'S bank account.
+--
+--  MTA provides the predefined variable `client`, which is always the player
+--  who actually triggered the event and cannot be spoofed. The guard below
+--  rejects any remote trigger where `source` does not match `client`.
+-- =============================================================================
+
+local function verifyBankCaller()
+	-- Returns the real player, or false if the call looks spoofed.
+	if not client or not isElement(client) or getElementType(client) ~= "player" then
+		return false
+	end
+	if source ~= client then
+		outputDebugString(("Bank: rejected spoofed event from %s (source=%s)")
+			:format(getPlayerName(client), tostring(source)), 2)
+		return false
+	end
+	return client
+end
+
 local accSys = exports["Accounts-System"]
 local miscSys = exports["misc"]
 
@@ -189,6 +219,7 @@ end
 addEvent("bankaBilgileri",true) 
 addEventHandler("bankaBilgileri",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
   if kartSifre ~= 0 then
    local bankaParasi = getElementData(accSys:getPlayerAcc(source), "pBank")
@@ -204,6 +235,7 @@ end
 addEvent("atmSoydu",true) 
 addEventHandler("atmSoydu",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
 local data = getElementData (source,"AtmSoyuyor")
  if (data == true) then
  local para = math.random (4000,8000)
@@ -256,6 +288,7 @@ addEventHandler("onElementDataChange",getRootElement(),outputChange2)
 addEvent("SifreUnuttum",true) 
 addEventHandler("SifreUnuttum",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
  local soru = getElementData(accSys:getPlayerAcc(source), "pBankQues")
  local cevap = getElementData(accSys:getPlayerAcc(source), "pBankAnswer")
@@ -270,6 +303,7 @@ end
 addEvent("ParaCek",true) 
 addEventHandler("ParaCek",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
   if kartSifre ~= 0 then
    local bankaParasi = getElementData(accSys:getPlayerAcc(source), "pBank")
@@ -283,6 +317,7 @@ end
 addEvent("transfer",true) 
 addEventHandler("transfer",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
   if kartSifre ~= 0 then
    local bankaParasi = getElementData(accSys:getPlayerAcc(source), "pBank")
@@ -296,6 +331,7 @@ end
 addEvent("KartOlustur",true) 
 addEventHandler("KartOlustur",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
   if kartSifre == 0 then
 	  triggerClientEvent(source, "KartOlusturC", source)
@@ -308,6 +344,7 @@ end
 addEvent("kartOlusturdu",true) 
 addEventHandler("kartOlusturdu",root, 
 function (sifre,soru,cevap)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  setElementData(accSys:getPlayerAcc(source), "pBankQues", soru)
  setElementData(accSys:getPlayerAcc(source), "pBankAnswer", cevap)
  setElementData(accSys:getPlayerAcc(source), "pBankPass", sifre)
@@ -329,6 +366,7 @@ end)
 addEvent("ParaYatir",true) 
 addEventHandler("ParaYatir",root, 
 function ()
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  local kartSifre = getElementData(accSys:getPlayerAcc(source), "pBankPass")
   if kartSifre ~= 0 then
    local bankaParasi = getElementData(accSys:getPlayerAcc(source), "pBank")
@@ -342,6 +380,7 @@ end
 addEvent("sifreDeneme",true) 
 addEventHandler("sifreDeneme",root,
 function (sifre1,sifre2,sifre3,sifre4,tip)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
 if (sifre1) and (sifre2) and (sifre3) and (sifre4) then
  local kartSifre = tonumber(getElementData(accSys:getPlayerAcc(source), "pBankPass"))
   if (kartSifre) then
@@ -368,6 +407,7 @@ end
 addEvent("paraYatirPara",true) 
 addEventHandler("paraYatirPara",root, 
 function (miktar)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
 	if (miktar) then
 		local miktar = tonumber(miktar)
 		local para = getPlayerMoney (source)
@@ -397,17 +437,28 @@ end
 addEvent("transferMoney",true) 
 addEventHandler("transferMoney",root, 
 function (target, meghdar, cash)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
 	local target = getPlayerFromName(target)
+	-- FIX: getPlayerName()/getPlayerAcc() were called on `target` BEFORE the
+	--      `if target then` nil-check below, so an unknown/offline recipient
+	--      name crashed the handler ("Bad argument @ getPlayerName").
+	if not target or not isElement(target) then
+		outputChatBox("#ff0000[Bank]: #ffffffPlayer peyda nashod!", client, 255, 255, 255, true)
+		return false
+	end
 	local pname = getPlayerName(target)
-	local pnames = getPlayerName(source)
-	local cash = getElementData(accSys:getPlayerAcc(source), "pBank")
+	local pnames = getPlayerName(client)
+	local cash = getElementData(accSys:getPlayerAcc(client), "pBank")
 	local hiscash = getElementData(accSys:getPlayerAcc(target), "pBank")
 	if target then
 		if (meghdar) then
 		local meghdar = tonumber(meghdar)
 			if cash >= tonumber(meghdar) then
 			if tonumber(cash) >= 1000 then
-			if ( string.find ( cash, '%p' ) ) then return false end
+			-- FIX: `cash` is a number here (read from pBank), and string.find on a
+			--      number raises an error in strict Lua. Validate the AMOUNT instead,
+			--      which is the value that actually comes from user input.
+			if not meghdar or meghdar <= 0 or meghdar ~= math.floor(meghdar) then return false end
 				local Mahdodiatesh = tonumber(getElementData(accSys:getPlayerAcc(source), "pEnteghal"))
 				if Mahdodiatesh >= meghdar then
 					if source ~= target then
@@ -448,6 +499,7 @@ end
 addEvent("sifreDegismeDenemesi",true) 
 addEventHandler("sifreDegismeDenemesi",root, 
 function (cevap,sifre)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  if (cevap and sifre) then
     local sifre2 = getElementData(accSys:getPlayerAcc(source), "pBankPass")
 	local cevap2 = getElementData(accSys:getPlayerAcc(source), "pBankAnswer")
@@ -465,6 +517,7 @@ end
 addEvent("paraCekPara",true) 
 addEventHandler("paraCekPara",root, 
 function (miktar)
+	if not verifyBankCaller() then return end -- FIX: reject spoofed source
  	if (miktar) then
  		local mitkar = tonumber(mitkar)
   		local bankaParasi = getElementData(accSys:getPlayerAcc(source), "pBank")

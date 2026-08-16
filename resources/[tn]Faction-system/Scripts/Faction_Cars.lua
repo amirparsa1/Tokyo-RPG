@@ -1,3 +1,9 @@
+-- FIX (bugfix pass 2): several guards below were written as
+--     if not getElementData(x, "factionVeh") == true then
+--   Lua parses that as (not getElementData(...)) == true, i.e. it is only
+--   true when the data is false/nil -- the inverse of the intent. The
+--   "is this a faction vehicle" check therefore never rejected anything.
+--   Rewritten as ~= true.
 local accSys = exports["Accounts-system"]
 local dbpTime = 500
 function CreateFactionCars()
@@ -35,7 +41,7 @@ CreateFactionCars()
 addEventHandler ( "onVehicleStartEnter", getRootElement(),
 function ( player, seat, jacked ) 
 	if seat == 0 then
-		if not getElementData(source, "factionVeh") == true then return false end
+		if getElementData(source, "factionVeh") ~= true then return false end
 		local vehid = getElementID ( source )
 		if tonumber(getElementData(accSys:getPlayerAcc(player), "pMember")) ~= tonumber(getElementData(source, "FactionID")) then
 			cancelEvent()
@@ -76,7 +82,7 @@ if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pAdmin")) < 15 then
 	end
 local inCar = getPedOccupiedVehicle(thePlayer)
 	if inCar then
-	if not getElementData(inCar, "factionVeh") == true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
+	if getElementData(inCar, "factionVeh") ~= true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
 		local plate = getElementData(inCar, "plate")
 		local Query = dbQuery(exports.mysql:getMySQLC(), "DELETE FROM factionvehicles WHERE plate = '"..plate.."';")
 		dbFree(Query)
@@ -94,7 +100,7 @@ if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pAdmin")) < 15 then
 	end
 local inCar = getPedOccupiedVehicle(thePlayer)
 	if inCar then
-	if not getElementData(inCar, "factionVeh") == true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
+	if getElementData(inCar, "factionVeh") ~= true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
 		local plate = getElementData(inCar, "plate")
 		local x,y,z = getElementPosition(thePlayer)
 		local rotX,rotY,rotZ = getElementRotation(thePlayer)
@@ -114,7 +120,7 @@ if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pAdmin")) < 15 then
 	end
 local inCar = getPedOccupiedVehicle(thePlayer)
 	if inCar then
-	if not getElementData(inCar, "factionVeh") == true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
+	if getElementData(inCar, "factionVeh") ~= true then exports["notf"]:addNotification(thePlayer, "(Faction-System) In Vehicle Motalegh Be Faction Nist!" , 'error') return false end
 		if r == nil then exports["notf"]:addNotification(thePlayer, "/colorveh [R (0-255)] [G (0-255)] [B (0-255)]!" , 'error') return false end
 		if r > "255" then exports["notf"]:addNotification(thePlayer, "(Faction-System) Color [ R ] Bayad Beyn [0-255] Bashad!" , 'error') return false end
 		if g == nil or g > "255" then exports["notf"]:addNotification(thePlayer, "(Faction-System) Color [ G ] Bayad Beyn [0-255] Bashad!" , 'error') return false end

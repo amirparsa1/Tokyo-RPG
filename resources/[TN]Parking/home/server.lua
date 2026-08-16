@@ -217,7 +217,9 @@ addCommandHandler("dparking", function(thePlayer, cmd, id)
 	local id = tonumber(id)
 	local data = home.spawnList[id]
 	if not(id) then return end
-	if not(data.id) == id then
+	-- FIX: `not(x) == id` parses as `(not x) == id` -- always false against a
+	--      number, so this guard never triggered.
+	if data.id ~= id then
 		outputChatBox("Khane'i Ba ID "..id.." Peyda Nashod!", thePlayer, 255, 0, 0)
 		return
 	end

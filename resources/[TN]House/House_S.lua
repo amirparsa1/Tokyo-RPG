@@ -290,7 +290,9 @@ addCommandHandler("out", function(thePlayer)
 		local house = getElementData(thePlayer, "house:lastvisitINT")
 		if (house) then
 			if getElementData(thePlayer, "inSleep") ~= true then
-					 if not getElementData(accSys:getPlayerAcc(thePlayer), "pJailTime") == 0 then
+					 -- FIX: `not x == 0` parses as `(not x) == 0`, which is ALWAYS false
+					 --      (a boolean never equals a number), so the jail check never fired.
+					 if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pJailTime")) ~= 0 then
 						 outputChatBox("#ff0000✖️ #ffffffShoma Dar Jail Hastid!", thePlayer, 255, 255, 255, true)
 						 return false
 					end

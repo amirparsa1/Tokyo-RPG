@@ -68,8 +68,12 @@ function guiClick(button)
 				guiGridListClear(aTabMap.MapList)
 				triggerServerEvent("getMaps_s", getLocalPlayer(), true)
 			end
-			if not guiGridListGetSelectedItem ( aTabMap.MapList ) == -1 then
+			-- FIX: `not x == -1` parses as `(not x) == -1`, which is always false,
+			--      so the "No map selected!" guard never fired and the code below
+			--      ran with an invalid row index.
+			if guiGridListGetSelectedItem ( aTabMap.MapList ) == -1 then
 				aMessageBox ( "error", "No map selected!" )
+				return
 			end
 			local mapName = guiGridListGetItemText ( aTabMap.MapList, guiGridListGetSelectedItem( aTabMap.MapList ), 1 )
 			local mapResName = guiGridListGetItemText ( aTabMap.MapList, guiGridListGetSelectedItem( aTabMap.MapList ), 2 )

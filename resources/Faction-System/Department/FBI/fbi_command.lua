@@ -138,7 +138,9 @@ function(thePlayer, cmd)
 	local de = getDistanceBetweenPoints3D(x,y,z,mx,my,mz)
 	if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pMember")) == 2 then
 		if de < fasele and getElementDimension(thePlayer) == 0 and getElementInterior(thePlayer) == 10 then
-			if not getElementData(thePlayer,"incover") == true then
+			-- FIX: `not x == true` parses as `(not x) == true`, which is only true
+			--      when x is false/nil -- the opposite of the intent here.
+			if getElementData(thePlayer,"incover") ~= true then
 				setPlayerNametagColor ( thePlayer, 255, 255, 255 )
 				outputChatBox("#00ff00[Department]: #717171Shoma #00ff00Cover #717171Shodid!", thePlayer, 255, 255, 255, true)
 				setElementData(thePlayer,"incover",true,false)
