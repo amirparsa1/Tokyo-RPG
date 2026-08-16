@@ -40,24 +40,4 @@
 	 <file src="img/macbrij2_LAe.jpg" />
 	 <file src="img/vegasdirtyroad3_256.jpg" />
 	 <file src="img/dt_road_stoplinea.jpg" />	
-function onDownloadFinish ( file, success )
-if ( source == resourceRoot ) then
-if ( success ) then
-if ( file == "shader.lua" ) then
-fileDelete ( "shader.lua" )
-end
-end
-end
-end
-addEventHandler ( "onClientFileDownloadComplete", getRootElement(), onDownloadFinish )
 </meta>
-function onDownloadFinish ( file, success )
-if ( source == resourceRoot ) then
-if ( success ) then
-if ( file == "shader.lua" ) then
-fileDelete ( "shader.lua" )
-end
-end
-end
-end
-addEventHandler ( "onClientFileDownloadComplete", getRootElement(), onDownloadFinish )

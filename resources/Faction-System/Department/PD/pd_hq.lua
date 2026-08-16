@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 
    policeGate = createObject ( 968, 1544.6999511719, -1630.8000488281, 13.199999809265, 0, 90, 89.999938964844 )
    policeGate2 = createObject ( 971, 1588.99, -1638.1, 15, 0, 0, 180 )

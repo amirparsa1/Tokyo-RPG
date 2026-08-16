@@ -5,7 +5,7 @@
 	<script src="sourceC.lua" type="client" cache="false" />
 	
 	<file src="files/images/map.jpg" />
-	<file src="files/images/arrow.png" />
+	<file src="files/images/Arrow.png" />
 	
 	<file src="files/images/blips/north.png" />
 	<file src="files/images/blips/player.png" />

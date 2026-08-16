@@ -1,4 +1,4 @@
-﻿guiLanguage.spanish = {
+guiLanguage.spanish = {
     --
     -- GENERAL STRINGS
     --

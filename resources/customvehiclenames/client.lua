@@ -1,4 +1,4 @@
-﻿g_Root = getRootElement()
+g_Root = getRootElement()
 g_thisRes = getThisResource()
 changeTable = {
 	[400] = "Porsche Cayenne",

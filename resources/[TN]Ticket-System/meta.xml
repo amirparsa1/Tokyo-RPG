@@ -1,7 +1,11 @@
 <meta>
     <info name="Ticket-System" author="ExoPrim" type="gamemode" version="1.6" />
-    <script src="server.lua" type="server" cache="false"/>
-    <script src="client.lua" type="client" cache="false"/>
+    <!-- FIX: server.lua / client.lua are referenced here but were never
+         committed to the repository, so this resource failed to start with
+         "Couldn't find script server.lua". The refs are commented out so the
+         rest of the server boots; re-add them once the scripts exist. -->
+    <!-- <script src="server.lua" type="server" cache="false"/> -->
+    <!-- <script src="client.lua" type="client" cache="false"/> -->
     <file src="Files/Bugs.png"/>
     <file src="Files/Close.png"/>
     <file src="Files/Helpmes.png"/>

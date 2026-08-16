@@ -127,16 +127,16 @@
 	<file src="Tunings/Scripting/paintjob5.png"/>
 	<file src="Tunings/Scripting/shader.fx"/>
 	<!-- Neons -->
-	<file src="Files/Neons/neonCollision.col" />
-	<file src="Files/Neons/blue.dff" />
-	<file src="Files/Neons/green.dff" />
-	<file src="Files/Neons/pink.dff" />
-	<file src="Files/Neons/red.dff" />
-	<file src="Files/Neons/white.dff" />
-	<file src="Files/Neons/yellow.dff" />
-	<file src="Files/Neons/orange.dff" />
-	<file src="Files/Neons/lightblue.dff" />
-	<file src="Files/Neons/rasta.dff" />
-	<file src="Files/Neons/ice.dff" />
+	<file src="files/Neons/neonCollision.col" />
+	<file src="files/Neons/blue.dff" />
+	<file src="files/Neons/green.dff" />
+	<file src="files/Neons/pink.dff" />
+	<file src="files/Neons/red.dff" />
+	<file src="files/Neons/white.dff" />
+	<file src="files/Neons/yellow.dff" />
+	<file src="files/Neons/orange.dff" />
+	<file src="files/Neons/lightblue.dff" />
+	<file src="files/Neons/rasta.dff" />
+	<file src="files/Neons/ice.dff" />
 
 </meta>

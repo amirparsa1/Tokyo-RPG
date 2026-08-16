@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 
 function isVehicleOccupied(vehicle)
     assert(isElement(vehicle) and getElementType(vehicle) == "vehicle", "Bad argument @ isVehicleOccupied [expected vehicle, got " .. tostring(vehicle) .. "]")

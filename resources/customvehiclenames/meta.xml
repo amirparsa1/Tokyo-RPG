@@ -3,5 +3,5 @@
 	<script src="client.lua" type="client" />
     <script src="plates.lua" type="server" />
 	<script src="client.lua" type="client"/>
-    <file src="File/Kadr.png"/>
+    <file src="File/kadr.png"/>
 </meta>

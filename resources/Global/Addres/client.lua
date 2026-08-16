@@ -124,4 +124,4 @@ function()
 	guiSetVisible ( WindowChange4, true )
 	showCursor(true)
 	guiSetInputEnabled( true )
-end)
+end)]]

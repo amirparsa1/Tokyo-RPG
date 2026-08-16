@@ -1,4 +1,4 @@
-<meta>
+<meta xmlns:edf="http://mtasa.com/edf">
 	<info author = "Bbp*Alone, Dutchman101" version = "1.5" name = "Ground Weapon Pickups for RPG servers" type = "script" edf:definition="mapedit.edf" />
 
 	<script src = "server.lua" type = "server" />

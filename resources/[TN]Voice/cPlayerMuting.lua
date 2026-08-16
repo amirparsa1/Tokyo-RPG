@@ -1,4 +1,4 @@
-﻿local DATA_NAME = "voice:chatting"
+local DATA_NAME = "voice:chatting"
 local xmlCache = {}
 
 addEventHandler ( "onClientPlayerVoiceStart", root,

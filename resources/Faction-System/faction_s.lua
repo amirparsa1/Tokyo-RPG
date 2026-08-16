@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 local miscSys = exports["misc"]
 local notfSys = exports["notf"]
 local FamilySys = exports["[TN]Family"]

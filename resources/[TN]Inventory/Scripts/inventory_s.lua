@@ -226,16 +226,17 @@ function TakePlayerItem(thePlayer,ItemSlot,Amounts)
 end
 
 function GetPlayerSlotInfo(thePlayer,ItemSlot)
+	-- FIX: the early `return` inside the loop skipped dbFree(), leaking a query
+	--      handle on every successful lookup. Free first, then return.
 	local InventoryQuery = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM inventory WHERE `InvOwner` = ?",tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pID")) )
 	local result, numrows = dbPoll(InventoryQuery, dbpTime)
+	dbFree(InventoryQuery)
 	if (result and numrows > 0) then
 		for index, row in pairs(result) do
-			--outputDebugString(
-			return tonumber(row["Item"..ItemSlot]),tonumber(row["Amount"..ItemSlot])
-			
+			return tonumber(row["Item"..ItemSlot]), tonumber(row["Amount"..ItemSlot])
 		end
 	end
-	dbFree(InventoryQuery)
+	return nil
 end
 
 function RemovePlayerItem(thePlayer,ItemSlot)

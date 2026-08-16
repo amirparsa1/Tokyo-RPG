@@ -1,11 +1,11 @@
 <meta>
 	<info author="ExoPrim" description="Job-System" version="1.0" type="misc"/>
 
-	<file src="files/Click1.png"/>
-	<file src="files/Click2.png"/>
-	<file src="files/s1.mp3"/>
-	<file src="files/s2.mp3"/>
-	<file src="files/s3.mp3"/>
+	<file src="Files/Click1.png"/>
+	<file src="Files/Click2.png"/>
+	<file src="Files/s1.mp3"/>
+	<file src="Files/s2.mp3"/>
+	<file src="Files/s3.mp3"/>
 
 	
 
@@ -34,11 +34,11 @@
 	<file src="Files/Accept.png"/>
 	<file src="Files/Reject.png"/>
 	<file src="Files/Mihan.png"/>
-	<file src="Files/red_line.png"/>
+	<file src="Files/Red_Line.png"/>
 	<file src="Files/Ghavas.png"/>
 	<file src="Files/Click.png"/>
 	<file src="Files/BG_Box.png"/>
-	<file src="Files/Close2.png"/>
+	<file src="Files/close2.png"/>
 	<file src="Files/Close.png"/>
 	<file src="Files/Font.ttf"/>
 	<file src="Files/Pizza1.wav"/>

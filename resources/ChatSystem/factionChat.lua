@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 local rankname = {
 	[1] = {"(R 1) Sotvan","(R 2) Sarvan","(R 3) Sargord","(R 4) Sarhang","(R 5) Sartip","(R 6) SarLashgar","(R 7) Sepahbod"},
 	[2] = {"(R 1) Sotvan","(R 2) Sarvan","(R 3) Sargord","(R 4) Sarhang","(R 5) Sartip","(R 6) SarLashgar","(R 7) Sepahbod"},

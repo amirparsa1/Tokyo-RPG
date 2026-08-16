@@ -7,8 +7,8 @@
 	<!-- burger  -->
 	<script src="burger/burger.lua" type="server" />
     <!--gunshop-->
-    <script src="gunshop/server.lua" type="server" />
-    <script src="gunshop/client.lua" type="client" cache="false"/>
+    <script src="GunShop/server.lua" type="server" />
+    <script src="GunShop/client.lua" type="client" cache="false"/>
 
 
 	
@@ -21,10 +21,10 @@
 
 	
    <!-- GunShop2 Interior -->
-    <script src="GunShop2/interior/Interior_S.lua" type="server" />
-    <script src="GunShop2/interior/Interior_C.lua" type="client" cache="false" />
-    <file src="GunShop2/interior/Enter.mp3"></file>
-	<file src="GunShop2/interior/bgpage.png" cache="false"/>
+    <script src="GunShop2/Interior/Interior_S.lua" type="server" />
+    <script src="GunShop2/Interior/Interior_C.lua" type="client" cache="false" />
+    <file src="GunShop2/Interior/Enter.mp3"></file>
+	<file src="GunShop2/Interior/bgpage.png" cache="false"/>
 	
 
 	

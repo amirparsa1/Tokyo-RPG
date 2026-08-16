@@ -6,7 +6,7 @@
 	<file src="Data/Images/qavanin.png" type="client" />
 	<file src="Data/Images/close.png" type="client" />
 	<file src="font.ttf"/>
-	<file src="font2.ttf"/>
+	<file src="font2.TTF"/>
 	<file src="Data/Images/cancel.png" type="client" />
 	<file src="Data/Images/kadr.png" type="client" />
 	<file src="Data/Images/kadrsoal.png" type="client" />

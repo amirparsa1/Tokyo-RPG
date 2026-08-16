@@ -41,20 +41,41 @@ function inrange(a1, a2, a3, a4, a5, a6)
   return false
 end
 
-function table.keys(_ARG_0_)
-  local t = {}
-  for k, v in pairs(tab) do
+function table.keys(tab)
+  -- FIX: was iterating undefined global 'tab' and using undefined global 'n'
+  --      (argument was named _ARG_0_ by a decompiler). Also leaked globals.
+  local t, n = {}, 0
+  if type(tab) ~= "table" then return t end
+  for k in pairs(tab) do
     n = n + 1
     t[n] = k
   end
   return t
 end
 
+-- FIX (security + crash): the original body was
+--     loadstring("return " .. func)()(unpack(nil))
+--   * loadstring() on a client-supplied string is remote code execution if the
+--     guard above is ever loosened;
+--   * unpack(nil) raises "bad argument #1 to 'unpack' (table expected, got nil)"
+--     and threw away the varargs the caller actually sent.
+--   Replaced with an explicit dispatch table -- no dynamic code, args preserved.
+local SERVER_FUNCTIONS = {
+  ["runUseAction"]   = function(...) if runUseAction then return runUseAction(...) end end,
+  ["items.runAction"] = function(...)
+      if type(items) == "table" and items.runAction then return items.runAction(...) end
+    end,
+}
+
 function callServerFunction(func, ...)
-  if func ~= "runUseAction" and func ~= "items.runAction" then
+  if not client or not isElement(client) then return end
+  if type(func) ~= "string" then return end
+  local handler = SERVER_FUNCTIONS[func]
+  if not handler then
+    outputDebugString("[TN]Parking: blocked callServerFunction('" .. tostring(func) .. "')", 2)
     return
   end
-  loadstring("return " .. func)()(unpack(nil))
+  return handler(...)
 end
 addEvent("onClientCallsServerFunction", true)
 addEventHandler("onClientCallsServerFunction", resourceRoot, callServerFunction)

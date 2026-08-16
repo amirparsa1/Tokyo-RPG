@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 local miscSys = exports["misc"]
 
 adminrankesh = {

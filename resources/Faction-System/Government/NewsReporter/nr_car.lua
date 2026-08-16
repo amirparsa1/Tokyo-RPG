@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 
 function enternrVehicle ( player, seat, jacked ) 
 if tonumber(getElementData(accSys:getPlayerAcc(player), "pMember")) ~= 7 then

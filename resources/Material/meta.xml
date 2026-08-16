@@ -12,6 +12,6 @@
 	
 	<file src="File/bgpage.png" />
 	<file src="File/font.ttf" />
-	<file src="File/fonts.ttf" />
+	<file src="File/fonts.TTF" />
 
 </meta>

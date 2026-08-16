@@ -130,7 +130,9 @@ end
 
 function pickupWeapon(cmd,state)
 	if (cmd == "pickup" or state=="down") and isTimer(spamTimer) then return end
-	spamTimer=setTimer(function() end,20,1)
+	-- FIX: MTA enforces a 50ms minimum interval; setTimer(...,20,1) returns false,
+	--      so isTimer(spamTimer) was always false and this spam guard never worked.
+	spamTimer=setTimer(function() end,50,1)
 	if(isElement(currentGround)) then
 		local weaponid = colshapes[currentGround].weaponid
 		local ammo = colshapes[currentGround].ammo
@@ -153,7 +155,9 @@ end
 
 function dropWeapon(cmd,state)
 	if (cmd == "drop" or state=="down") and isTimer(spamTimer) then return end
-	spamTimer=setTimer(function() end,20,1)
+	-- FIX: MTA enforces a 50ms minimum interval; setTimer(...,20,1) returns false,
+	--      so isTimer(spamTimer) was always false and this spam guard never worked.
+	spamTimer=setTimer(function() end,50,1)
 	local team = getPlayerTeam(localPlayer)
 	if team and bannedTeams[getTeamName(team)] and bannedTeamsEnabled then
 		outputChatBox("You cannot drop weapons while in a gang/squad",255,0,0)

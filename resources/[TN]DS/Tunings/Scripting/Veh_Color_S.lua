@@ -63,6 +63,7 @@ function UpdateCarColor(thePlayer, Color1R, Color1G, Color1B, Color2R, Color2G, 
 		local pName = getPlayerName(thePlayer)
 		local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 		local result, numrows = dbPoll(query, dbpTime)
+		dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 		if (result and numrows > 0) then
 			for index, row in pairs(result) do
 				local vOwner = row['vOwner']
@@ -94,6 +95,7 @@ function UpdateCarColor(thePlayer, Color1R, Color1G, Color1B, Color2R, Color2G, 
 		local pName = getPlayerName(thePlayer)
 		local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 		local result, numrows = dbPoll(query, dbpTime)
+		dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 		if (result and numrows > 0) then
 			for index, row in pairs(result) do
 				local vOwner = row['vOwner']
@@ -126,6 +128,7 @@ function UpdateCarColor(thePlayer, Color1R, Color1G, Color1B, Color2R, Color2G, 
 		local pName = getPlayerName(thePlayer)
 		local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 		local result, numrows = dbPoll(query, dbpTime)
+		dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 		if (result and numrows > 0) then
 			for index, row in pairs(result) do
 				local vOwner = row['vOwner']
@@ -163,6 +166,7 @@ if getElementData(thePlayer, "loggedIn") == true then
 	local pName = getPlayerName(thePlayer)
 	local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 	local result, numrows = dbPoll(query, dbpTime)
+	dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 	if (result and numrows > 0) then
 		for index, row in pairs(result) do
 			local vOwner = row['vOwner']
@@ -206,6 +210,7 @@ if getElementData(thePlayer, "loggedIn") == true then
 			local pName = getPlayerName(thePlayer)
 			local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 			local result, numrows = dbPoll(query, dbpTime)
+			dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 			if (result and numrows > 0) then
 				for index, row in pairs(result) do
 					local vOwner = row['vOwner']
@@ -245,6 +250,7 @@ if getElementData(thePlayer, "loggedIn") == true then
 				local pName = getPlayerName(thePlayer)
 				local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 				local result, numrows = dbPoll(query, dbpTime)
+				dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 				if (result and numrows > 0) then
 					for index, row in pairs(result) do
 						local vOwner = row['vOwner']
@@ -284,6 +290,7 @@ if getElementData(thePlayer, "loggedIn") == true then
 			local pName = getPlayerName(thePlayer)
 			local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM vehicles;" )
 			local result, numrows = dbPoll(query, dbpTime)
+			dbFree(query) -- FIX: query handle was never freed (leaked on every call)
 			if (result and numrows > 0) then
 				for index, row in pairs(result) do
 					local vOwner = row['vOwner']

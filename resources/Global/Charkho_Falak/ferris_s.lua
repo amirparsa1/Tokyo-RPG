@@ -1,4 +1,4 @@
-﻿local fcabin = { obj = {}, step = {}, col = {} };
+local fcabin = { obj = {}, step = {}, col = {} };
 local interval = 1100;
 
 addEventHandler( 'onResourceStart', resourceRoot, function()

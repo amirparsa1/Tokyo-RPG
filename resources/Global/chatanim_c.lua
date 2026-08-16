@@ -1,4 +1,4 @@
-﻿gChatting = false
+gChatting = false
  
 function chatCheckPulse()
     local chatState = isChatBoxInputActive() or isConsoleActive()

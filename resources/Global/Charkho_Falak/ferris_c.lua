@@ -1,4 +1,4 @@
-﻿local scX, scY = guiGetScreenSize();
+local scX, scY = guiGetScreenSize();
 local lps = { x = 383.705, y = -2028.377, z = 7.835, rz = 90 };  -- Position where player will be teleported after he leaves a cabin
 local bdKey = { 'K', 'L' };                                      -- Keys to get inside [1] and outside [2] of the cabin ('K' and 'L' by default)
 local tstgs = {

@@ -10,7 +10,7 @@
 
 	<script src="help-c.lua" type="client"/>
 	
-	<file src="Data/TREBUCBD.ttf"></file>
+	<file src="Data/TREBUCBD.TTF"></file>
 	<file src="Data/GOTHIC.ttf"></file>
 	<file src="Data/error.mp3"/>
 	<file src="Data/errorp.mp3"/>

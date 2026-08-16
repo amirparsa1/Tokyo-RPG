@@ -450,7 +450,7 @@ addEventHandler ( "aPlayerVersion", _root, function ( version )
 	end
 
 	-- Format it all prettyful
-	local _,_,ver,type,build = string.find ( playerVersion, "(.*)-([0-9])\.(.*)" )
+	local _,_,ver,type,build = string.find ( playerVersion, "(.*)-([0-9])%.(.*)" )
 	if aPlayers[source] then
 		aPlayers[source]["version"] = ver .. ( type < '9' and " pre  " or "  " ) .. "(" .. type .. "." .. build .. ")"
 	end
@@ -1556,7 +1556,19 @@ addEvent ( "aExecute", true )
 addEventHandler ( "aExecute", _root, function ( action, echo )
 	if checkClient( "command.execute", source, 'aExecute', action ) then return end
 	if ( hasObjectPermissionTo ( source, "command.execute" ) ) then
-		local result = loadstring("return " .. action)()
+		-- FIX: loadstring() returns nil (+error msg) on a syntax error; calling it
+		--      directly crashed the handler. Compile and run guarded instead.
+		--      NOTE: still gated behind the "command.execute" ACL right.
+		local chunk, compileErr = loadstring("return " .. tostring(action))
+		if not chunk then
+			outputDebugString("aExecute compile error: " .. tostring(compileErr), 1)
+			return false
+		end
+		local ok, result = pcall(chunk)
+		if not ok then
+			outputDebugString("aExecute runtime error: " .. tostring(result), 1)
+			return false
+		end
 		if ( echo == true ) then
 			local restring = ""
 			if ( type ( result ) == "table" ) then

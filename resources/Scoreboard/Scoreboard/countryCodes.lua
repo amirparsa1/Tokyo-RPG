@@ -1,4 +1,4 @@
-﻿countryName = {
+countryName = {
 	AF = "AFGHANISTAN",
 	AX = "ALAND ISLANDS",
 	AL = "ALBANIA",

@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 
 	fbiGate = createObject ( 971, 364.89999, -1469.7, 31.3, 0, 0, 38 )
 	fbiGate2 = createObject ( 971, 310.89999, -1555, 31.3, 0, 0, 141.996 )

@@ -429,7 +429,9 @@ function loadSnowSettings()
 	local cursorhighlight = xmlFindChild(file,"highlightcursor",0)
 	if cursorhighlight then
 		highlight = xmlNodeGetValue(cursorhighlight)
-		highlight = loadstring("return "..highlight)()
+		-- FIX: loadstring() on a config value is arbitrary code execution if the XML
+		--      is tampered with, and errors on malformed input. Parse a boolean instead.
+		highlight = (tostring(highlight):lower() == "true")
 		
 		if highlight then
 			addEventHandler("onClientPreRender",root,highlightCursor)
@@ -441,7 +443,8 @@ function loadSnowSettings()
 	local jittervalue = xmlFindChild(file,"jitter",0)
 	if jittervalue then
 		jitter = xmlNodeGetValue(jittervalue)
-		settings.jitter = loadstring("return "..jitter)()
+		-- FIX: replaced loadstring() with a plain numeric parse (see note above).
+		settings.jitter = tonumber(jitter) or 0
 	else
 		outputDebugString("Failed to load 'jitter' setting.")
 	end		

@@ -7,4 +7,4 @@
 
 	end
 end
-setTimer ( syncHealth, 40000, 0 )
+setTimer ( syncHealth, 40000, 0 )]]

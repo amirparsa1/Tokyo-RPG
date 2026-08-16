@@ -214,7 +214,9 @@ function FamilyInfo(fID,typesh)
                 local query = dbQuery(exports.mysql:getMySQLC(), "SELECT * FROM `users` WHERE `pID` = ?",row['fOwner'])
                 local result2, numrows2 = dbPoll(query, 500)
                 if (result2 and numrows2 > 0) then
-                    for index, row2 in pairs(result) do
+                    -- FIX: iterated `result` (the OUTER query) instead of `result2`,
+                    --      so "owner" returned the wrong row's pName / nil.
+                    for index, row2 in pairs(result2) do
                         Natije = row2['pName']
                         dbFree(AllFamilys)
                         return Natije

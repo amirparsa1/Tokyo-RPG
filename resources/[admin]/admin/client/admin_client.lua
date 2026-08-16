@@ -126,7 +126,19 @@ function getWeatherNameFromID ( weather )
 end
 
 function aExecute ( action, echo )
-	local result = loadstring("return " .. action)()
+	-- FIX: loadstring() returns nil (+error msg) on a syntax error; calling it
+	--      directly crashed the handler. Compile and run guarded instead.
+	--      NOTE: still gated behind the "command.execute" ACL right.
+	local chunk, compileErr = loadstring("return " .. tostring(action))
+	if not chunk then
+		outputDebugString("aExecute compile error: " .. tostring(compileErr), 1)
+		return false
+	end
+	local ok, result = pcall(chunk)
+	if not ok then
+		outputDebugString("aExecute runtime error: " .. tostring(result), 1)
+		return false
+	end
 	if ( echo == true ) then
 		local restring = ""
 		if ( type ( result ) == "table" ) then restring = "Table ("..unpack ( result )..")"

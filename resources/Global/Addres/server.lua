@@ -1,4 +1,4 @@
-﻿
+
 --[[ Forumfunction Copy2 (thePlayer)
 	exports["notf"]:addNotification(thePlayer, "Link Discord Mega City Copy Shod." , 'success')
 	triggerClientEvent ( thePlayer, "PlayMovafagh", thePlayer)

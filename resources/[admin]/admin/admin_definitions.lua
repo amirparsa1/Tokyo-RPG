@@ -29,8 +29,7 @@ end
 
 -- EVENT CALLS
 
-enum
-({
+enum({
 	"EVENT_SYNC",
 	"EVENT_SYNC_PERMISSIONS",
 	"EVENT_TEAM",
@@ -52,8 +51,7 @@ enum
 
 -- SYNC DEFINITIONS
 
-enum
-({
+enum({
 	"SYNC_PLAYER",
 	"SYNC_PLAYERS",
 	"SYNC_RESOURCES",
@@ -66,16 +64,14 @@ enum
 
 -- TEAM DEFINITIONS
 
-enum
-({
+enum({
 	"TEAM_CREATE",
 	"TEAM_DESTROY"
 })
 
 -- ADMIN DEFINITIONS
 
-enum
-({
+enum({
 	"ADMIN_PASSWORD",
 	"ADMIN_AUTOLOGIN",
 	"ADMIN_SYNC",
@@ -87,8 +83,7 @@ enum
 
 -- PLAYER DEFINITIONS
 
-enum
-({
+enum({
 	"PLAYER_KICK",
 	"PLAYER_BAN",
 	"PLAYER_MUTE",
@@ -113,8 +108,7 @@ enum
 
 -- VEHICLE DEFINITIONS
 
-enum
-({
+enum({
 	"VEHICLE_REPAIR",
 	"VEHICLE_CUSTOMIZE",
 	"VEHICLE_SET_PAINTJOB",
@@ -125,8 +119,7 @@ enum
 
 -- RESOURCE DEFINITIONS
 
-enum
-({
+enum({
 	"RESOURCE_START",
 	"RESOURCE_RESTART",
 	"RESOURCE_STOP"
@@ -134,8 +127,7 @@ enum
 
 -- SERVER DEFINITIONS
 
-enum
-({
+enum({
 	"SERVER_SET_GAME",
 	"SERVER_SET_MAP",
 	"SERVER_SET_WELCOME",
@@ -151,8 +143,7 @@ enum
 
 -- MESSAGE DEFINITIONS
 
-enum
-({
+enum({
 	"MESSAGE_NEW",
 	"MESSAGE_GET",
 	"MESSAGE_READ",
@@ -161,8 +152,7 @@ enum
 
 -- BANS DEFINITIONS
 
-enum
-({
+enum({
 	"BANS_BAN_IP",
 	"BANS_BAN_SERIAL",
 	"BANS_UNBAN_IP",

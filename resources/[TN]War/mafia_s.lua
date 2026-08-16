@@ -833,14 +833,30 @@ function getFactionData(facID,data)
 	return false
 end
 
-function setFactionData(facID,data,value)
-	local data = tostring(data)
-	local myQH = dbQuery(exports.mysql:getMySQLC(), "UPDATE `factions` SET `"..data.."` = '"..value.."' WHERE `id` = '"..facID.."'")
+-- FIX: `value` and `facID` were concatenated straight into the SQL string
+--      (injection risk + breaks on quotes). They are bound as parameters now.
+--      The column name cannot be a parameter in SQL, so it is validated
+--      against an allow-list instead of being interpolated blindly.
+--      Also removed the unreachable `return false` after the if/else.
+local FACTION_COLUMNS = {
+	fBank = true, fMats = true, fDrugs = true, fName = true,
+	fMoney = true, fPoint = true, fWeapon = true,
+}
+
+function setFactionData(facID, data, value)
+	data = tostring(data)
+	if not FACTION_COLUMNS[data] then
+		outputDebugString("setFactionData: rejected unknown column '"..data.."'", 1)
+		return false
+	end
+	facID = tonumber(facID)
+	if not facID then return false end
+
+	local myQH = dbQuery(exports.mysql:getMySQLC(),
+		"UPDATE `factions` SET `"..data.."` = ? WHERE `id` = ?", value, facID)
 	if myQH then
 		dbFree(myQH)
 		return true
-	else
-		return false
 	end
 	return false
 end

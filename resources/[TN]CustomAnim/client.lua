@@ -1,4 +1,4 @@
-﻿local customIfp = nil 
+local customIfp = nil 
 
 function setPedFortniteAnimation (ped,animation,tiempo,repetir,mover,interrumpible)
 if (type(animation) ~= "string" or type(tiempo) ~= "number" or type(repetir) ~= "boolean" or type(mover) ~= "boolean" or type(interrumpible) ~= "boolean") then return false end
