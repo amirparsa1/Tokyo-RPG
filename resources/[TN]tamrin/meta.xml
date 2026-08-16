@@ -6,7 +6,7 @@
 	<script src="shootingranch_client.lua" type="client"/>
 	<script src="shootingranch_server.lua" type="server"/>
 	<file src="Verdanab.ttf" />
-	<file src="sbg.png" />
+	<file src="Sbg.png" />
 	
 	
 	<file src="Gunicon/ak47s.png" />

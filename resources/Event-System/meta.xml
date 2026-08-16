@@ -7,8 +7,8 @@
 	<file src="Data/event.png" />
 	<file src="Data/bg.png" />
 	<file src="Data/kadr.png" />
-	<file src="Data/GOTHIC.ttf" />
-	<file src="Data/TREBUCBD.ttf" />
+	<file src="Data/GOTHIC.TTF" />
+	<file src="Data/TREBUCBD.TTF" />
 	
 		<!--sound-->
 	<file src="sound/error.mp3"/>

@@ -11,8 +11,8 @@
     <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
 	
 	<!--  Interior -->
-    <script src="interior/Interior_S.lua" type="server" />
-    <script src="interior/Interior_C.lua" type="client" cache="false" />
-    <file src="interior/Enter.mp3"></file>
-	<file src="interior/bgpage.png" />
+    <script src="Interior/Interior_S.lua" type="server" />
+    <script src="Interior/Interior_C.lua" type="client" cache="false" />
+    <file src="Interior/Enter.mp3"></file>
+	<file src="Interior/bgpage.png" />
 </meta>

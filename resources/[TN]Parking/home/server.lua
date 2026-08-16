@@ -1,4 +1,4 @@
-﻿local dbpTime = 500
+local dbpTime = 500
 home = {}
 local notfSys = exports["notf"]
 local accSys = exports["Accounts-System"]

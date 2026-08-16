@@ -1,4 +1,4 @@
-﻿local miscSys = exports["misc"]
+local miscSys = exports["misc"]
 local accSys = exports["Accounts-System"]
 local ngduty = createPickup ( 299.2802734375 ,187.359375 ,1007.171875 , 3, 1275, 0)
 setElementInterior ( ngduty, 3 )

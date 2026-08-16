@@ -1,4 +1,4 @@
-﻿homeControl = {}
+homeControl = {}
 
 local window_homeControl = guiCreateWindow(0.35,0.2, 0.3,0.3, 'Управление домом',true)
 guiWindowSetSizable(window_homeControl,false)

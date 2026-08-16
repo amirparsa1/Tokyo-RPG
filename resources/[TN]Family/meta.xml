@@ -131,12 +131,12 @@
     <file src = "Vehicles/546.png" />
     <file src = "Vehicles/547.png" />
     <file src = "Vehicles/551.png" />
-    <file src="list/Close.png" />
-    <file src="IMG/Background.png" />
-    <file src="list/Next.png" />
-    <file src="list/Online.png" />
-    <file src="list/Kargah_Box.png" />
-    <file src="list/textbox.png" />
+    <file src="List/Close.png" />
+    <file src="IMG/background.png" />
+    <file src="List/Next.png" />
+    <file src="List/Online.png" />
+    <file src="List/Kargah_Box.png" />
+    <file src="List/textbox.png" />
     
     <file src="Events/AirDrop.png"/>
     <file src="Events/FFA.mp3"/>

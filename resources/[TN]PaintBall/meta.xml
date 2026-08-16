@@ -1,8 +1,8 @@
 <meta>
 	<script src="pb_client.lua" type="client" />
 	<script src="pb_server.lua" type="server" />
-	<file src="Data/GOTHIC.ttf" />
-	<file src="Data/TREBUCBD.ttf" />
+	<file src="Data/GOTHIC.TTF" />
+	<file src="Data/TREBUCBD.TTF" />
 	<file src="Data/entekhabemap.png" />
 	<file src="Data/Spaz.png" />
 	<file src="Data/SNIPER.png" />
@@ -12,10 +12,10 @@
 	<file src="Data/rifle.png" />
 	<file src="Data/tec9.png" />
 	<file src="Data/ak47.png" />
-	<file src="Data/Spaz2.png" />
-	<file src="Data/SNIPER2.png" />
+	<file src="Data/spaz2.png" />
+	<file src="Data/sniper2.png" />
 	<file src="Data/mp52.png" />
-	<file src="Data/M42.png" />
+	<file src="Data/m42.png" />
 	<file src="Data/desert2.png" />
 	<file src="Data/rifle2.png" />
 	<file src="Data/tec92.png" />
@@ -34,14 +34,14 @@
 	<file src="Data/Mapasli2.png" />
 	<file src="Data/Mapasli3.png" />
 	<file src="Data/Mapasli4.png" />
-	<file src="Data/Mapasli5.png" />
+	<file src="Data/MapAsli5.png" />
 	<file src="Data/Mapsoon.png" />
-	<file src="Data/Time1.png" />
-	<file src="Data/Time2.png" />
-	<file src="Data/Time3.png" />
-	<file src="Data/Time11.png" />
-	<file src="Data/Time22.png" />
-	<file src="Data/Time33.png" />
+	<file src="Data/time1.png" />
+	<file src="Data/time2.png" />
+	<file src="Data/time3.png" />
+	<file src="Data/time11.png" />
+	<file src="Data/time22.png" />
+	<file src="Data/time33.png" />
 	<file src="Data/bgp.png" />
 	<file src="Data/bg2.png" />
     <file src="Data/paintball.png" />

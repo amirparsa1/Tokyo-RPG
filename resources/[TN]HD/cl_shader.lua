@@ -1,4 +1,4 @@
-﻿
+
 textyre_doroga = {}
 shader_doroga = {}
 

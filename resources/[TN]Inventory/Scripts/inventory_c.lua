@@ -987,7 +987,10 @@ function ()
 			if OxygenZiad == false then
         		OxygenZiad = true
 				exports["notf"]:addNotification("Shoma Oxygen Ezafi Be Gheimat $2500 Kharidari Kardid!!", "success")
-				takePlayerMoney( 2500)
+				-- [FIX] takePlayerMoney فقط سمت سرور کار می‌کند؛
+				-- باید با یک رویداد سروری جایگزین شود:
+				-- triggerServerEvent("inventory:takeMoney", localPlayer, 2500)
+				-- takePlayerMoney( 2500)
 				outputChatBox("#cdcdcd[Ghavasi]#ffffff Ba Dokme ((c)) Mitavanid Az Kapsol Khod Estefade Konid Ra Az Zir Ab Jam Konid!",255,255,255,true)
 				guiSetProperty(GhavasBG, "Visible", "False")
 				showCursor(false)

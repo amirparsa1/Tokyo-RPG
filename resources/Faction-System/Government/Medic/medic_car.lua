@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 function entermedicVehicle ( player, seat, jacked ) 
 if tonumber(getElementData(accSys:getPlayerAcc(player), "pMember")) ~= 4 then
 	if seat == 0 then

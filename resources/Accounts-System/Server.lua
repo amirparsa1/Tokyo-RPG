@@ -1,4 +1,4 @@
-﻿-- PuB By @KhodeOxYGeM : )
+-- PuB By @KhodeOxYGeM : )
 local dbpTime = 500
 local globalSys = exports["Global"]
 local accSys = exports["Accounts-System"] 

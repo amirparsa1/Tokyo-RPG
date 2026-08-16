@@ -1,4 +1,4 @@
-﻿   nggate = createObject ( 980, 2776.9004, 913.2002, 12.5, 0, 0, 90.643 )
+   nggate = createObject ( 980, 2776.9004, 913.2002, 12.5, 0, 0, 90.643 )
    colNgGate = createColCircle (2777.8134765625 ,909.9365234375 ,9)
 
 

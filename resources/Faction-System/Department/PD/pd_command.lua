@@ -1,4 +1,4 @@
-﻿local accSys = exports["Accounts-System"]
+local accSys = exports["Accounts-System"]
 local miscSys = exports["misc"]
 
 local pdduty = createPickup ( 255.384765625, 77.291015625, 1003.640625 , 3, 1275, 0)

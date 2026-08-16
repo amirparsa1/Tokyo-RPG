@@ -10,7 +10,7 @@
 	<file src="Data/img/fundo3.png" />
 	<file src="Data/img/fundo5.png" />
 	<file src="Data/img/hp.png" />
-	<file src="Data/img/datebox.png" />
+	<file src="Data/img/DateBox.png" />
 	<file src="Data/img/shield.png" />
 	<file src="Data/FONT.ttf" />
 	<file src="Data/img/0.png" />
@@ -71,7 +71,7 @@
 	<file src="Data/wanted/5.png" />
 	<file src="Data/wanted/6.png" />
 	
-	<file src="Data/img/background.png"/>
+	<file src="Data/img/BackGround.png"/>
 	<file src="Data/img/aks.png"/>
 	<script src="client.lua" type="client" cache="false" />
 </meta>

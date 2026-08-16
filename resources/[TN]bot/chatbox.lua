@@ -1,4 +1,4 @@
-﻿function chatbox()
+function chatbox()
 	outputChatBox("#9A00FF[TheNight-MTA] #00FFE6Baray Ertebat Ba #ff1010 Helper#00ffe6 Hay Server Az Cmd #ff1010[/Helpme] #00FFE6Estefade Konid.", client, 255, 255, 255, true)
 	setTimer(chatbox1,400000,1)
 end

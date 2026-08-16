@@ -125,3 +125,4 @@ function()
 	showCursor(true)
 	guiSetInputEnabled( true )
 end)
+]]

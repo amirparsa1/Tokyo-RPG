@@ -1,4 +1,4 @@
-﻿local miscSys = exports["misc"]
+local miscSys = exports["misc"]
 local accSys = exports["Accounts-System"]
 local fasele = 2.5
 

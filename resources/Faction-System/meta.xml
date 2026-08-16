@@ -33,7 +33,7 @@
 	<script src="Department/CIA/CIA_Car.lua" type="server" />
 
 	<script src="Special/ICA/ICA.lua" type="server" />
-	<script src="Special/ICA/ICA-Car.lua" type="server" /> 
+	<script src="Special/ICA/ICA-car.lua" type="server" /> 
 
 
 	<!-- Government -->

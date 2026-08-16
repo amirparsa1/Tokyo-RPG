@@ -24,7 +24,7 @@
 <file src="sound/error.mp3"/>
 <file src="sound/errorp.mp3"/>
 <file src="sound/info.mp3"/>
-<file src="font/Times.ttf"/>
+<file src="font/Times.TTF"/>
 
 			<!-- Interior -->
 

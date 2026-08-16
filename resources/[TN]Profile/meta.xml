@@ -5,8 +5,8 @@
     <script src="server.lua" type="server" />
 	<script src="client.lua" type="client" cache="false" />
 	<file src="Data/font.ttf"/>
-	<file src="Data/font2.ttf"/>
-	<file src="Data/Box.png"/>
+	<file src="Data/font2.TTF"/>
+	<file src="Data/box.png"/>
 	<file src="Data/BG.png"/>
 
 	<!-- register sound-->	<file src="Data/error.mp3" />

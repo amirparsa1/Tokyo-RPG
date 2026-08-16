@@ -13,8 +13,8 @@
     <file src="Files/Pooshidan.png" />
     <file src="Files/Porkardan.png" />
     <file src="Files/Oxygen.png" />
-    <file src="Files/ghavas.txd" />
-    <file src="Files/ghavas.dff" />
+    <file src="Files/Ghavas.txd" />
+    <file src="Files/Ghavas.dff" />
 	<file src="Sounds/open.m4a" />
     <file src="Panels/Clean.png" cache="false" />
 	<file src="Panels/Close.png" cache="false" />
@@ -26,15 +26,15 @@
 	<file src="assets/1.mp3"/>
 	<file src="assets/2.mp3"/>
 	<file src="assets/animations.ifp"/>
-	<file src="assets/bg.png"/>
+	<file src="assets/BG.png"/>
 	<file src="assets/bg2.png"/>
 	<file src="assets/fish1.png"/>
 	<file src="assets/font1.ttf"/>
-	<file src="assets/IranSans.ttf"/>
+	<file src="assets/IRANSans.ttf"/>
 	<file src="assets/Green.png"/>
 	<file src="assets/Item.png"/>
 	<file src="assets/monitor.png"/>
-	<file src="assets/bgup.png"/>
+	<file src="assets/BGUP.png"/>
 	<file src="assets/Cinematic.png" />
 
 	<file src="Files/Green.png"/>
@@ -84,17 +84,17 @@
 	<file src="Items/36.png"/>
 	<file src="Items/37.png"/>
 	<file src="Items/38.png"/>
-	<file src="Items/39.png"/>
+	<file src="Items/39.PNG"/>
 	<file src="Items/40.png"/>
-	<file src="Items/41.png"/>
-	<file src="Items/42.png"/>
-	<file src="Items/43.png"/>
+	<file src="Items/41.PNG"/>
+	<file src="Items/42.PNG"/>
+	<file src="Items/43.PNG"/>
 	<file src="Items/44.png"/>
 	<file src="Items/45.png"/>
-	<file src="Items/46.png"/>
+	<file src="Items/46.PNG"/>
 	<file src="Items/47.png"/>
-	<file src="Items/48.png"/>
-	<file src="Items/49.png"/>
+	<file src="Items/48.PNG"/>
+	<file src="Items/49.PNG"/>
 	<file src="Items/50.png"/>
 	<file src="Items/51.png"/>
 	<file src="Items/52.png"/>

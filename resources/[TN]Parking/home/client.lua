@@ -1,4 +1,4 @@
-﻿home = {}
+home = {}
 home.temp = {}
 homeControl = {}
 local sX, sY = guiGetScreenSize()

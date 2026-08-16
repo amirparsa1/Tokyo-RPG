@@ -1,4 +1,4 @@
-﻿tradeMarkerPositions = -- Маркер обмена
+tradeMarkerPositions = -- Маркер обмена
 {
 	{-1990.4864501953, 276.23626708984, 34.171875},
 }

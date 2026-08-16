@@ -1,4 +1,4 @@
-﻿Display = {};
+Display = {};
 Display.Width, Display.Height = guiGetScreenSize();
 visible2 = true
 

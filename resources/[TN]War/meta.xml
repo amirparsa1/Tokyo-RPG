@@ -14,10 +14,10 @@
 	<file src="Files/vs.png"/>
 	<file src="Files/soon.png"/>
 	<file src="Files/bg2.png"/>
-    <script src="interior/Interior_S.lua" type="server" />
-    <script src="interior/Interior_C.lua" type="client" cache="false" />
-    <file src="interior/Enter.mp3" />
-	<file src="interior/bgpage.png" />   
+    <script src="Interior/Interior_S.lua" type="server" />
+    <script src="Interior/Interior_C.lua" type="client" cache="false" />
+    <file src="Interior/Enter.mp3" />
+	<file src="Interior/bgpage.png" />   
 <export function="setFactionData" type="server"/>
 <export function="getFactionData" type="server"/>
 </meta>

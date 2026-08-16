@@ -2,7 +2,7 @@
     <map src="RemoveKeshti.map" dimension="0" />
     <map src="Koore.map" dimension="0"></map>
     <map src="Map-Harry.map" dimension="0"></map>
-    <map src="prison.map" dimension="0"></map>
+    <map src="Prison.map" dimension="0"></map>
     <map src="jelopd.map" dimension="0"></map>
     <map src="C-Jail.map" dimension="0"></map>
     <map src="MAP-City.map" dimension="0"></map>
@@ -15,7 +15,7 @@
     <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
     <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
     <map src="Fish-2-Map.map" dimension="0"></map>
-    <map src="Fix.map" dimension="0"></map>
+    <map src="fix.map" dimension="0"></map>
     <map src="ExoMaperi.map" dimension="0"></map>
     <map src="vine.map" dimension="0"></map>
     <script src="sidewalk/c.lua" type="client" cache="false"/>
