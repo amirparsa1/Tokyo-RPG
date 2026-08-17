@@ -54,9 +54,10 @@ function send(id, arg){
 /* ---------- responsive root size ---------- */
 function fit(){
   // 27rem panel should occupy ~ 30% of a 1080p height -> 16px root
-  // FIX: text rendered at only 8-10px on 1080p, unreadable at gameplay
-  // distance. Root size raised so the smallest label lands around 13-14px.
-  const r = Math.max(15, Math.min(26, window.innerHeight / 46));
+  // Text must stay readable at gameplay distance, but the PANEL must not eat
+  // the screen. So the type stays generous and the box metrics (padding, gaps,
+  // min-heights) were tightened in CSS instead of shrinking the font.
+  const r = Math.max(13.5, Math.min(19, window.innerHeight / 58));
   document.documentElement.style.fontSize = r + 'px';
 }
 window.addEventListener('resize', fit);
