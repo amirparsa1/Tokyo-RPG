@@ -648,7 +648,18 @@ function panelinventory()
 		end
 	end
 end
-bindKey("F2","down",panelinventory)
+-- FIX (XMP UI): F2 now opens the new CEF panel (Scripts/ui_bridge.lua).
+-- panelinventory() is kept because other code paths still call it, but it is
+-- no longer bound to a key. UI_toggle() still asks the server for fresh data
+-- through the same RequestShowInventory event, so nothing else changes.
+bindKey("F2","down",function()
+	if UI_toggle then
+		UI_toggle()
+		triggerServerEvent("RequestShowInventory",getLocalPlayer(),getLocalPlayer())
+	else
+		panelinventory()
+	end
+end)
 
 -- FIX (bugfix pass 3): recovery path for F2.
 --   The server refuses RequestShowInventory while its anti-flood timer runs or
