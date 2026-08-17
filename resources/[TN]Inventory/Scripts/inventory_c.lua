@@ -375,15 +375,17 @@ addEventHandler("ShowInventoryForPlayer",getLocalPlayer(),function(thePlayer,Inv
 		-- FIX (bugfix pass 3): the server confirmed, so it is now safe to reveal
 		--   the outer frame. See the note in panelinventory().
 		inventoryPending = nil
-		if ShowMode == 1 then
-			LoadPlayerInventory(thePlayer,InventoryData)
-		else
+		-- FIX (XMP UI): always ingest the data, but only reveal the LEGACY gui
+		--   when the new CEF panel is not the active interface. Without this the
+		--   server's reply to RequestShowInventory re-opened the old window on
+		--   top of the new one, so both were visible at once.
+		LoadPlayerInventory(thePlayer,InventoryData)
+		if ShowMode ~= 1 and not (XMP_UI_ACTIVE and XMP_UI_ACTIVE()) then
 			guiSetVisible( InventoryBGFull, true )
 			guiSetProperty(InventoryBG,"Visible","True")
 			showChat(false)
 			hideALL = true
 			showCursor(true)
-			LoadPlayerInventory(thePlayer,InventoryData)
 		end
 		RefreshPanel()
 	end

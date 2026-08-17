@@ -24,12 +24,12 @@
 
 .mh-mark{display:flex;align-items:center;gap:calc(var(--u)*2);
   margin-bottom:calc(var(--u)*1.5)}
-.mh-x{font-size:.62rem;font-weight:900;letter-spacing:.2em;color:var(--accent)}
+.mh-x{font-size:.72rem;font-weight:900;letter-spacing:.2em;color:var(--accent)}
 .mh-sep{width:14px;height:1px;background:var(--border)}
 
 .mh-right{display:flex;align-items:center;gap:calc(var(--u)*5)}
 .mh-stat{display:flex;flex-direction:column;gap:calc(var(--u)*1);align-items:flex-end}
-.mh-val{font-size:.86rem;font-weight:700;letter-spacing:.02em;color:var(--txt)}
+.mh-val{font-size:1rem;font-weight:800;letter-spacing:.02em;color:var(--txt)}
 .mh-div{width:1px;height:26px;background:var(--border)}
 
 .mh-close{width:34px;height:34px;background:var(--panel);cursor:pointer;
@@ -62,7 +62,7 @@
 .vitals{display:flex;flex-direction:column;gap:calc(var(--u)*2.5)}
 .v-head{display:flex;justify-content:space-between;align-items:baseline;
   margin-bottom:calc(var(--u)*1.25)}
-.v-head .t-num{font-size:.72rem;font-weight:700}
+.v-head .t-num{font-size:.9rem;font-weight:800}
 
 /* ── equipped ── */
 .equip{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*1.5)}
@@ -91,13 +91,13 @@
   letter-spacing:.05em;color:var(--txt-mute);opacity:.8;
   font-variant-numeric:tabular-nums}
 .slot img{width:66%;height:66%;object-fit:contain;pointer-events:none}
-.slot .q{position:absolute;right:2px;bottom:1px;font-size:.5rem;font-weight:800;
+.slot .q{position:absolute;right:3px;bottom:2px;font-size:.6rem;font-weight:900;
   letter-spacing:.02em;color:var(--txt);
   font-variant-numeric:tabular-nums;text-shadow:0 1px 2px #000}
 
 /* hint bar */
 .hintbar{display:flex;align-items:center;gap:calc(var(--u)*2);
-  font-size:.58rem;letter-spacing:.14em;color:var(--txt-dim)}
+  font-size:.62rem;letter-spacing:.14em;color:var(--txt-dim)}
 .hintbar b{color:var(--txt-dim);font-weight:700}
 .hintbar .sp{width:1px;height:9px;background:var(--border)}
 
@@ -117,10 +117,10 @@
   margin-bottom:calc(var(--u)*3)}
 .det-hero img{width:56%;height:56%;object-fit:contain}
 .det-qty{position:absolute;right:calc(var(--u)*2);bottom:calc(var(--u)*1.5);
-  font-size:.72rem;font-weight:800;color:var(--txt-dim)}
+  font-size:.9rem;font-weight:900;color:var(--txt)}
 
 .det-title{margin-bottom:calc(var(--u)*3)}
-.det-title h2{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;
+.det-title h2{font-size:1.28rem;font-weight:900;letter-spacing:-.01em;
   line-height:1.2;margin-top:calc(var(--u)*1)}
 
 /* spec list — editorial, hairline rows, no boxes */
@@ -128,7 +128,7 @@
 .spec>div{display:flex;justify-content:space-between;align-items:center;
   padding:calc(var(--u)*2) 0;border-bottom:var(--line) solid var(--hairline)}
 .spec dt{font-size:.58rem;font-weight:600;letter-spacing:.18em;color:var(--txt-dim)}
-.spec dd{font-size:.7rem;font-weight:700;color:var(--txt)}
+.spec dd{font-size:.82rem;font-weight:800;color:var(--txt)}
 
 .actions{display:flex;flex-direction:column;gap:calc(var(--u)*1.5)}
 

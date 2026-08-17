@@ -6709,3 +6709,68 @@ addEventHandler("onPlayerQuit", root, function()
 		end
 	end
 end)
+
+
+-- ============================================================================
+--  /itemlist  --  ADDED (XMP UI pass)
+--
+--  There was no way to look up an item ID in game: /giveitem and /itemall both
+--  take a numeric ID, but the only place those numbers existed was ItemsTable
+--  in this file. Admins had to keep the list open in a text editor.
+--
+--  /itemlist            -> paged list, 15 per page
+--  /itemlist <page>     -> jump to a page
+--  /itemlist <text>     -> search by name, e.g. /itemlist almas
+-- ============================================================================
+addCommandHandler("itemlist", function(thePlayer, cmd, arg)
+    if tonumber(getElementData(accSys:getPlayerAcc(thePlayer), "pAdmin")) < 2 then
+        sendPlayerMessage("#FF0000[Error]:#FFFFFF Shoma Dastresi Nadarid!", thePlayer)
+        return
+    end
+
+    -- collect and sort once
+    local list = {}
+    for id, row in pairs(ItemsTable) do
+        if type(row) == "table" and row[1] and tonumber(id) and tonumber(id) > 0 then
+            list[#list + 1] = { id = tonumber(id), name = tostring(row[1]) }
+        end
+    end
+    table.sort(list, function(a, b) return a.id < b.id end)
+
+    -- search mode
+    if arg and not tonumber(arg) then
+        local needle = tostring(arg):lower()
+        local hits = {}
+        for _, it in ipairs(list) do
+            if it.name:lower():find(needle, 1, true) then hits[#hits + 1] = it end
+        end
+        if #hits == 0 then
+            sendPlayerMessage("#FF0000[ItemList]:#FFFFFF Hich Itemi Ba '" .. arg .. "' Peyda Nashod.", thePlayer)
+            return
+        end
+        outputChatBox("#C8963E[ItemList] #FFFFFFNatije Jostojoo: #C8963E" .. arg ..
+                      " #8C969F(" .. #hits .. ")", thePlayer, 255, 255, 255, true)
+        for _, it in ipairs(hits) do
+            outputChatBox("  #C8963E" .. it.id .. "  #F2F4F5" .. it.name, thePlayer, 255, 255, 255, true)
+        end
+        return
+    end
+
+    -- paged mode
+    local perPage = 15
+    local pages   = math.ceil(#list / perPage)
+    local page    = math.max(1, math.min(tonumber(arg) or 1, pages))
+    local from    = (page - 1) * perPage + 1
+    local to      = math.min(from + perPage - 1, #list)
+
+    outputChatBox("#C8963E[ItemList] #FFFFFFSafhe #C8963E" .. page .. "#FFFFFF/" .. pages ..
+                  "  #8C969F(" .. #list .. " item)", thePlayer, 255, 255, 255, true)
+    for i = from, to do
+        outputChatBox("  #C8963E" .. list[i].id .. "  #F2F4F5" .. list[i].name,
+                      thePlayer, 255, 255, 255, true)
+    end
+    if page < pages then
+        outputChatBox("#8C969F  Safhe Badi: #FFFFFF/itemlist " .. (page + 1) ..
+                      "   #8C969F| Jostojoo: #FFFFFF/itemlist <esm>", thePlayer, 255, 255, 255, true)
+    end
+end)

@@ -196,6 +196,10 @@ end
 -- --------------------------------------------------------------------------
 -- show / hide
 -- --------------------------------------------------------------------------
+--- Lets inventory_c.lua know the CEF panel owns the screen, so it will not
+--- also reveal the legacy GUI when the server answers RequestShowInventory.
+function XMP_UI_ACTIVE() return shown end
+
 function UI_show()
     if shown or not (browser and ready) then return end
     shown = true
