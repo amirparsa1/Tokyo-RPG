@@ -33,11 +33,21 @@ const $  = s => document.querySelector(s);
 const el = (t,c) => { const e=document.createElement(t); if(c) e.className=c; return e; };
 
 /* ---------- bridge ---------- */
+/* Page -> Lua.
+   MTA exposes a Lua ajax handler at a virtual URL on the same origin, so a
+   plain fetch() reaches it. (An earlier version called mta.triggerEvent, which
+   belongs to the server event system and never arrived, leaving every button
+   dead.) Outside MTA this falls through to console logging for preview. */
 function send(id, arg){
-  if (window.mta && typeof mta.triggerEvent === 'function') {
-    mta.triggerEvent('vcAction', id, arg === undefined ? '' : String(arg));
-  } else {
-    console.log('[dev] action', id, arg);   // browser preview
+  const a = (arg === undefined || arg === null) ? '' : String(arg);
+  try {
+    fetch('http://mta/local/vcAction', {
+      method : 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body   : 'id=' + encodeURIComponent(id) + '&arg=' + encodeURIComponent(a)
+    }).catch(()=>{});
+  } catch(e){
+    console.log('[dev] action', id, a);
   }
 }
 

@@ -28,10 +28,21 @@ local lastPayload = nil
 -- --------------------------------------------------------------------------
 -- browser bootstrap
 -- --------------------------------------------------------------------------
+-- Forward declaration: buildBrowser() below references installAjax(), which is
+-- defined further down. Without this the upvalue would resolve to a GLOBAL that
+-- is still nil at call time, and the ajax endpoint would never be registered.
+local installAjax
+
 local function buildBrowser()
     if browser then return end
-    browser = createBrowser(sX, sY, true, false)   -- local content, no transparency issues
+    -- FIX: the 4th argument is `transparent`. It was false, which makes CEF
+    --      composite the page over an OPAQUE white surface -- that is why the
+    --      whole screen turned white when the panel opened. It must be true so
+    --      only the panel itself is drawn and the game shows through.
+    browser = createBrowser(sX, sY, true, true)
     addEventHandler("onClientBrowserCreated", browser, function()
+        -- the ajax endpoint must exist before the page loads and calls it
+        installAjax()
         loadBrowserURL(source, "http://mta/local/ui/index.html")
     end)
     addEventHandler("onClientBrowserDocumentReady", browser, function()
@@ -112,6 +123,28 @@ local function drawBrowser()
     dxDrawImage(0, 0, sX, sY, browser, 0, 0, 0, tocolor(255, 255, 255, 255), true)
 end
 
+-- --------------------------------------------------------------------------
+-- mouse injection
+--
+-- A browser rendered through dxDrawImage is just a texture: CEF never sees the
+-- cursor. Without these three handlers the page renders correctly but is
+-- completely dead to clicks, which is exactly how this resource first shipped.
+-- --------------------------------------------------------------------------
+function onCursorMove(_, _, ax, ay)
+    if not (browser and visible) then return end
+    injectBrowserMouseMove(browser, ax, ay)
+end
+
+function onBrowserClick(button, state, ax, ay)
+    if not (browser and visible) then return end
+    if button ~= "left" then return end
+    if state == "down" then
+        injectBrowserMouseDown(browser, "left")
+    else
+        injectBrowserMouseUp(browser, "left")
+    end
+end
+
 function VC_close()
     if not visible then return end
     visible = false
@@ -119,6 +152,8 @@ function VC_close()
         executeBrowserJavascript(browser, "VC.hide()")
     end
     removeEventHandler("onClientRender", root, drawBrowser)
+    removeEventHandler("onClientCursorMove", root, onCursorMove)
+    removeEventHandler("onClientClick", root, onBrowserClick)
     if isTimer(syncTimer) then killTimer(syncTimer) end
     syncTimer = nil
     showCursor(false)
@@ -141,6 +176,13 @@ local function VC_open(veh)
     focusBrowser(browser)
     executeBrowserJavascript(browser, "VC.show()")
     pushState(true)
+
+    -- FIX: focusBrowser() alone only routes the KEYBOARD. A browser drawn with
+    --      dxDrawImage receives no mouse input at all, so every click was
+    --      silently dropped -- the panel rendered but nothing was clickable.
+    --      Cursor movement and clicks must be injected manually (see below).
+    addEventHandler("onClientCursorMove", root, onCursorMove)
+    addEventHandler("onClientClick", root, onBrowserClick)
 
     if isTimer(syncTimer) then killTimer(syncTimer) end
     syncTimer = setTimer(function() pushState(false) end, SYNC_MS, 0)
@@ -169,10 +211,14 @@ addCommandHandler("vc", toggle)
 -- --------------------------------------------------------------------------
 -- page -> Lua
 -- --------------------------------------------------------------------------
-addEvent("vcAction", true)
-addEventHandler("vcAction", root, function(id, arg)
-    if not visible then return end
-    if id == "close" then VC_close() return end
+--[[ FIX: the page used to call mta.triggerEvent('vcAction', ...) and Lua
+     listened with addEvent("vcAction", true). That is the SERVER event system;
+     it is not the CEF bridge, so nothing ever arrived and every button was
+     dead. The supported channel for page -> Lua is an ajax handler, which the
+     page reaches with a plain fetch(). ]]
+local function handleAction(id, arg)
+    if not visible then return "" end
+    if id == "close" then VC_close() return "" end
 
     if id == "door" or id == "seat" then
         triggerServerEvent("TN:VehControl:action", localPlayer, id, tonumber(arg))
@@ -182,7 +228,21 @@ addEventHandler("vcAction", root, function(id, arg)
     playSoundFrontEnd(4)
     -- refresh shortly after so the page shows the result of the action
     setTimer(function() pushState(true) end, 90, 1)
-end)
+    return ""
+end
+
+--[[ The ajax handler is called with two TABLES (GET params, POST params), not
+     loose arguments, and it must return a string that becomes the response
+     body. It is registered once, right after the browser element exists. ]]
+installAjax = function()
+    if not browser then return end
+    setBrowserAjaxHandler(browser, "vcAction", function(get, post)
+        local p = post or {}
+        local g = get or {}
+        handleAction(p.id or g.id, p.arg or g.arg)
+        return "ok"
+    end)
+end
 
 -- --------------------------------------------------------------------------
 -- auto-close
