@@ -1,0 +1,10 @@
+<meta>
+    <info author="Arena.ai" name="[TN]VehControl" description="Vehicle control panel (F4) - engine, locks, doors, lights, seats" version="1.0.0" type="script" />
+
+    <script src="shared.lua" type="shared" />
+    <script src="server.lua" type="server" />
+    <script src="client.lua" type="client" cache="false" />
+
+    <file src="files/Rubik-Black.ttf" />
+    <file src="files/Rubik-Regular.ttf" />
+</meta>
