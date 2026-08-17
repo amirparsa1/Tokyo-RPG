@@ -1,10 +1,14 @@
 <meta>
-    <info author="Arena.ai" name="[TN]VehControl" description="Vehicle control panel (F4) - engine, locks, doors, lights, seats" version="1.0.0" type="script" />
+    <info author="Arena.ai" name="[TN]VehControl" description="Vehicle control panel (F4) - engine, locks, doors, lights, seats" version="2.0.0" type="script" />
 
     <script src="shared.lua" type="shared" />
     <script src="server.lua" type="server" />
     <script src="client.lua" type="client" cache="false" />
 
-    <file src="files/Rubik-Black.ttf" />
-    <file src="files/Rubik-Regular.ttf" />
+    <!-- CEF front-end -->
+    <file src="ui/index.html" />
+    <file src="ui/style.css" />
+    <file src="ui/app.js" />
+    <file src="ui/Rubik-Regular.ttf" />
+    <file src="ui/Rubik-Black.ttf" />
 </meta>

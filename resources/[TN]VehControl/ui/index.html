@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="utf-8" />
+<title>Vehicle Control</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="panel" class="panel booting">
+
+  <!-- ───────────── header ───────────── -->
+  <header class="head">
+    <div class="head-l">
+      <div class="brand">
+        <span class="dot"></span>
+        <span id="vehName">VEHICLE</span>
+      </div>
+      <div class="plate" id="vehPlate">———</div>
+    </div>
+    <button class="close" id="btnClose" aria-label="close">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </header>
+
+  <!-- ───────────── stage : car + gauges ───────────── -->
+  <section class="stage">
+
+    <div class="gauges">
+      <div class="gauge">
+        <div class="g-val" id="gHealth">100<i>%</i></div>
+        <div class="g-lbl">SALAMAT</div>
+        <div class="g-bar"><span id="gHealthBar" style="width:100%"></span></div>
+      </div>
+      <div class="gauge">
+        <div class="g-val" id="gSpeed">0<i>km/h</i></div>
+        <div class="g-lbl">SOR'AT</div>
+        <div class="g-bar"><span id="gSpeedBar" style="width:0%"></span></div>
+      </div>
+    </div>
+
+    <!-- door map: schematic, unambiguous, no fake 3D -->
+    <div class="car-wrap">
+      <div class="dmap">
+        <div class="dm-row">
+          <div class="dcell door" data-door="1"><span class="dn">KAPOOT</span><span class="dv">BASTE</span></div>
+        </div>
+        <div class="dm-mid">
+          <div class="dcol">
+            <div class="dcell door" data-door="2"><span class="dn">RANANDE</span><span class="dv">BASTE</span></div>
+            <div class="dcell door" data-door="4"><span class="dn">AGHAB C</span><span class="dv">BASTE</span></div>
+          </div>
+          <div class="cabin">
+            <div class="cab-inner">
+              <div class="lockbadge" id="lockBadge">
+                <svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0110 0v3"/><rect x="4" y="10" width="16" height="11" rx="2"/></svg>
+                <span id="lockTxt">LOCKED</span>
+              </div>
+              <div class="beam" id="beam"></div>
+            </div>
+          </div>
+          <div class="dcol">
+            <div class="dcell door" data-door="3"><span class="dn">SHAGERD</span><span class="dv">BASTE</span></div>
+            <div class="dcell door" data-door="5"><span class="dn">AGHAB R</span><span class="dv">BASTE</span></div>
+          </div>
+        </div>
+        <div class="dm-row">
+          <div class="dcell door" data-door="0"><span class="dn">SANDOGH</span><span class="dv">BASTE</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── controls ───────────── -->
+  <section class="grid" id="grid"><!-- built by app.js --></section>
+
+  <!-- ───────────── seats ───────────── -->
+  <section class="block">
+    <div class="cap">SANDALI</div>
+    <div class="seats" id="seats"></div>
+  </section>
+
+  <footer class="foot">
+    <span class="hint">KLIK = TAGHIR</span>
+    <span class="hint key">F4 &nbsp;BASTAN</span>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
