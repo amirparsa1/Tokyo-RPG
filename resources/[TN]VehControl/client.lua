@@ -161,7 +161,10 @@ local function toggle()
 end
 
 bindKey(OPEN_KEY, "down", toggle)
-addCommandHandler("veh", toggle)
+-- NOTE: "/veh" is already taken by [TN]Admin (admin vehicle spawn) and
+--       [TN]Taraghe, so this resource uses "/vc" instead to avoid shadowing
+--       an admin command.
+addCommandHandler("vc", toggle)
 
 -- --------------------------------------------------------------------------
 -- page -> Lua
