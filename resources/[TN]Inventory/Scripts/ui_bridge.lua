@@ -207,10 +207,26 @@ function UI_show()
     addEventHandler("onClientRender", root, render)
     addEventHandler("onClientCursorMove", root, onMove)
     addEventHandler("onClientClick", root, onClick)
+    -- Belt and braces: if the legacy window is showing for any reason (a race
+    -- with a server reply, another script, a stale state), force it down. The
+    -- two must never be on screen together.
+    if isElement(InventoryBGFull) then guiSetVisible(InventoryBGFull, false) end
+    if isElement(InventoryBG) then guiSetProperty(InventoryBG, "Visible", "False") end
+    if isElement(ActionsBG) then guiSetProperty(ActionsBG, "Visible", "False") end
+
     showCursor(true)
     focusBrowser(browser)
     executeBrowserJavascript(browser, "INV.show()")
     push(true)
+
+    -- a server reply can land a few frames after we opened; keep the legacy
+    -- window suppressed across that window
+    setTimer(function()
+        if shown then
+            if isElement(InventoryBGFull) then guiSetVisible(InventoryBGFull, false) end
+            if isElement(InventoryBG) then guiSetProperty(InventoryBG, "Visible", "False") end
+        end
+    end, 250, 1)
 end
 
 function UI_hide()

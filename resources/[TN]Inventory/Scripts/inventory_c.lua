@@ -656,8 +656,15 @@ end
 -- through the same RequestShowInventory event, so nothing else changes.
 bindKey("F2","down",function()
 	if UI_toggle then
+		-- FIX: the data request used to fire on EVERY press, including the press
+		--   that CLOSES the panel. The server then answered while the CEF panel was
+		--   already gone, XMP_UI_ACTIVE() was false, and ShowInventoryForPlayer
+		--   revealed the legacy window -- so closing with F2 popped the old gui open.
+		--   Only ask for data when we are actually opening.
 		UI_toggle()
-		triggerServerEvent("RequestShowInventory",getLocalPlayer(),getLocalPlayer())
+		if XMP_UI_ACTIVE and XMP_UI_ACTIVE() then
+			triggerServerEvent("RequestShowInventory",getLocalPlayer(),getLocalPlayer())
+		end
 	else
 		panelinventory()
 	end
