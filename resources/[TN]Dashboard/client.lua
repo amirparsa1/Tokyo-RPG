@@ -168,11 +168,11 @@ function drawDashBoard()
         dxDrawImage(px*27, py*23, px*1550, py*850, "Files/Panel.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
         dxDrawImage(px*75, py*73, px*120, py*117, "Files/Avatars/"..skinid..".png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
         dxDrawText(playername, px*230, py*160, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, poter, "left", "center",false,false,false, false) 
-        dxDrawText("ID:", px*235, py*250, px*45, py*24, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-        dxDrawText("Level:", px*298, py*250, px*45, py*24, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
+        dxDrawText("ID:", px*235, py*250, px*45, py*24, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+        dxDrawText("Level:", px*298, py*250, px*45, py*24, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
         dxDrawText(m12, px*256, py*250, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
         dxDrawText(m4, px*340, py*250, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false) 
-        dxDrawText("Serial:", px*230, py*335, px*45, py*24, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false)
+        dxDrawText("Serial:", px*230, py*335, px*45, py*24, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false)
         dxDrawText(getPlayerSerial(getLocalPlayer()), px*280, py*335, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
         dxDrawText("World\nMemberShip", px*1361, py*195, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font9, "center", "center",false,false,false, false)
         if m10 == "0" then 
@@ -188,60 +188,60 @@ function drawDashBoard()
             dxDrawImage(px*831, py*73, px*120, py*117, "Files/flogo/"..m64..".png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
         end
         dxDrawText(m13, px*990, py*180, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font9, "left", "center",false,false,false, false)
-        dxDrawText(m61, px*990, py*235, px*45, py*24, tocolor(128, 128, 128, 255), fontScale, font9, "left", "center",false,false,false, false)
-        dxDrawText("FP:      |  FW:", px*1050, py*330, px*45, py*24, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false)
+        dxDrawText(m61, px*990, py*235, px*45, py*24, tocolor(140, 150, 159, 255), fontScale, font9, "left", "center",false,false,false, false)
+        dxDrawText("FP:      |  FW:", px*1050, py*330, px*45, py*24, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false)
         dxDrawText(m6, px*1080, py*330, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
         dxDrawText(m63.."/3", px*1155, py*330, px*45, py*24, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
         if tab == 1  then
             dxDrawImage(px*478, py*300, px*900, py*460, "Files/Panel_Stats.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
-            dxDrawText("Cash:", px*560, py*688, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("Register Time:", px*880, py*688, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("Respect:", px*1210, py*688, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Cash:", px*560, py*688, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Register Time:", px*880, py*688, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Respect:", px*1210, py*688, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
             dxDrawText(getPlayerMoney(getLocalPlayer()).." $", px*603, py*690, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m17, px*983, py*690, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText("("..m8.."/"..m65..")", px*1275, py*690, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Bank:", px*560, py*768, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Total Played:", px*880, py*768, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Last-Login Time:", px*1077, py*768, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false)
+            dxDrawText("Bank:", px*560, py*768, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false)
+            dxDrawText("Total Played:", px*880, py*768, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false)
+            dxDrawText("Last-Login Time:", px*1077, py*768, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m24.." $", px*603, py*770, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m50.." Saat", px*975, py*770, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m18, px*1195, py*770, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Gold:", px*560, py*852, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Warn:", px*852, py*852, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("Vehicle Slot:", px*970, py*852, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("COMING SOON....", px*1180, py*852, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Gold:", px*560, py*852, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false)
+            dxDrawText("Warn:", px*852, py*852, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Vehicle Slot:", px*970, py*852, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("COMING SOON....", px*1180, py*852, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
             dxDrawText(m9.." g", px*603, py*853, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m5.."/3", px*900, py*853, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m25 , px*1060, py*853, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Black Cash:", px*560, py*935, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("Phone Number:", px*865, py*935, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
-            dxDrawText("Vaziat Ta'ahol:", px*1140, py*935, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Black Cash:", px*560, py*935, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Phone Number:", px*865, py*935, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
+            dxDrawText("Vaziat Ta'ahol:", px*1140, py*935, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font3, "left", "center",false,false,false, false) 
             dxDrawText("0 $", px*650, py*937, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m15, px*975, py*937, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
             dxDrawText(m66 , px*1248, py*937, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
-            dxDrawText("Training Gun:", px*518, py*1213, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Vehicle:", px*840, py*1213, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Bike:", px*1055, py*1213, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Training Gun:", px*518, py*1213, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Vehicle:", px*840, py*1213, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Bike:", px*1055, py*1213, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(m3.."/20" , px*628, py*1213, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m26.." Saat", px*905, py*1213, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m29.." Saat" , px*1100, py*1213, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
-            dxDrawText("Bank Robbery:", px*517, py*1297, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Boat:", px*840, py*1297, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Weapon:", px*1025, py*1297, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Bank Robbery:", px*517, py*1297, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Boat:", px*840, py*1297, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Weapon:", px*1025, py*1297, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(m7.."/20" , px*637, py*1298, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m35.." Saat", px*887, py*1298, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m41.." Saat" , px*1095, py*1298, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
-            dxDrawText("Biz Rob:", px*518, py*1381, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Material:", px*840, py*1381, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Plane:", px*1043, py*1381, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Biz Rob:", px*518, py*1381, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Material:", px*840, py*1381, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Plane:", px*1043, py*1381, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(m3.."/20", px*590, py*1381, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m26.." Saat" , px*908, py*1381, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m29.." Saat" , px*1095, py*1381, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
         elseif tab == 2  then
             if isMouseInPosition(px*520, py*390, px*130, py*25) then
-                dxDrawImage(px*520,  py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*520,  py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*520,  py*280, px*130, py*100, "Files/items/RockStarMemberShip.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*520, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*520, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("2500", px*550, py*758, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -263,9 +263,9 @@ function drawDashBoard()
             
 
             if isMouseInPosition(px*695, py*390, px*130, py*25) then
-                dxDrawImage(px*695, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*695, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*695, py*280, px*130, py*100, "Files/items/ClearWanted.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*695, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*695, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("500", px*725, py*758, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -288,9 +288,9 @@ function drawDashBoard()
 
             
             if isMouseInPosition(px*870, py*390, px*130, py*25) then
-                dxDrawImage(px*870, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*870, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*870, py*280, px*130, py*100, "Files/items/Clear30FP.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*870, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*870, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("750", px*900, py*758, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -313,9 +313,9 @@ function drawDashBoard()
 
 
             if isMouseInPosition(px*1045, py*390, px*130, py*25) then
-                dxDrawImage(px*1045, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1045, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*1045, py*280, px*130, py*100, "Files/items/ColorName.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*1045, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1045, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("500", px*1075, py*758, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -338,9 +338,9 @@ function drawDashBoard()
             end
 
             if isMouseInPosition(px*1220, py*390, px*130, py*25) then
-                dxDrawImage(px*1220, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1220, py*280, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*1220, py*280, px*130, py*100, "Files/items/VehicleSlot.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*1220, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1220, py*390, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("1,250", px*1250, py*758, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -366,9 +366,9 @@ function drawDashBoard()
             ------------------------------------------------------------------------------------------------------------------------------------
 
             if isMouseInPosition(px*520, py*560, px*130, py*25) then
-                dxDrawImage(px*520,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*520,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*520,  py*450, px*130, py*100, "Files/items/PassengerSlot.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*520, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*520, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("500", px*550, py*1097, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -391,9 +391,9 @@ function drawDashBoard()
 
 
             if isMouseInPosition(px*695, py*560, px*130, py*25) then
-                dxDrawImage(px*695,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*695,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*695,  py*450, px*130, py*100, "Files/items/JourneySpeaker.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*695, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*695, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("500", px*725, py*1097, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -415,9 +415,9 @@ function drawDashBoard()
 
 
             if isMouseInPosition(px*870, py*560, px*130, py*25) then
-                dxDrawImage(px*870,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*870,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*870,  py*450, px*130, py*100, "Files/items/Speaker_1Month.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*870, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*870, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("2,500", px*900, py*1097, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -437,9 +437,9 @@ function drawDashBoard()
 
 
             if isMouseInPosition(px*1075, py*560, px*130, py*25) then
-                dxDrawImage(px*1045,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1045,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*1045,  py*450, px*130, py*100, "Files/items/Speaker_Lifetime.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*1045, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1045, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("200,000", px*1075, py*1097, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -459,9 +459,9 @@ function drawDashBoard()
 
 
             if isMouseInPosition(px*1220, py*560, px*130, py*25) then
-                dxDrawImage(px*1220,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1220,  py*450, px*130, py*100, "Files/Panel_Shop_Box.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawImage(px*1220,  py*450, px*130, py*100, "Files/items/ToysSlot.png", 0, 0, 0, tocolor(255,255,255, 255), true)
-                dxDrawImage(px*1220, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1220, py*560, px*130, py*25, "Files/Panel_Shop_Buy.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 dxDrawText("2,000", px*1250, py*1097, px*130, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false)
                 if getKeyState("mouse1")  then
                     if not press then
@@ -484,25 +484,25 @@ function drawDashBoard()
             dxDrawText("Frind ", px*50, py*50, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font3, "left", "center",false,false,false, false) 
         elseif tab == 5  then
             dxDrawImage(px*500, py*300, px*850, py*460, "Files/Panel_Setting.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
-            dxDrawText("GPU:", px*545, py*690, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false)
-            dxDrawText("Spawn Location:", px*965, py*690, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("GPU:", px*545, py*690, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false)
+            dxDrawText("Spawn Location:", px*965, py*690, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(geraphikname, px*590, py*690, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(m67, px*1100, py*690, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Video Ram:", px*545, py*773, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Server Version:", px*965, py*773, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Video Ram:", px*545, py*773, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Server Version:", px*965, py*773, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(geraphikvalue.." MB (Free "..freegeraphik.." MB)", px*640, py*773, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText("v1.21.1", px*1090, py*773, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             
-            dxDrawText("SerialLocked:", px*965, py*855, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("FOV (Field Of View):", px*545, py*855, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("SerialLocked:", px*965, py*855, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("FOV (Field Of View):", px*545, py*855, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(FOV, px*710, py*855, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m68, px*1075, py*855, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
-            dxDrawText("Vesion:", px*545, py*935, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
-            dxDrawText("Lastip:", px*965, py*935, px*50, py*50, tocolor(128, 128, 128, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Vesion:", px*545, py*935, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
+            dxDrawText("Lastip:", px*965, py*935, px*50, py*50, tocolor(140, 150, 159, 255), fontScale, font2, "left", "center",false,false,false, false) 
             dxDrawText(tag, px*607, py*937, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             dxDrawText(m69, px*1024, py*937, px*50, py*50, tocolor(255, 255, 255, 255), fontScale, font2, "left", "center",false,false,false, false)
             if isMouseInPosition(px*520, py*607, px*130, py*120) then
-                dxDrawImage(px*510, py*607, px*130, py*120, "Files/Spawn_Civilian.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*510, py*607, px*130, py*120, "Files/Spawn_Civilian.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -519,7 +519,7 @@ function drawDashBoard()
             end
 
             if isMouseInPosition(px*650, py*607, px*130, py*120) then
-                dxDrawImage(px*650, py*607, px*130, py*120, "Files/Spawn_House.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*650, py*607, px*130, py*120, "Files/Spawn_House.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -535,7 +535,7 @@ function drawDashBoard()
                 dxDrawImage(px*650, py*607, px*130, py*120, "Files/Spawn_House.png", 0, 0, 0, tocolor(255, 255, 255, 255, 255), true)
             end
             if isMouseInPosition(px*790, py*607, px*130, py*120) then
-                dxDrawImage(px*790, py*607, px*130, py*120, "Files/Spawn_FactionFamily.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*790, py*607, px*130, py*120, "Files/Spawn_FactionFamily.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -551,7 +551,7 @@ function drawDashBoard()
                 dxDrawImage(px*790, py*607, px*130, py*120, "Files/Spawn_FactionFamily.png", 0, 0, 0, tocolor(255, 255, 255, 255, 255), true)
             end
             if isMouseInPosition(px*930, py*607, px*130, py*120) then
-                dxDrawImage(px*930, py*607, px*130, py*120, "Files/Spawn_LastLocation.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*930, py*607, px*130, py*120, "Files/Spawn_LastLocation.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -567,7 +567,7 @@ function drawDashBoard()
                 dxDrawImage(px*930, py*607, px*130, py*120, "Files/Spawn_LastLocation.png", 0, 0, 0, tocolor(255, 255, 255, 255, 255), true)
             end
             if isMouseInPosition(px*1070, py*607, px*130, py*120) then
-                dxDrawImage(px*1070, py*607, px*130, py*120, "Files/Spawn_Journey.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1070, py*607, px*130, py*120, "Files/Spawn_Journey.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -583,7 +583,7 @@ function drawDashBoard()
                 dxDrawImage(px*1070, py*607, px*130, py*120, "Files/Spawn_Journey.png", 0, 0, 0, tocolor(255, 255, 255, 255, 255), true)
             end
             if isMouseInPosition(px*1210, py*607, px*130, py*120) then
-                dxDrawImage(px*1210, py*607, px*130, py*120, "Files/Spawn_Penthouse.png", 0, 0, 0, tocolor(150,150,150, 255), true)
+                dxDrawImage(px*1210, py*607, px*130, py*120, "Files/Spawn_Penthouse.png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
                 if getKeyState("mouse1")  then
                 
                     if not press then
@@ -608,7 +608,7 @@ function drawDashBoard()
 
         if isMouseInPosition(px*1433,py*265, px*100, py*115) then
             
-        	dxDrawImage(px*1433,py*265, px*100, py*115, "Files/"..aksstate..".png", 0, 0, 0, tocolor(150,150,150, 255), true)
+        	dxDrawImage(px*1433,py*265, px*100, py*115, "Files/"..aksstate..".png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
 
         	if getKeyState("mouse1")  then
                 if aksstate == "Stats" then
@@ -641,7 +641,7 @@ function drawDashBoard()
 
 
         if isMouseInPosition(px*1433,py*400, px*100, py*115) then
-        	dxDrawImage(px*1433,py*400, px*100, py*115, "Files/"..aksshop..".png", 0, 0, 0, tocolor(150,150,150, 255), true)
+        	dxDrawImage(px*1433,py*400, px*100, py*115, "Files/"..aksshop..".png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
 
         	if getKeyState("mouse1") then
                 if aksshop == "Shop" then
@@ -673,7 +673,7 @@ function drawDashBoard()
 
 
         if isMouseInPosition(px*1433,py*535, px*100, py*115) then
-        	dxDrawImage(px*1433,py*535, px*100, py*115, "Files/"..levelaks..".png", 0, 0, 0, tocolor(150,150,150, 255), true)
+        	dxDrawImage(px*1433,py*535, px*100, py*115, "Files/"..levelaks..".png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
         	if getKeyState("mouse1") then
         	    if not press then
         	    	press = true
@@ -688,7 +688,7 @@ function drawDashBoard()
         end
 
         if isMouseInPosition(px*1433,py*670, px*100, py*120) then
-        	dxDrawImage(px*1433,py*670, px*100, py*120, "Files/"..firindaks..".png", 0, 0, 0, tocolor(150,150,150, 255), true)
+        	dxDrawImage(px*1433,py*670, px*100, py*120, "Files/"..firindaks..".png", 0, 0, 0, tocolor(140, 150, 159, 255), true)
 
         	if getKeyState("mouse1") then
                 if firindaks == "Referral_Reward" then

@@ -619,9 +619,9 @@ function randomroyarucontractsetkon()
 			setElementData(accSys:getPlayerAcc(thePlayer), "pContractBy", "ICA-Radio")
 
 			setElementData(accSys:getPlayerAcc(thePlayer),"pHowContract",1)
-			setTimer( randomroyarucontractsetkon(), math.random( 900000, 1800000 ), 1 )
+			setTimer( randomroyarucontractsetkon, math.random( 900000, 1800000 ), 1 ) -- FIX: the () called it immediately and passed nil to setTimer, so the timer never existed
 		else
 			randomroyarucontractsetkon()
 		end
 end
-setTimer( randomroyarucontractsetkon(), math.random( 900000, 1800000 ), 1 )
+setTimer( randomroyarucontractsetkon, math.random( 900000, 1800000 ), 1 ) -- FIX: the () called it immediately and passed nil to setTimer, so the timer never existed

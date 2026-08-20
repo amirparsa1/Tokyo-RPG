@@ -2,13 +2,6 @@
 	<script src="Scripts/inventory_s.lua" type="server" cache="false"/>
 	<script src="Scripts/inventory_c.lua" type="client" cache="false"/>
 	<script src="Scripts/skin.lua" type="client" cache="false"/>
-	<script src="Scripts/ui_bridge.lua" type="client" cache="false"/>
-
-	<!-- XMP Default RPG interface -->
-	<file src="ui/index.html" />
-	<file src="ui/core.css" />
-	<file src="ui/inventory.css" />
-	<file src="ui/app.js" />
 	<file src="finder/finder.png" />
 
 	<file src="finder/finder.ttf"></file>
@@ -44,7 +37,6 @@
 	<file src="assets/BGUP.png"/>
 	<file src="assets/Cinematic.png" />
 
-	<file src="Files/Green.png"/>
 	<file src="Files/Inventory.png"/>
 	<file src="Files/Item.png"/>
 	

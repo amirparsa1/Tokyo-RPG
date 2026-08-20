@@ -15,12 +15,35 @@ local BlipAirDropBox = {
 }
 local nowevent = false
 
+--- Guard against a stuck event flag.
+--- nowevent is set true by five different events and cleared by scattered
+--- timers. If any of those timers fails to be created (see the airdrop bug
+--- below) the flag sticks and CanUseItem() blocks item use for EVERY player
+--- until the server restarts. The watchdog clears it after 45 minutes, which is
+--- longer than the longest legitimate event.
+local noweventSince = nil
+local NOWEVENT_MAX = 45 * 60 * 1000
+
+function SetNowEvent(v)
+    nowevent = v and true or false
+    noweventSince = nowevent and getTickCount() or nil
+end
+
+setTimer(function()
+    if nowevent == true and noweventSince
+       and (getTickCount() - noweventSince) > NOWEVENT_MAX then
+        outputDebugString("[TN]Family: nowevent stuck for >45min, clearing it", 2)
+        nowevent = false
+        noweventSince = nil
+    end
+end, 60000, 0)
+
 function CanUseItem ()
     if nowevent == true then
+        if not noweventSince then noweventSince = getTickCount() end
         return false
-    else
-        return true
     end
+    return true
 end
 function insertSortingByIndex(array, e)
     if e == nil then
@@ -3392,7 +3415,12 @@ function spawneventairdrop()
         EndEventAirDrop()
         AirDopBox[1] = true
         nowevent = true
-        setTimer(EndEventAirDrop(),1800000,1)
+        -- FIX: this read setTimer(EndEventAirDrop(), ...) -- the parentheses
+        --   CALLED the function immediately and passed its nil return to
+        --   setTimer, so no timer was ever created. nowevent therefore stayed
+        --   true forever, CanUseItem() returned false, and USING ANY ITEM was
+        --   silently blocked for every player on the server until a restart.
+        setTimer(EndEventAirDrop, 1800000, 1)
         AirDopBox[1] = createObject(1685,randomairdroppos[RANDOMPOSAIRDROP][1],randomairdroppos[RANDOMPOSAIRDROP][2],randomairdroppos[RANDOMPOSAIRDROP][3]+70)
         setElementFrozen(AirDopBox[1],true)
         moveObject(AirDopBox[1],180000,randomairdroppos[RANDOMPOSAIRDROP][1],randomairdroppos[RANDOMPOSAIRDROP][2],randomairdroppos[RANDOMPOSAIRDROP][3])

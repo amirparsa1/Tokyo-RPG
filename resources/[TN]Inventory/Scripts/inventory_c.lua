@@ -123,7 +123,7 @@ local formols = {
 	["585960"] = {27},
 	["615859"] = {28},
 }
-InventoryBG = guiCreateStaticImage(0.095, 0.08, 0.80, 0.81, "assets/bg.png", true)
+InventoryBG = guiCreateStaticImage(0.095, 0.08, 0.80, 0.81, "assets/BG.png", true)
 
 function DrawCraftSystem()
 	dxDrawImage(x*230, y*670, x*1160, y*342, "Panels/CraftBG.png", 0, 0, 0, tocolor(255, 255, 255, 255), true)
@@ -187,61 +187,61 @@ function DrawCraftSystem()
 end
 
 
-SlotBG[1] = guiCreateStaticImage(0.10+0.02 ,0.18 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[2] = guiCreateStaticImage(0.17+0.02 ,0.18 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[3] = guiCreateStaticImage(0.24+0.02 ,0.18 ,0.06,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[4] = guiCreateStaticImage(0.31+0.02 ,0.18 ,0.06,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[5] = guiCreateStaticImage(0.38+0.02 ,0.18 ,0.06,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[6] = guiCreateStaticImage(0.45+0.02 ,0.18 ,0.06,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[7] = guiCreateStaticImage(0.52+0.02 ,0.18 ,0.06,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[8] = guiCreateStaticImage(0.59+0.02, 0.18, 0.06, 0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[9] = guiCreateStaticImage(0.66+0.02, 0.18, 0.06, 0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[10] = guiCreateStaticImage(0.73+0.02, 0.18, 0.06, 0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[11] = guiCreateStaticImage(0.80+0.02, 0.18, 0.06, 0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[12] = guiCreateStaticImage(0.10+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[13] = guiCreateStaticImage(0.17+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[14] = guiCreateStaticImage(0.24+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[15] = guiCreateStaticImage(0.31+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[16] = guiCreateStaticImage(0.38+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[17] = guiCreateStaticImage(0.45+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[18] = guiCreateStaticImage(0.52+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[19] = guiCreateStaticImage(0.59+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[20] = guiCreateStaticImage(0.66+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[21] = guiCreateStaticImage(0.73+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[22] = guiCreateStaticImage(0.80+0.02 ,0.30 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)	
-SlotBG[23] = guiCreateStaticImage(0.10+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[24] = guiCreateStaticImage(0.17+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[25] = guiCreateStaticImage(0.24+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[26] = guiCreateStaticImage(0.31+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[27] = guiCreateStaticImage(0.38+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[28] = guiCreateStaticImage(0.45+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[29] = guiCreateStaticImage(0.52+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[30] = guiCreateStaticImage(0.59+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[31] = guiCreateStaticImage(0.66+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[32] = guiCreateStaticImage(0.73+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[33] = guiCreateStaticImage(0.80+0.02 ,0.42 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[34] = guiCreateStaticImage(0.10+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[35] = guiCreateStaticImage(0.17+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[36] = guiCreateStaticImage(0.24+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[37] = guiCreateStaticImage(0.31+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[38] = guiCreateStaticImage(0.38+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[39] = guiCreateStaticImage(0.45+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[40] = guiCreateStaticImage(0.52+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[41] = guiCreateStaticImage(0.59+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[42] = guiCreateStaticImage(0.66+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[43] = guiCreateStaticImage(0.73+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[44] = guiCreateStaticImage(0.80+0.02 ,0.54 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[45] = guiCreateStaticImage(0.10+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[46] = guiCreateStaticImage(0.17+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[47] = guiCreateStaticImage(0.24+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[48] = guiCreateStaticImage(0.31+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[49] = guiCreateStaticImage(0.38+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[50] = guiCreateStaticImage(0.45+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[51] = guiCreateStaticImage(0.52+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[52] = guiCreateStaticImage(0.59+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[53] = guiCreateStaticImage(0.66+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[54] = guiCreateStaticImage(0.73+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
-SlotBG[55] = guiCreateStaticImage(0.80+0.02 ,0.66 , 0.06 ,0.096, "assets/Item.png", true, InventoryBG)
+SlotBG[1] = guiCreateStaticImage(0.038 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[2] = guiCreateStaticImage(0.13 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[3] = guiCreateStaticImage(0.222 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[4] = guiCreateStaticImage(0.314 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[5] = guiCreateStaticImage(0.406 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[6] = guiCreateStaticImage(0.038 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[7] = guiCreateStaticImage(0.13 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[8] = guiCreateStaticImage(0.222 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[9] = guiCreateStaticImage(0.314 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[10] = guiCreateStaticImage(0.406 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[11] = guiCreateStaticImage(0.038 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[12] = guiCreateStaticImage(0.13 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[13] = guiCreateStaticImage(0.222 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[14] = guiCreateStaticImage(0.314 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[15] = guiCreateStaticImage(0.406 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[16] = guiCreateStaticImage(0.038 ,0.479 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[17] = guiCreateStaticImage(0.13 ,0.479 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[18] = guiCreateStaticImage(0.222 ,0.479 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[19] = guiCreateStaticImage(0.314 ,0.479 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[20] = guiCreateStaticImage(0.406 ,0.479 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[21] = guiCreateStaticImage(0.038 ,0.572 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[22] = guiCreateStaticImage(0.13 ,0.572 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)	
+SlotBG[23] = guiCreateStaticImage(0.222 ,0.572 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[24] = guiCreateStaticImage(0.314 ,0.572 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[25] = guiCreateStaticImage(0.406 ,0.572 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[26] = guiCreateStaticImage(0.038 ,0.665 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[27] = guiCreateStaticImage(0.13 ,0.665 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[28] = guiCreateStaticImage(0.222 ,0.665 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[29] = guiCreateStaticImage(0.314 ,0.665 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[30] = guiCreateStaticImage(0.406 ,0.665 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[31] = guiCreateStaticImage(0.038 ,0.758 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[32] = guiCreateStaticImage(0.13 ,0.758 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[33] = guiCreateStaticImage(0.222 ,0.758 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[34] = guiCreateStaticImage(0.314 ,0.758 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[35] = guiCreateStaticImage(0.406 ,0.758 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[36] = guiCreateStaticImage(0.038 ,0.851 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[37] = guiCreateStaticImage(0.13 ,0.851 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[38] = guiCreateStaticImage(0.222 ,0.851 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[39] = guiCreateStaticImage(0.314 ,0.851 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[40] = guiCreateStaticImage(0.406 ,0.851 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[41] = guiCreateStaticImage(0.525 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[42] = guiCreateStaticImage(0.617 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[43] = guiCreateStaticImage(0.709 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[44] = guiCreateStaticImage(0.801 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[45] = guiCreateStaticImage(0.893 ,0.2 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[46] = guiCreateStaticImage(0.525 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[47] = guiCreateStaticImage(0.617 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[48] = guiCreateStaticImage(0.709 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[49] = guiCreateStaticImage(0.801 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[50] = guiCreateStaticImage(0.893 ,0.293 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[51] = guiCreateStaticImage(0.525 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[52] = guiCreateStaticImage(0.617 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[53] = guiCreateStaticImage(0.709 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[54] = guiCreateStaticImage(0.801 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
+SlotBG[55] = guiCreateStaticImage(0.893 ,0.386 , 0.082 ,0.082, "assets/Item.png", true, InventoryBG)
 
 for i=1,55 do
 	Slot[i] = guiCreateStaticImage(0.0, 0.0, 1.00, 1.00, "Items/0.png", true, SlotBG[i])
@@ -319,7 +319,7 @@ addEventHandler("onClientMouseEnter", getRootElement(), function()
 	if IsSlot[source] then
 		if SlotBack[source] then
 			
-			guiStaticImageLoadImage(SlotBack[source], "Files/Green.png")
+			guiStaticImageLoadImage(SlotBack[source], "assets/Green.png")
 			guiStaticImageLoadImage(source, "Items/"..items[IsSlot[source]]..".png")
 			if not attachedGUI then
 				
@@ -329,7 +329,7 @@ addEventHandler("onClientMouseEnter", getRootElement(), function()
 				--outputChatBox("Slot: "..occupiedSlot.."")
 			end
 		else
-			guiStaticImageLoadImage(source, "Files/Green.png")
+			guiStaticImageLoadImage(source, "assets/Green.png")
 			guiStaticImageLoadImage(BackSlot[source], "Items/"..items[IsSlot[source]]..".png")
 			occupiedGUI = BackSlot[source]
 			if not attachedGUI then
@@ -345,14 +345,14 @@ end)
 addEventHandler("onClientMouseLeave", getRootElement(), function()
 	if IsSlot[source] then
 		if SlotBack[source] then
-			guiStaticImageLoadImage(SlotBack[source], "Files/Item.png")
+			guiStaticImageLoadImage(SlotBack[source], "assets/Item.png")
 			guiStaticImageLoadImage(source, "Items/"..items[IsSlot[source]]..".png")
 			if not attachedGUI then
 				occupiedGUI = nil
 			end
 			--occupiedSlot = nil
 		else
-			guiStaticImageLoadImage(source, "Files/Item.png")
+			guiStaticImageLoadImage(source, "assets/Item.png")
 			guiStaticImageLoadImage(BackSlot[source], "Items/"..items[IsSlot[source]]..".png")
 			if not attachedGUI then
 				occupiedGUI = nil
@@ -375,17 +375,15 @@ addEventHandler("ShowInventoryForPlayer",getLocalPlayer(),function(thePlayer,Inv
 		-- FIX (bugfix pass 3): the server confirmed, so it is now safe to reveal
 		--   the outer frame. See the note in panelinventory().
 		inventoryPending = nil
-		-- FIX (XMP UI): always ingest the data, but only reveal the LEGACY gui
-		--   when the new CEF panel is not the active interface. Without this the
-		--   server's reply to RequestShowInventory re-opened the old window on
-		--   top of the new one, so both were visible at once.
-		LoadPlayerInventory(thePlayer,InventoryData)
-		if ShowMode ~= 1 and not (XMP_UI_ACTIVE and XMP_UI_ACTIVE()) then
+		if ShowMode == 1 then
+			LoadPlayerInventory(thePlayer,InventoryData)
+		else
 			guiSetVisible( InventoryBGFull, true )
 			guiSetProperty(InventoryBG,"Visible","True")
 			showChat(false)
 			hideALL = true
 			showCursor(true)
+			LoadPlayerInventory(thePlayer,InventoryData)
 		end
 		RefreshPanel()
 	end
@@ -650,25 +648,7 @@ function panelinventory()
 		end
 	end
 end
--- FIX (XMP UI): F2 now opens the new CEF panel (Scripts/ui_bridge.lua).
--- panelinventory() is kept because other code paths still call it, but it is
--- no longer bound to a key. UI_toggle() still asks the server for fresh data
--- through the same RequestShowInventory event, so nothing else changes.
-bindKey("F2","down",function()
-	if UI_toggle then
-		-- FIX: the data request used to fire on EVERY press, including the press
-		--   that CLOSES the panel. The server then answered while the CEF panel was
-		--   already gone, XMP_UI_ACTIVE() was false, and ShowInventoryForPlayer
-		--   revealed the legacy window -- so closing with F2 popped the old gui open.
-		--   Only ask for data when we are actually opening.
-		UI_toggle()
-		if XMP_UI_ACTIVE and XMP_UI_ACTIVE() then
-			triggerServerEvent("RequestShowInventory",getLocalPlayer(),getLocalPlayer())
-		end
-	else
-		panelinventory()
-	end
-end)
+bindKey("F2","down",panelinventory)
 
 -- FIX (bugfix pass 3): recovery path for F2.
 --   The server refuses RequestShowInventory while its anti-flood timer runs or
@@ -1004,7 +984,7 @@ GhavasBG = guiCreateStaticImage((screenW - 667) / 2, (screenH - 400) / 2, 700, 5
 Kandan = guiCreateStaticImage(467,299, 184, 61, "files/Kandan.png", false, GhavasBG)
 Pooshidan = guiCreateStaticImage(467,144, 176, 61, "files/Pooshidan.png", false , GhavasBG )
 Porkardan = guiCreateStaticImage(467,220, 184, 61, "files/Porkardan.png", false, GhavasBG)
-Close = guiCreateStaticImage(625,18, 50, 50, "files/Close.png", false, GhavasBG)
+Close = guiCreateStaticImage(625,18, 50, 50, "Panels/Close.png", false, GhavasBG)
 --Oxygen = guiCreateStaticImage(900, 50, 50, 50, "files/Oxygen.png", false)
 guiSetProperty(GhavasBG, "Visible", "false")
 
@@ -2524,7 +2504,7 @@ local arrowPos = 0
 local whereGo = 0
 local difficulty = 0
 local KeyName = ""
-local font = dxCreateFont("Files/IRANSans.ttf",32)
+local font = dxCreateFont("assets/IRANSans.ttf",32)
 engineLoadIFP ("Files/FishAnims.ifp", "fishanimifp")
 engineImportTXD(engineLoadTXD("Files/FishingRod.txd"), 2703)
 engineReplaceModel(engineLoadDFF("Files/FishingRod.dff", 0), 2703)
@@ -2560,8 +2540,8 @@ addEvent("setPedFishAnim",true)
 addEventHandler("setPedFishAnim",getRootElement(),setPedFishAnim)
 
 function renderFish()
-	dxDrawImage( x - 75, y - 250, 30, 213, "images/Mid.png", 0,0,0, tocolor(255,255,255,150) )
-	dxDrawImage( x - 140, y - arrowPos, 200, 300, "images/Arrow.png", 0,0,0, tocolor(255,255,255,200) )
+	dxDrawImage( x - 75, y - 250, 30, 213, "Images/Mid.png", 0,0,0, tocolor(255,255,255,150) )
+	dxDrawImage( x - 140, y - arrowPos, 200, 300, "Images/Arrow.png", 0,0,0, tocolor(255,255,255,200) )
 	dxDrawText(KeyName, x - 130, y - 227, 200, 200,tocolor(255,255,255,255),1,font)
 	if ( arrowPos > 190 and whereGo == 1 ) then arrowPos = arrowPos - difficulty end
 	if ( arrowPos < 400 and whereGo == 2 ) then arrowPos = arrowPos + difficulty end
